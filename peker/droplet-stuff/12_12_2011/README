@@ -1,0 +1,70 @@
+For prep of all samples, See FRET NOTEBOOK 3 (PEKER) pages 5 to 8
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10-11 uW 514nm . Counts : A/D ~ 120k/15k per sec
+Never Track never Trap, no IR
+
+run_000:
+-------------------------------------------------
+  1) 100nM Ha's Cy3 labelled Ha's OligoD in freely diffusing droplets
+  2) 20 ticks up into solution
+  3) Relatively denser than last data set from last Friday (12/9/2011)
+  4) Stopped around 2 mins for checking the density by eye
+
+run_001:
+-------------------------------------------------
+  1) On same sample in run_000
+  2) 20 ticks up into solution
+  3) Only 514nm excitation 10-11 uW
+  4) Around 45 mins, total ~ 350k Donor counts
+  5) Rare Acceptor bursts, probably because of old PCA  
+
+run_002:
+-------------------------------------------------
+  1) On same sample in run_000 and run_001
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Only 514nm excitation 10-11 uW
+  4) Around 45 mins, total ~ 350k Donor counts
+  5) Rare Acceptor bursts, probably because of old PCA
+
+run_003:
+-------------------------------------------------
+  1) New sample cell from 100nM droplet stock
+  2) 20 ticks up into solution
+  3) Only 514nm excitation 23 uW
+  4) Around 60 mins, total ~ 850k Donor counts
+  5) Rare Acceptor bursts, probably because of old PCA
+
+run_004:
+-------------------------------------------------
+  1) On same sample in run_003
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Only 514nm excitation 23 uW
+  4) Around 60 mins, total ~ 700k Donor counts
+  5) Rare Acceptor bursts, probably because of old PCA
+
+run_005:
+-------------------------------------------------
+  1) 50nM Ha's Cy3 labelled Ha's OligoD in freely diffusing droplets
+  2) This time 50uL of solution into FC77+RainDance to have a less dense droplet sample
+  3) 20 ticks up into solution
+  4) Only 514nm excitation 23 uW
+  5) Around 60 mins, total ~ 400k Donor counts
+  6) Rare Acceptor bursts, probably because of old PCA
+
+run_006:
+-------------------------------------------------
+  1) On same sample in run_005
+  3) Considering the migration of droplets up in time, 50 ticks up into solution
+  4) Only 514nm excitation 23 uW
+  5) Around 75 mins, total ~ 450k Donor counts
+  6) Rare Acceptor bursts, probably because of old PCA
+
+run_007:
+-------------------------------------------------
+  1) 10nM Ha's Cy3 labelled Ha's OligoD in freely diffusing droplets
+  2) This time 50uL of solution into FC77+RainDance to have a less dense droplet sample
+  3) 20 ticks up into solution
+  4) Only 514nm excitation 23 uW
+  5) Around 60 mins, total ~ 315k Donor counts
+  6) Rare Acceptor bursts, probably because of old PCA

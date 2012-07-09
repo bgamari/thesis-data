@@ -1,0 +1,184 @@
+2012-03-13
+
+FRET on RNA 16mer Forward Attachment in Diffusing Droplets 
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+SAMPLE : RNA in buffer + PCD/PCA + Trolox mixture before droplet prep
+DENSE : Original emulsion right after sonication. Content is 200uL, 10^-3 (v/v) RainDance in FC40 + 5uL RNA sample
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 + "PCD/PCA + Trolox + MV" -> As described below
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+ALEX20: 50usec alternation time, 20uW 514nm and 10uW 647nm
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX20: Only 20uW 514nm
+
+Fully Closed Iris (FCI): The Smallest beam diameter in collimated region so Under-filling Objective Lens
+Fully Opened Iris (FOI): The Largest beam diameter in collimated region so Critically-filling Objective Lens
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM old TMR with 40uW 514nm . Counts : D/A ~ 100k/13k per sec
+
+Always 30 tics up into solution
+Always dissolve CO2 in MIX oil before adding droplets from DENSE
+Always add 2uL PCD (150x), 5uL PCA (40x), 1uL Trolox (100x), 1uL Methyl Viologen (MV) (100x) into 100L buffer first. 
+Then add RNA sample for dilution into this solution. This is again before DENSE prep.
+
+run_000:
+-------------------------------------------------
+  1) 50nM FRNA DA
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 34 minutes
+  6) Total counts in D/A is around 199k/344k
+  7) Please see NOTE1
+
+run_001:
+-------------------------------------------------
+  1) 50nM FRNA DA in (10% (v/v) Glycerol + Buffer)
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 33 minutes
+  6) Total counts in D/A is around 191k/279k
+  7) Please see NOTE1
+
+run_002:
+-------------------------------------------------
+  1) 50nM FRNA DA
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 2uW 476nm
+  5) Data duration is around 35 minutes
+  6) Total counts in D/A is around 141k/254k
+  7) Please see NOTE1
+  8) Please see NOTE2
+
+run_003:
+-------------------------------------------------
+  1) 50nM FRNA DA in (10% (v/v) Glycerol + Buffer)
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 2uW 476nm
+  5) Data duration is around 38 minutes
+  6) Total counts in D/A is around 153k/238k
+  7) Please see NOTE1
+  8) Please see NOTE2
+
+run_004:
+-------------------------------------------------
+  1) 50nM FRNA D
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 39 minutes
+  6) Total counts in D/A is around 143k/239k
+  7) Please see NOTE1
+
+run_005:
+-------------------------------------------------
+  1) 50nM FRNA D in (10% (v/v) Glycerol + Buffer)
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 36 minutes
+  6) Total counts in D/A is around 172k/248k
+  7) Please see NOTE1
+
+run_006:
+-------------------------------------------------
+  1) 50nM FRNA D
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 2uW 476nm
+  5) Data duration is around 36 minutes
+  6) Total counts in D/A is around 128k/214k
+  7) Please see NOTE1
+  8) Please see NOTE2
+
+run_007:
+-------------------------------------------------
+  1) 50nM FRNA D in (10% (v/v) Glycerol + Buffer)
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 2uW 476nm
+  5) Data duration is around 35 minutes
+  6) Total counts in D/A is around 121k/183k
+  7) Please see NOTE1
+  8) Please see NOTE2
+
+run_008:
+-------------------------------------------------
+  1) Buffer
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 15 minutes
+  6) Total counts in D/A is around 56k/92k
+  7) Please see NOTE1
+
+run_009:
+-------------------------------------------------
+  1) Buffer
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 2uW 476nm
+  5) Data duration is around 16 minutes
+  6) Total counts in D/A is around 56k/91k
+  7) Please see NOTE1
+  8) Please see NOTE2
+  9) Please see NOTE3
+
+run_010:
+-------------------------------------------------
+  1) 10% (v/v) Glycerol + Buffer
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 
+  5) Data duration is around 17 minutes
+  6) Total counts in D/A is around 60k/114k
+  7) Please see NOTE1
+  8) Please see NOTE4
+
+run_011:
+-------------------------------------------------
+  1) 10% (v/v) Glycerol + Buffer
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 2uW 476nm
+  5) Data duration is around 18 minutes
+  6) Total counts in D/A is around 60k/119k
+  7) Please see NOTE1
+  8) Please see NOTE2
+  9) Please see NOTE5
+  10) Please see NOTE6
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) This time i used a slightly different sonication method. Basically,
+I shaked the solution for DENSE, then i put it into a conical with ice in it.
+I sonicated this for 2 mins. Without opening conical, i shaked it, then i 
+sonicated it another 2 mins. 
+
+  2) Here 476nm line is supposed to be slightly defocused because of chromatic aberration
+of the objective lens.
+
+  3) This sample is the same sample as 008. I didn't change objective lens' position.
+I just kept everything as they were, i turned on 476nm and record the data to anew file.
+
+  4) I ran out of PCD. Therefore i prepared this sample with a fresh PCD from -80 C.
+  
+  5) This sample is the same sample as 010. I didn't change objective lens' position.
+I just kept everything as they were, i turned on 476nm and record the data to anew file.
+
+  6) I forgot to turn on 476nm at the beginning. I turned it on after 7-8 mins. Then i 
+recorded the data to same file (011).

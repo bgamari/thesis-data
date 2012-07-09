@@ -1,0 +1,106 @@
+2012-03-09
+
+FRET on RNA 16mer Forward Attachment in Diffusing Droplets 
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+SAMPLE : RNA in buffer + PCD/PCA + Trolox mixture before droplet prep
+DENSE : Original emulsion right after sonication. Content is 200uL, 10^-3 (v/v) RainDance in FC40 + 5uL RNA sample
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 + "PCD/PCA + Trolox + MV" -> As described below
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+ALEX20: 50usec alternation time, 20uW 514nm and 10uW 647nm
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX20: Only 20uW 514nm
+
+Fully Closed Iris (FCI): The Smallest beam diameter in collimated region so Under-filling Objective Lens
+Fully Opened Iris (FOI): The Largest beam diameter in collimated region so Critically-filling Objective Lens
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM old TMR with 30uW 514nm . Counts : D/A ~ 90k/12k per sec
+
+Always 30 tics up into solution
+Always dissolve CO2 in MIX oil before adding droplets from DENSE
+Always add 2uL PCD (150x), 5uL PCA (40x), 1uL Trolox (100x), 1uL Methyl Viologen (MV) (100x) into 100L buffer first. 
+Then add RNA sample for dilution into this solution. This is again before DENSE prep.
+
+run_000:
+-------------------------------------------------
+  1) 50nM FRNA DA
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 5uW 476nm 
+  5) Data duration is around 67 minutes
+  6) Total counts in D/A is around 315k/695k
+  7) Please see NOTE3.
+
+run_001:
+-------------------------------------------------
+  1) 50nM FRNA D
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 5uW 476nm 
+  5) Data duration is around 67 minutes
+  6) Total counts in D/A is around 289k/787k
+  7) Please see NOTE3.
+
+run_002:
+-------------------------------------------------
+  1) 50nM FRNA DA
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 65 minutes
+  6) Total counts in D/A is around 286k/505k
+
+run_003:
+-------------------------------------------------
+  1) 50nM FRNA D
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 68 minutes
+  6) Total counts in D/A is around 315k/623k
+
+run_004:
+-------------------------------------------------
+  1) Buffer
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20
+  5) Data duration is around 30 minutes
+  6) Total counts in D/A is around 116k/236k
+
+run_005:
+-------------------------------------------------
+  1) Buffer
+  2) FOI
+  3) MIX in FC770
+  4) Non-ALEX20 + 5uW 476nm 
+  5) Data duration is around 42 minutes
+  6) Total counts in D/A is around 163k/358k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) RNA samples are from yesterday's 1uM samples. I kept them in ice.
+
+  2) I am intended to check this Back-Isomerization mechanism today. Previously
+on 2012-03-08 data, i observed that surfactant fluoresces by the application of
+488nm light. On the other hand, it was fairly quite for 476nm. Therefore i decided
+to apply 476nm for triggering back-isomerization. Having said that, it was also very
+surprising to see very long Stokes shift in the surfactant fluorescence. More
+explicitly, surfactant absorbes 488nm and emits around 676nm (peak emission wavelength
+of Cy5). This suggests that surfactant (RainDance) most probably have a cyclic structure
+in its hydrophobic head, also tells the possibility of having at least one aromatic ring
+in the same part of the molecule.
+ 
+  3) Here 476nm line is supposed to be slightly defocused because of chromatic aberration
+of the objective lens.

@@ -1,0 +1,202 @@
+Burst FRET Experiment on RNA 16mer Forward Attachment in Diffusing Droplets 
+-----------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+RNA 16mer : Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+RNA 16mer Donor Only: Double strand Only Donor labeled (Cy3) RNA 16mer
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 195k/24k per sec
+Always ALEX with 50us alternation time
+Always 10uW 514nm and 5uW 647nm 
+Always 30 tics up into solution
+Always 10% Glycerol in buffer solution
+
+run_000:
+-------------------------------------------------
+  1) Buffer, See NOTE1
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 57k/60k
+
+run_001:
+-------------------------------------------------
+  1) 100nM RNA 16mer
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 77k/100k
+
+run_002:
+-------------------------------------------------
+  1) 50nM RNA 16mer
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 75k/100k
+
+run_003:
+-------------------------------------------------
+  1) 20nM RNA 16mer
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 62k/71k
+
+run_004:
+-------------------------------------------------
+  1) 10nM RNA 16mer
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 66k/73k
+
+run_005:
+-------------------------------------------------
+  1) 5nM Ha's RNA 16mer
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 65k/70k
+
+run_006:
+-------------------------------------------------
+  1) Buffer, See NOTE1
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 58k/60k
+
+run_007:
+-------------------------------------------------
+  1) 100nM RNA 16mer
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 87k/128k
+
+run_008:
+-------------------------------------------------
+  1) 50nM RNA 16mer
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 74k/90k
+
+run_009:
+-------------------------------------------------
+  1) 20nM RNA 16mer
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 34 minutes
+  4) Total counts in D/A is around 100k/115k
+
+run_010:
+-------------------------------------------------
+  1) 10nM RNA 16mer
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 24 minutes
+  4) Total counts in D/A is around 67k/71k
+
+run_011:
+-------------------------------------------------
+  1) 5nM Ha's RNA 16mer
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 61k/67k
+
+run_012:
+-------------------------------------------------
+  1) 100nM RNA 16mer Donor Only
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 65k/63k
+
+run_013:
+-------------------------------------------------
+  1) 100nM RNA 16mer Donor Only, See NOTE3
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 68k/65k
+
+run_014:
+-------------------------------------------------
+  1) 50nM RNA 16mer Donor Only
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 25 minutes
+  4) Total counts in D/A is around 74k/70k
+
+run_015:
+-------------------------------------------------
+  1) 20nM RNA 16mer Donor Only
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 63k/62k
+
+run_016:
+-------------------------------------------------
+  1) 10nM RNA 16mer Donor Only
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 60k/62k
+
+run_017:
+-------------------------------------------------
+  1) 5nM Ha's RNA 16mer Donor Only
+  2) MIX in FC770, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 60k/62k
+  5) A picture from sample can be found in data 
+folder with file name "density_size_017.ppm".
+
+run_018:
+-------------------------------------------------
+  1) 100nM RNA 16mer Donor Only
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 78k/67k
+
+run_019:
+-------------------------------------------------
+  1) 50nM RNA 16mer Donor Only
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 69k/63k
+
+run_020:
+-------------------------------------------------
+  1) 20nM RNA 16mer Donor Only
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 25 minutes
+  4) Total counts in D/A is around 69k/70k
+
+run_021:
+-------------------------------------------------
+  1) 10nM RNA 16mer Donor Only
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 62k/61k
+
+run_022:
+-------------------------------------------------
+  1) 5nM Ha's RNA 16mer Donor Only
+  2) MIX in FC40, See NOTE2
+  3) Data duration is around 24 minutes
+  4) Total counts in D/A is around 67k/67k
+
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Buffer consists of 20mM pH 7.8 Hepes + 10% Glycerol in DEPC water + 50mM NaCl + 5mM MgCl2
+
+  2) DENSE droplet solution prepared in FC40. MIX prepared as diluting DENSE 1:4 ratio
+either in FC770 or FC40 as reported in ruyn specs.
+
+  3) Because I had less counts than i expected, i decided to repeat run_012. I used same
+DENSE and i prepared a new MIX. I took the sample from this new MIX.
+
+  4) Interestingly singly labeled RNA was not as bright as i was expecting. Only in relatively
+higher concentrations i got some clear increase in total Donor counts.
+
+  5) As it can be seen in picture from run_017, i have clearly smaller size droplets. Roughly
+speaking, their radius is probably atleast 2 times smaller than the ones we were tracking.
+Considering we decided that we reached the single molecule concentration in tracking by
+using 10nM concentration, i believe i should start to see single molecule FRET around 20mM
+or higher concentration. In fact, 2 times smaller droplet radius makes the single molecule
+concentration 2^3=8 times larger. I think is a very important point in those experiments.

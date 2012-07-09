@@ -1,0 +1,70 @@
+FRET Experiment on RNA forward 16mer in freely diffusing droplets
+-----------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, see the notes end of the document
+
+For prep of all samples, See FRET NOTEBOOK 3 (PEKER) pages 9 to 11
+Fresh PCA and Trolox used, for preps, See FRET NOTEBOOK 3 (PEKER) page 1
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 12-14 uW 514nm . Counts : D/A ~ 170k/20k per sec
+
+run_000:
+-------------------------------------------------
+  1) 100nM RNA forward 16 mer in freely diffusing droplets
+  2) 20 ticks up into solution
+  3) Only 514nm excitation 30 uW
+  4) Data duration is around 75 mins
+  5) Total counts in Donor is around 550k
+  6) PLEASE see the NOTE 1
+
+run_001:
+-------------------------------------------------
+  1) On same sample in run_000
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Only 514nm excitation 50 uW
+  4) Data duration is around 30 mins
+  5) Total counts in D/A is around 280k/200k
+  6) PLEASE see the NOTE 1
+
+run_002:
+-------------------------------------------------
+  1) From the dilution of same DENSE droplet solution
+  2) 20 ticks up into solution
+  3) Only 514nm excitation 50 uW
+  4) Data duration is around 75 mins
+  5) Total counts in D/A is around 870k/590k
+
+run_003:
+-------------------------------------------------
+  1) On same sample in run_002
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Only 514nm excitation 50 uW
+  4) Data duration is around 75 mins
+  5) Total counts in D/A is around 830k/527k
+
+run_004:
+-------------------------------------------------
+  1) Fresh DENSE sample.
+  2) 200nM RNA forward 16 mer in freely diffusing droplets
+  3) 20 ticks up into solution
+  4) Only 514nm excitation 50 uW
+  5) Data duration is around 65 mins
+  6) Total counts in D/A is around 760k/520k
+
+run_005:
+-------------------------------------------------
+  1) On same sample in run_004
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Only 514nm excitation 50 uW
+  4) Data duration is around 70 mins
+  5) Total counts in D/A is around 670k/480k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) I asked Ben to move up the stage some amount after 40-45 mins, because we knew that
+droplets will migrate up. He did it but apparently he didn't dump the records into a new file.
+In fact, after he changed the position of sample, he didn't write down the time and the 
+new position. Therefore i decided to take this data again in run_002 and run_003.
+  2) As a common property for all samples, most of the droplets produced high Donor bursts.
+On the other hand, whenever a burst appears in Acceptor channel without a burst in Donor channel
+(this is by eye from live plot of bins), it was really distinct and easily identifiable.

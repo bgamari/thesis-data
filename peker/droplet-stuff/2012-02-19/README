@@ -1,0 +1,149 @@
+2012-02-19
+
+FRET on RNA 16mer Forward and Reverse Attachments in Diffusing Droplets 
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+SAMPLE : RNA in buffer + PCD/PCA + Trolox mixture before droplet prep
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 + "PCD/PCA + Trolox + MV" -> As described below
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+ALEX20: 50usec alternation time, 20uW 514nm and 10uW 647nm
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX20: Only 20uW 514nm
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM old TMR with 50uW 514nm . Counts : D/A ~ 240k/32k per sec
+
+Always 30 tics up into solution
+Always dissolve CO2 in MIX oil before adding droplets from DENSE
+Always add 1uL PCD (150x), 5uL PCA (40x), 1uL Trolox (100x), 1uL Methyl Viologen (MV) (100x) into 100uL RNA sample before DENSE prep
+
+run_000:
+-------------------------------------------------
+  1) 100nM FRNA DA
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 67 minutes
+  5) Total counts in D/A is around 254k/394k
+  6) Please see NOTE1
+
+run_001:
+-------------------------------------------------
+  1) 50nM FRNA DA
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 70 minutes
+  5) Total counts in D/A is around 232k/444k
+  6) Please see NOTE1
+
+run_002:
+-------------------------------------------------
+  1) 20nM FRNA DA
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 60 minutes
+  5) Total counts in D/A is around 168k/337k
+  6) Please see NOTE1
+
+run_003:
+-------------------------------------------------
+  1) 100nM RRNA DA
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 67 minutes
+  5) Total counts in D/A is around 285k/465k
+  6) Please see NOTE1
+
+run_004:
+-------------------------------------------------
+  1) 50nM RRNA DA
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 66 minutes
+  5) Total counts in D/A is around 295k/408k
+  6) Please see NOTE1
+
+run_005:
+-------------------------------------------------
+  1) 20nM FRNA DA
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 70 minutes
+  5) Total counts in D/A is around 200k/385k
+  6) Please see NOTE1
+
+run_006:
+-------------------------------------------------
+  1) 100nM FRNA D
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 65 minutes
+  5) Total counts in D/A is around 195k/343k
+  6) Please see NOTE1
+
+run_007:
+-------------------------------------------------
+  1) 50nM FRNA D
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 70 minutes
+  5) Total counts in D/A is around 186k/344k
+  6) Please see NOTE1
+
+run_008:
+-------------------------------------------------
+  1) 20nM FRNA D
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 72 minutes
+  5) Total counts in D/A is around 190k/350k
+  6) Please see NOTE1
+
+run_009:
+-------------------------------------------------
+  1) 100nM RRNA D
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 65 minutes
+  5) Total counts in D/A is around 396k/375k
+
+run_010:
+-------------------------------------------------
+  1) 50nM RRNA D
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 50 minutes
+  5) Total counts in D/A is around 263k/313k
+
+run_011:
+-------------------------------------------------
+  1) 20nM RRNA D
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 67 minutes
+  5) Total counts in D/A is around 233k/358k
+
+run_012:
+-------------------------------------------------
+  1) Buffer
+  2) MIX in FC770
+  3) ALEX20
+  4) Data duration is around 46 minutes
+  5) Total counts in D/A is around 120k/228k, See NOTE1
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) 2-0.2uL pipette had an issue with its tip. Sometimes tip
+was locking to the pipette. I notced that in the prep of run_009.
+Therefore samples before run_009 may not have one or more 1uL 
+buffer components. Those are PCD, Trolox, and MV.

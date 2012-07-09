@@ -1,0 +1,107 @@
+FRET Experiment on Ha's OligoD and A (DNA) in Droplets without Tracking
+-----------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+For annealing of OligoD and Oligo A, See FRET NOTEBOOK 3 (PEKER) page 9
+For dilutions, See FRET NOTEBOOK 3 (PEKER) pages 95-97
+
+For droplet prep of all samples, See DROPLET NOTEBOOK (by Ryan D'Souza) page 135
+DENSE refers to original emulsion stack.
+MIX refers to 50uL of DENSE in 200uL FC40 (i.e. 5 times dilution)
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 210k/26k per sec
+Always ALEX with 50usec alternation time
+Always 10uW 514nm, 5uW 647nm
+Always 30 tics up from bottom surface 
+
+Always 5uL PCD (150x), 20uL PCA (40x), 4uL Trolox (100x)
+
+run_000:
+-------------------------------------------------
+  1) 100nM DNA 
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 115k/126k
+
+run_001:
+-------------------------------------------------
+  1) 50nM DNA 
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 100k/115k
+
+run_002:
+-------------------------------------------------
+  1) 20nM DNA 
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 69k/72k
+
+run_003:
+-------------------------------------------------
+  1) 10nM DNA 
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 66k/62k
+
+run_004:
+-------------------------------------------------
+  1) 5nM DNA 
+  2) Data duration around 22 mins
+  3) Total counts D/A ~ 66k/62k
+
+run_005:
+-------------------------------------------------
+  1) 1nM DNA 
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 54k/53k
+
+run_006:
+-------------------------------------------------
+  1) Buffer, i.e. everything except DNA 
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 56k/52k
+  4) Please see NOTE 1
+
+run_007:
+-------------------------------------------------
+  1) 100nM Donor Only (OligoD)
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 117k/60k
+
+run_008:
+-------------------------------------------------
+  1) 50nM Donor Only (OligoD)
+  2) Data duration around 21 mins
+  3) Total counts D/A ~ 110k/63k
+
+run_009:
+-------------------------------------------------
+  1) 20nM Donor Only (OligoD)
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 66k/54k
+
+run_010:
+-------------------------------------------------
+  1) 10nM Donor Only (OligoD)
+  2) Data duration around 22 mins
+  3) Total counts D/A ~ 66k/58k
+
+run_011:
+-------------------------------------------------
+  1) 5nM Donor Only (OligoD)
+  2) Data duration around 23 mins
+  3) Total counts D/A ~ 67k/62k
+
+run_012:
+-------------------------------------------------
+  1) 1nM Donor Only (OligoD)
+  2) Data duration around 20 mins
+  3) Total counts D/A ~ 58k/53k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Before taking this data i took a picture from the sample
+for understanding the density of droplets in the solution. This file
+can be found in same place with data files. File name is;
+"example_density_buffer.ppm"
+
+  2) AOTF Sequencer messed up data has wrong alternation sequence!!!
+

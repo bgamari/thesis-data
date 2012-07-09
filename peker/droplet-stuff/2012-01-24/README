@@ -1,0 +1,152 @@
+FRET on RNA 16mer Forward Attachment in Diffusing Droplets with The Addition of CO2 into Continuous Phase Experiment
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+SAMPLE : RNA in buffer + PCD/PCA + Trolox mixture before droplet prep
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+RNA 16mer (RNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+RNA 16mer Donor Only (RNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 180k/21k per sec
+Always ALEX with 50us alternation time
+Always 30 tics up into solution
+Always 10% Glycerol in buffer solution
+Always dissolve CO2 in MIX oil before adding droplets from DENSE
+Always add 5uL PCD (150x), 20uL PCA (40x), 4uL Trolox (100x) into 100uL RNA sample before DENSE prep
+
+run_000:
+-------------------------------------------------
+  1) 50nM RNA DA
+  2) MIX in FC40
+  3) 10uW 514nm and 5uW 647nm 
+  4) Data duration is around 60 minutes
+  5) Total counts in D/A is around 190k/250k
+
+run_001:
+-------------------------------------------------
+  1) 50nM RNA DA
+  2) From same SAMPLE of run_000, new DENSE 
+  3) MIX in FC770
+  4) 10uW 514nm and 5uW 647nm 
+  5) Data duration is around 61 minutes
+  6) Total counts in D/A is around 215k/270k
+
+run_002:
+-------------------------------------------------
+  1) 50nM RNA DA
+  2) new SAMPLE
+  3) MIX in FC40
+  4) 20uW 514nm and 10uW 647nm 
+  5) Data duration is around 60 minutes
+  6) Total counts in D/A is around 227k/297k
+
+run_003:
+-------------------------------------------------
+  1) 50nM RNA DA
+  2) From same SAMPLE of run_002, new DENSE 
+  3) MIX in FC770
+  4) 20uW 514nm and 10uW 647nm 
+  5) Data duration is around 60 minutes
+  6) Total counts in D/A is around 237k/419k
+
+run_004:
+-------------------------------------------------
+  1) 50nM RNA D
+  2) MIX in FC40
+  3) 20uW 514nm and 10uW 647nm 
+  4) Data duration is around 62 minutes
+  5) Total counts in D/A is around 222k/222k, See NOTE1
+
+run_005:
+-------------------------------------------------
+  1) 50nM RNA D
+  2) From same SAMPLE of run_004, new DENSE 
+  3) MIX in FC40
+  4) 20uW 514nm and 10uW 647nm 
+  5) Data duration is around 60 minutes
+  6) Total counts in D/A is around 240k/213k, See NOTE1
+
+run_006:
+-------------------------------------------------
+  1) 50nM RNA D
+  2) From same DENSE of run_005
+  3) MIX in FC770
+  4) 20uW 514nm and 10uW 647nm 
+  5) Data duration is around 63 minutes
+  6) Total counts in D/A is around 245k/229k, See NOTE1
+
+run_007:
+-------------------------------------------------
+  1) 50nM RNA D
+  2) new SAMPLE
+  2) MIX in FC40
+  3) 10uW 514nm and 5uW 647nm 
+  4) Data duration is around 65 minutes
+  5) Total counts in D/A is around 188k/191k, See NOTE1
+
+run_008:
+-------------------------------------------------
+  1) 50nM RNA D
+  2) From same SAMPLE of run_007, new DENSE 
+  2) MIX in FC770
+  3) 10uW 514nm and 5uW 647nm 
+  4) Data duration is around 60 minutes
+  5) Total counts in D/A is around 182k/176k, See NOTE1
+
+run_009:
+-------------------------------------------------
+  1) Buffer, See NOTE2
+  2) MIX in FC40
+  3) 10uW 514nm and 5uW 647nm 
+  4) Data duration is around 60 minutes
+  5) Total counts in D/A is around 169k/175k, See NOTE1
+
+run_010:
+-------------------------------------------------
+  1) Buffer, See NOTE2
+  2) From same DENSE of run_009
+  2) MIX in FC770
+  3) 10uW 514nm and 5uW 647nm 
+  4) Data duration is around 61 minutes
+  5) Total counts in D/A is around 175k/179k, See NOTE1
+
+run_011:
+-------------------------------------------------
+  1) Buffer, See NOTE2
+  2) new SAMPLE
+  2) MIX in FC40
+  3) 20uW 514nm and 10uW 647nm 
+  4) Data duration is around 62 minutes
+  5) Total counts in D/A is around 193k/216k, See NOTE1
+
+run_012:
+-------------------------------------------------
+  1) Buffer, See NOTE2
+  2) From same DENSE of run_011
+  2) MIX in FC770
+  3) 20uW 514nm and 10uW 647nm 
+  4) Data duration is around 61 minutes
+  5) Total counts in D/A is around 193k/209k, See NOTE1
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Somehow Donor only samples had less counts than expected. This reminds me the 
+possibility of a stability issue of Cy3. It has been reported that Trolox works well
+on Cy5 but its effect is not as pronounced in Cy3 case. It has also been reported in 
+another paper that in the absence of O2 Trolox can not dissociate to its oxidizing
+form. Therefore i think because of lack of oxidizing form of Trolox Cy3 is not stable 
+enough. On the other hand this can be an indicator of RNA itself is an oxidizing agent
+in the system in the following way. From MD simulations Cy5 is supposed to be base
+stacked almost all time. If only Trolox as reducing agent works RNA should be oxidizing
+agent for Cy5. This is the observed case i believe not in this specific experiment but
+in all other surface experiments too. In parallel, from MD, Cy3 is not like Cy5 and it 
+has other possible configurations at the end of RNA, and so RNA may not be able to 
+oxidize Cy3 as efficiently as Cy5.   
+
+  2) Buffer in this experiment consists of 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2
+

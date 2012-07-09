@@ -1,0 +1,146 @@
+FCS Experiment on Diffusing Droplets, Also Monitoring the Background Reduction from RainDance Surfactant
+-----------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check (after run_000 and run_001) with 10 nM Cy3 labelled Ha's OligoD with 20uW 514nm . Counts : D/A ~ 17k/2k per sec
+Power is always 20uW 514 only
+
+run_000:
+-------------------------------------------------
+  1) Didn't check alignment
+  2) Plain water droplets
+  3) DENSE prepared as 5uL water is added into 10-3 (v/v) RainDance+FC40 solution
+  4) Shaked 20 secs, sonicated 10 mins
+  5) Sample taken from DENSE 
+  6) 30 ticks up into solution from bottom surface
+  7) Data duration is around 15 mins
+  8) Forgot to write down total counts
+
+run_001:
+-------------------------------------------------
+  1) Didn't check alignment
+  2) Same sample as run_000
+  3) For density of droplets see picture run_000_1density.ppm
+  4) 30 ticks down into solution from top surface
+  5) Data duration is around 28 mins
+  6) Forgot to write down total counts
+  7) PLEASE see the NOTE 1
+
+run_002:
+-------------------------------------------------
+  1) Alignment checked as described at top of the document
+  2) New sample from same DENSE solution for run_000 and run_001
+  3) Density is very similar to run_000 and run_001 by eye
+  4) 30 ticks up into solution from bottom surface
+  5) Data duration is around 21 mins
+  6) Total counts in D/A is around 150k/125k
+  7) PLEASE see the NOTE 1
+
+run_003:
+-------------------------------------------------
+  1) 10nM OligoD droplets 
+  2) Same DENSE preparation as previous runs
+  3) Sample taken from DENSE 
+  4) 30 ticks up into solution from bottom surface
+  5) Data duration is around 15 mins
+  6) Total counts in D/A is around 85k/58k
+  7) PLEASE see the NOTE 2
+
+run_004:
+-------------------------------------------------
+  1) Same sample as run_003 
+  2) For density of droplets see picture run_004density.ppm
+  3) 30 ticks down into solution from top surface
+  4) Data duration is around 16 mins
+  5) Total counts in D/A is around 97k/65k
+  6) PLEASE see the NOTE 2
+
+run_005:
+-------------------------------------------------
+  1) From MIX sample of DENSE sample for run_003 and run_004
+  2) MIX prepared as described at top of the document using FC70 as oil
+  3) For density of droplets see picture run_005density.ppm
+  4) 30 ticks up into solution from bottom surface
+  5) Data duration is around 37 mins
+  6) Total counts in D/A is around 137k/135k
+  7) PLEASE see the NOTE 3
+
+run_006:
+-------------------------------------------------
+  1) 10nM OligoD droplets including PCD/PCA and Trolox
+  2) PLEASE see the NOTE 4 for amounts of PCD/PCA and Trolox
+  3) Same DENSE preparation as in run_000
+  4) Sample taken from DENSE
+  5) For density of droplets see picture run_006density.ppm 
+  6) 30 ticks up into solution from bottom surface
+  7) Data duration is around 26 mins
+  8) Total counts in D/A is around 130k/100k
+  9) PLEASE see the NOTE 5
+
+run_007:
+-------------------------------------------------
+  1) From MIX sample of DENSE sample for run_006
+  2) MIX prepared as described at top of the document using FC70 as oil
+  3) For density of droplets see picture run_007density.ppm 
+  4) 30 ticks up into solution from bottom surface
+  5) Data duration is around 43 mins
+  6) Total counts in D/A is around 155k/157k
+  7) PLEASE see the NOTE 5
+
+run_008:
+-------------------------------------------------
+  1) 100nM OligoD droplets including PCD/PCA and Trolox
+  2) PLEASE see the NOTE 4 for amounts of PCD/PCA and Trolox
+  3) DENSE prepared as 10uL OligoD+PCD/PCA+Trolox is added into 10-3 (v/v) RainDance+FC40 solution
+  4) Shake and sonication times are same as run_000
+  4) Sample taken from DENSE
+  5) For density of droplets see picture run_008density.ppm 
+  6) 30 ticks up into solution from bottom surface
+  7) Data duration is around 21 mins
+  8) Total counts in D/A is around 770k/147k
+  9) PLEASE see the NOTE 6
+
+run_009:
+-------------------------------------------------
+  1) From MIX sample of DENSE sample for run_008
+  2) MIX prepared as described at top of the document using FC40 as oil
+  3) For density of droplets see picture run_009density.ppm 
+  4) 30 ticks up into solution from bottom surface
+  5) Data duration is around 21 mins
+  6) Total counts in D/A is around 200k/88k
+  7) PLEASE see the NOTE 6 and NOTE 7
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) We use a very thin chambers in all experiments. We also use a water immersion objective.
+Therefore we can see the top surface of the sample chamber. 
+
+  2) From live plot of bin counts even in very crowded droplet samples we didn't see any significant
+burst. Although there was a slight increase because of fluorescence of RainDance, it just appared as
+a tiny increase in background counts. This behavior can be seen clearly in the comparison of signal
+from run_004 with signals from previous runs.
+
+  3) We previously used FC70 as a viscous bath for slowing down the droplets. Again in previous 
+experiments we were making droplets in FC770 which is 4-5 times less viscous than FC40 and almost 2 
+times less viscous than Water. In current experiments we made our droplets in FC40. Therefore, when
+we put them into FC70 bath by MIX they sort of hanged in the solution without moving much. As a result
+all MIX runs (run_005, and run_007) gave us almost background signal.
+
+  4) Starting from 40X PCA, 150X PCD, and 100X Trolox all as described in FRET NOTEBOOK 3 (PEKER) page 1,
+we added them into OligoD solution as following. For 100uL OligoD solution, 5uL PCD, 10uL PCA, and 
+4uL Trolox. This info documented in page 72 of FRET NOTEBOOK 3 (PEKER).
+
+  5) This maybe just an eye issue but after the addition of PCD/PCA+Trolox droplets kind of shrinked. 
+In other words we kind of got some slightly smaller and denser emulsions.
+
+  6) Because we got a small signal in 10nM experiments, we decided to increase the concentration to 100nM.
+Also in run_009, to make diluted droplets in tightly hanged in solution we decided to use FC40 rather than 
+FC70 as bath.

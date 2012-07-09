@@ -1,0 +1,104 @@
+Burst FRET Experiment on Ha's Oligo D and A in Diffusing Droplets 
+-----------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 190k/23k per sec
+Always ALEX with 50us alternation time
+Always 10uW 514nm and 5uW 647nm 
+Always 30 tics up into solution
+Always 10% Glycerol in buffer solution
+
+run_000:
+-------------------------------------------------
+  1) Buffer, See NOTE1
+  2) MIX, See NOTE2
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 58k/60k
+
+run_001:
+-------------------------------------------------
+  1) 100nM Ha's DNA
+  2) MIX, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 120k/230k
+
+run_002:
+-------------------------------------------------
+  1) 50nM Ha's DNA
+  2) MIX, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 87k/161k
+
+run_003:
+-------------------------------------------------
+  1) 20nM Ha's DNA
+  2) MIX, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 76k/110k
+
+run_004:
+-------------------------------------------------
+  1) 10nM Ha's DNA
+  2) MIX, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 65k/73k
+
+run_005:
+-------------------------------------------------
+  1) 5nM Ha's DNA
+  2) MIX, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 68k/70k
+
+run_006:
+-------------------------------------------------
+  1) 100nM Ha's OligoD, See NOTE3
+  2) MIX, See NOTE2
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 120k/71k
+
+run_007:
+-------------------------------------------------
+  1) 50nM Ha's OligoD, See NOTE3
+  2) MIX, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 93k/65k
+
+run_008:
+-------------------------------------------------
+  1) 20nM Ha's OligoD, See NOTE3
+  2) MIX, See NOTE2
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 73k/64k
+
+run_009:
+-------------------------------------------------
+  1) 10nM Ha's OligoD, See NOTE3
+  2) MIX, See NOTE2
+  3) Data duration is around 24 minutes
+  4) Total counts in D/A is around 67k/67k
+
+run_010:
+-------------------------------------------------
+  1) 5nM Ha's OligoD, See NOTE3
+  2) MIX, See NOTE2
+  3) Data duration is around 24 minutes
+  4) Total counts in D/A is around 70k/68k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Buffer consists of 20mM pH 7.8 Hepes + 10% Glycerol in DEPC water + 50mM NaCl
+
+  2) DENSE droplet solution prepared in FC40. MIX prepared as diluting DENSE 1:4 ratio
+in FC770
+
+  3) Oligo D concentrations can be taken as somewhere between 80-90% of reported 
+concentration, because of pipetting and vaporization of sample in time.
