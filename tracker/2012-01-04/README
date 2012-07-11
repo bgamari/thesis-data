@@ -1,0 +1,108 @@
+2011-01-04
+
+== FRET on DNA in droplets ==
+Oligo A, D in droplets, slightly less than 10nM
+With PCA, PCD, Trolox 
+Refer to Peker's FRET notebook 3, pg. 91 for prep.
+Tracking
+IR laser running at 2.16W
+
+Power: Donor: 0.1uW (amp=122)
+
+001: On at t=6.5s
+     Slight acceptor response
+     Lost track at t=10s
+
+Power: Donor: 1uW (amp=255)
+
+002: 2um droplet?
+     On at t=9s
+     Much better acceptor response
+     Multiple molecules?
+     
+003: Empty
+
+004: Empty
+
+005: Empty
+
+006: Definitely something
+     Acceptor decayed within a couple seconds
+     Stopped feedback at t=62s
+
+007: Empty
+
+008: On at t=9s
+     Something but unclear when acceptor died
+
+009: on at t=8.5s
+     Signal in acceptor
+     Strange burst at t=25s
+     Bleach around t=40s?
+
+010: Donor only?
+
+011: Empty
+
+012: Empty
+
+013: On at t=12s
+     Sharp signal
+     Bleach at t=26s
+     Perhaps five bleaches?
+     Killed track at t=143s
+
+014: Probably empty
+
+015: Donor only?
+
+016: Lamp decay at t=5s
+     Exc. on at t=10s
+     Very promising
+     Perhaps three bleaches
+
+== Burst ==
+
+Lori suggested looking at bursts from diffusing droplets
+
+30 ticks into solution
+
+50us/50us ALEX
+Power: Donor: 10uW (amp=620)
+       Acceptor: 5uW (amp=160)
+
+017: Acquired for 15 minutes
+     Donor: 50k counts
+     Acceptor: 50k counts
+     Relatively few bursts
+
+Power: Donor: 20uW (amp=875)
+       Acceptor: 10uW (amp=225)
+
+018: Acquired for 15 minutes
+     Donor: 60k counts
+     Acceptor 57k counts
+
+Seems that we are looking almost exclusively at background
+
+== Buffer bursts ==
+
+Power: Donor: 20uW (amp=875)
+       Acceptor: 10uW (amp=225)
+
+019: More bursts than I would have expected
+     Surfactant micelles?
+     Acquired for 15 minutes
+     Donor: 50k counts
+     Acceptor: 53k counts
+
+== Oligo D bursts ==
+
+10nM Oligo D
+
+Power: D=20uW, A=10uW
+
+020: Acquired 16 min
+     Donor: 59k counts
+     Acceptor: 57k counts
+

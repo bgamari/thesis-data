@@ -1,0 +1,97 @@
+FRET Experiment on Ha's OligoD and A (DNA) in Droplets without Tracking
+-----------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+For annealing of OligoD and Oligo A, See FRET NOTEBOOK 3 (PEKER) page 9
+For dilutions, See FRET NOTEBOOK 3 (PEKER) pages 95-97
+
+For droplet prep of all samples, See FRET NOTEBOOK 3 (PEKER) page 98
+DENSE refers to original emulsion stack.
+MIX refers to 50uL of DENSE in 200uL FC40 (i.e. 5 times dilution)
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 190k/23k per sec
+Always 20% Glycerol in DEPC water used NOT just DEPC water
+Always ALEX with 50usec alternation time
+Always 10uW 514nm, 5uW 647nm
+Always 30 tics up from bottom surface 
+
+Always 5uL PCD (150x), 20uL PCA (40x), 4uL Trolox (100x)
+
+run_000:
+-------------------------------------------------
+  1) 100nM DNA 
+  2) From MIX  
+  3) Data duration around 20 mins
+  4) Total counts D/A ~ 65k/66k
+
+run_001:
+-------------------------------------------------
+  1) 100nM DNA 
+  2) From DENSE  
+  3) Data duration around 22 mins
+  4) Total counts D/A ~ 133k/98k
+
+run_002:
+-------------------------------------------------
+  1) 50nM DNA 
+  2) From MIX  
+  3) Data duration around 20 mins
+  4) Total counts D/A ~ 65k/68k
+
+run_003:
+-------------------------------------------------
+  1) 50nM DNA 
+  2) From DENSE  
+  3) Data duration around 20 mins
+  4) Total counts D/A ~ 142k/106k
+
+run_004:
+-------------------------------------------------
+  1) 20nM DNA 
+  2) From MIX  
+  3) Data duration around 22 mins
+  4) Total counts D/A ~ 74k/77k
+
+run_005:
+-------------------------------------------------
+  1) 20nM DNA 
+  2) From DENSE  
+  3) Data duration around 20 mins
+  4) Total counts D/A ~ 137k/106k
+
+run_006:
+-------------------------------------------------
+  1) 10nM DNA 
+  2) From MIX  
+  3) Data duration around 21 mins
+  4) Total counts D/A ~ 71k/65k
+
+run_007:
+-------------------------------------------------
+  1) 10nM DNA 
+  2) From DENSE  
+  3) Data duration around 21 mins
+  4) Total counts D/A ~ 93k/92k
+
+run_008:
+-------------------------------------------------
+  1) 5nM DNA 
+  2) From MIX  
+  3) Data duration around 20 mins
+  4) Total counts D/A ~ 60k/61k
+
+run_009:
+-------------------------------------------------
+  1) 5nM DNA 
+  2) From DENSE  
+  3) Data duration around 20 mins
+  4) Total counts D/A ~ 90k/92k
+
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Because of increase in viscosity of dispersed material
+,i.e. sample, i need to shake the eppendorf tube before i sonicate it.
+If i shake it less, i can make slightly larger droplets which can be 
+more suitable for tracking. 

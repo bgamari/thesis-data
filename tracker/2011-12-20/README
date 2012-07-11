@@ -1,0 +1,204 @@
+2011-12-20: Ben and Peker, Ha Oligo A and D
+
+
+== Sample #1 ==
+
+Looking at Ha's DNA, oligo A, oligo D in droplets
+FC-40 with Triton
+No Trolox, PCA, PCD due to misunderstanding
+See Peker's FRET notebook, pg. 33
+
+=== FRET, no ALEX ===
+
+Power: donor: 20uW
+
+001: 3um droplet?
+     Acceptor started at 200/10ms to settle at 10/10ms
+     Donor went from 
+     Settled at donor 250/s, acceptor 100/s
+    
+=== ALEX ===
+
+Power: donor: 10uW (amp=785)
+       acceptor: 5.5uW (amp=62)
+
+Using ALEX with : 50us, 50us
+
+002: Slightly larger than 1um droplet?
+     Nothing
+
+003: Started at 20/10ms donor, 5/10ms acceptor
+     Donor only with crosstalk?
+     No appreciable bleaching?
+     Lost track at t=87s, no idea why
+     Signal increased to 100/10ms right after loss
+
+004: Donor: 90/10ms
+     Acceptor decayed from 80/10ms down to 10/10ms within 20s
+     Slow decay of donor to
+     Perhaps a bleach event in donor at t=75s
+     Another around t=120s
+
+005: 1um droplet
+     Donor: 20/10ms
+     Acceptor: 50/s
+     Acceptor decayed, donor rose
+     Acceptor died off, looking at donor only
+     Fluctuations in donor intensity
+     Bleach around t=128s
+     Another around t=160s?
+     Stopped at t=210s
+
+006: donor: 100/10ms
+     acceptor 500/10ms
+     acceptor died within 15s, donor rises
+     donor again slowly decays
+     Stopped at t=120s
+
+=== FRET, no ALEX ===
+One more without ALEX
+
+007: acceptor: 140/s
+     donor 50/s
+     acceptor decayed within 12s, donor rose
+     Background counts by t=90s
+
+=== For fun ===
+
+Peker is taking a break and will prepare a new sample
+I'll take a few sets on my own for fun
+Let's try some long timescale variants on ALEX
+With ALEX: 10ms, 10ms
+
+008: Lamp decay
+     Turned on excitation at t~15s
+     Very fast acceptor decay
+     Forgot to close door
+
+009: The usual pattern
+     Killed track at t=188s
+
+Remeasured power
+        Donor: 10uW
+        Acceptor: 5uW
+
+== Sample 2 ==
+Another Oligo A, D sample
+This time with Trolox, PCD, PCA
+
+=== FRET, no ALEX ===
+010: ~3um droplet?
+     Didn't catch beginning counts
+     Substantially more intense than anything seen thusfar
+     Settles at similar count rate to previous empty droplets
+     Quite abrupt bleach near end?
+     Track still seems to be working
+
+011: Acceptor: 15/10ms
+     Donor: 7/10ms
+     Acceptor decays, donor remains steady
+     Waiting to reproduce abrupt bleach as seen in 010
+     Seems to smoothly decay down to background
+     Stopped track at t=256s
+     
+012: Acceptor: 30/10ms, decay by t=14s
+     Donor: 15/10ms
+     Stopped track at t=92s
+
+=== ALEX ===
+
+ALEX: 50us, 50us
+
+013: Didn't catch beginning counts
+     Acceptor decay slower
+     Lost tracking t=121s
+
+014: Acceptor: 325/10ms
+     Donor came up as usual
+     Lost track at t=15.5s
+
+015: Acceptor: 20/10ms
+     Donor came up as usual
+     at t=120: donor=120/s, aceptor=60/s
+     Let's try to bleach remaining
+     at t=138 increased amp=1000
+     Didn't see bleach but clearly there was a drop in donor intensity after amp was reduced back to 785
+
+=== ALEX with reduced power ===
+
+Clearly we see FRET but acceptor is too short lived
+Let's reduce power
+Power:
+        Donor: 1uW (amp=590)
+        Acceptor: 0.54uW (amp=20)
+
+016: Acceptor: 250/bin
+     Longer acceptor decay (18s)
+     Large fluctuations in donor intensity, reflected in acceptor
+     Lost track at t=95s
+
+017: Smallish droplet
+     No real signal but still above background
+     Killed track at t=62s
+
+018: No signal
+     Killed track at t=36s
+
+019: Acceptor: 8/10ms
+     Donor: 2/10ms
+     Everything gone before t=30s
+
+020: Very little fluorescence
+
+021: Light on at t=13s
+     Again little fluorescence
+     Try increasing power back to donor=10uW, acceptor=5uW
+     Incrased acceptor at t=58s
+     No change
+     donor at t=69s
+     Saw increase in donor
+     Nothing else interesting
+
+=== FRET, no ALEX, reduced power ===
+Go back to 1uW donor excitation
+No ALEX
+It's getting difficult to find large (>1um) droplets so we've been looking primarily at smaller specimens
+
+022: Acceptor: 11/10us
+     Decayed
+     Lost at t=27s, large increase in intensity near end
+     It seems that we are likely out of alignment
+
+023: Acceptor: 6/10us
+     Killed track
+
+024: Acceptor: 3/10us
+     Tried various twiddling of Z setpoint
+     No effect at all, clearly I need to look at the setpoint code
+
+Very little signal
+Looks like we need to look at the alignment
+
+== Buffer droplet sample ==
+
+Water, trolox, pca, pcd at standard concentration in FC-40
+Hoping to verify lack of fluorescence by buffer
+
+Same power as before (10uW, 1uW)
+No ALEX
+
+025: Sent to APDs at t=10s
+     Excitation light at t=14s
+     Pretty much no added background
+     Lost feedback at t=238s
+
+026: Not tracking droplet
+     Looking at oil alone
+     
+027: Not tracking droplet
+     Looking at oil along
+     IR off
+
+Today's preparation
+Peker's FRET notebook 3, pp. 33-35
+

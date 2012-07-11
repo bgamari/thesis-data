@@ -1,0 +1,115 @@
+FRET Experiment on Ha's OligoD and A (HaDNA) in freely diffusing droplets
+-----------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+For prep of all samples, See FRET NOTEBOOK 3 (PEKER) pages 23 to 25
+PCA and Trolox are 2 days old, See FRET NOTEBOOK 3 (PEKER) page 9 
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 20uW 514nm . Counts : D/A ~ 270k/33.5k per sec
+Power is always 20uW 514 only
+
+run_000:
+-------------------------------------------------
+  1) 100nM HaDNA in freely diffusing droplets
+  2) 20 ticks up into solution
+  3) No PCA/PCD, no Trolox
+  4) Data duration is around 30 mins
+  5) Forgot to write down total counts
+  6) PLEASE see the NOTE 1
+
+run_001:
+-------------------------------------------------
+  1) On same sample in run_000
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Data duration is around 33 mins
+  4) Total counts in D/A is around 640k/215k
+  5) PLEASE see the NOTE 2
+
+run_002:
+-------------------------------------------------
+  1) New DENSE droplet sample, PLEASE see the NOTE 3
+  2) 20 ticks up into solution
+  3) Data duration is around 30 mins
+  4) Total counts in D/A is around 585k/276k
+  5) PLEASE see the NOTE 4
+
+run_003:
+-------------------------------------------------
+  1) On same sample in run_002
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  3) Data duration is around 42 mins
+  4) Total counts in D/A is around 720k/310k
+  5) PLEASE see the NOTE 5
+
+run_004:
+-------------------------------------------------
+  1) New DENSE droplet sample, PLEASE see the NOTE 6
+  2) HaDNA droplets kept in same amount in solution, PLEASE see the NOTE 7
+  3) 20 ticks up into solution
+  4) Data duration is around 36 mins
+  5) Forgot to write down total Donor counts, Acceptor is around 300k
+  6) PLEASE see the NOTE 8
+
+run_005:
+-------------------------------------------------
+  1) On same sample in run_004
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  4) Data duration is around 35 mins
+  5) Total counts in D/A is around 600k/258k
+  6) PLEASE see the NOTE 5
+
+run_006:
+-------------------------------------------------
+  1) New MIX droplet sample, PLEASE see the NOTE 9
+  2) 20 ticks up into solution
+  4) Data duration is around 30 mins
+  5) Total counts in D/A is around 2.3m/775k
+  6) PLEASE see the NOTE 10
+
+run_007:
+-------------------------------------------------
+  1) On same sample in run_006
+  2) Considering the migration of droplets up in time, 50 ticks up into solution
+  4) Data duration is around 32 mins
+  5) Total counts in D/A is around 2.2m/725k
+
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Data looks similar to last RNA data in freely diffusing droplets. More specifically
+,by eye, frequancy of Donor bursts and Acceptor bursts are similar. Again very high counts
+per 10msec (around 400 sometimes) in Donor channel. On the other hand, in same time intervals
+Acceptor could go up tp 150-200 in the absence of Donor bursts. By this i meant, those are 
+the bursts that we clearly don't expect them from Donor leakage by looking at live plot.
+
+  2) In this sample at least once i observed 400 photons per 10msec in Acceptor channel as a 
+burst without simultaneous Donor burst in live plot.
+
+  3) Droplets have 100nM HaDNA, PCD/PCA, and Trolox in them. For more details of preparation,
+See FRET NOTEBOOK 3 (PEKER) pages 24
+
+  4) A slight increase is observed in total Acceptor counts. In parallel a slight decrese is
+observed in total Donor counts. Also at least one 500 per 10msec Acceptor burst is observed.
+Finally, seems like a slight increase in frequency of Acceptor bursts is observed
+
+  5) Somehow when i go up to 50 tics, there is almost always a slight decrease in total counts. I 
+don't understand the reason for this
+
+  6) Two kind of droplets. One has 100nM HaDNA+Trolox in them. The other has PCD/PCA in them. For 
+more details of preparation, See FRET NOTEBOOK 3 (PEKER) pages 24
+
+  7) In the MIX droplet solution, which is the dilution in FC70, 10uL HaDNA droplets (as always)
+and 20uL PCD/PCA droplets, For more details of preparation, See FRET NOTEBOOK 3 (PEKER) pages 24,26
+
+  8) No clear increase in background signal, but somehow slight in crease in Acceptor bursts sizes.
+This comment is relative to data run_002
+
+  9) 10uL HaDNA+Trolox and 50uL PCD/PCA DENSE droplet solutions added to previous MIX (dilution in FC70) 
+solution. This was the droplet solution for run_004 and run_005. Here it supposed to be more 
+concentrated by means of total HaDNA droplets, as well as non-emitting PCD/PCA droplets even more
+
+  10) Especially in run_006 and run_007 there are some droplets with similar emission profiles as
+ Lori's trapped droplets. I mean an Acceptor burst followed by strong Donor bursts while droplet 
+is presumably in observation volume. I can even further tell those kind of droplet appeared in run_004
+and run_005

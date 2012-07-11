@@ -1,0 +1,50 @@
+Doing FRET experiments in trapped droplets
+10nM doubly labelled DNA in HEPES buffer, pH=7.8
+
+Having great difficulty tracking
+Signal appears much weaker than usual
+Took out first IR ND=2 filter
+
+001: Saw several series of brief bursts in both channels
+     Up to 200 counts/10ms.
+     FRET?
+     Lost track at t=169s
+     Several spurious events after lost track
+
+002: Again, sparse bursts
+
+003: No counts until t=580s
+     Sporatic bursts in acceptor
+     Lost at t=612
+
+004: Brightfield tail at beginning
+     A few scattered hits
+     Lost at t=120s
+     Still see consistent bursts
+
+005: Much more frequent bursts than previous droplets
+     Lost track at t=52s
+
+006: Lost immediately on switchover
+
+007: Small
+     Probably nothing in there
+     Lost track after 70s
+
+008: High counts
+     donor: 280/s, acceptor: 100/s
+     Lost at t=62s
+     Interesting, acceptor counts rose after loss of track
+
+009: donor: 120/s, acceptor: 70/s
+     a few bursts
+     Lost at t=62s
+
+Switching to new sample, this time with PCA and PCD for O2 scavaging
+
+010: Very few events until track last at t=90s
+
+011: Large drop
+
+Really just don't have enough sensitivity in Z
+Electronics work necessary

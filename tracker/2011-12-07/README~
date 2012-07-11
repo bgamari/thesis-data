@@ -1,0 +1,176 @@
+Spent all day working on new amplifier
+  - Implemented filters correctly
+  - Added offset compensation to sum signals, allowing for increased gain
+
+Results look quite promising
+
+001: 500nm fluorescent bead in 75% glycerine
+     Started recording timetags several minutes into track
+     Very robust track, largest singular value = 0.096
+     Looking at position trace one can see oscillations
+     Feedback too strong?
+     See definite photobleaching over time
+     From 13k/s to 9k/s over 15 minutes
+     Lost at timetag t=712s, track t~1000s
+     Signal immediately dropped to 7k/s but persisted at this intensity for quite a while
+     Persisted even after moving stage
+     I guess this is background
+     Damn, forgot to save tracker trajectory
+
+Done with calibration and testing
+Taking data on Ha's oligo A and D, 100nM with PCD, PCA, and trolox
+
+002: Yesterday's DNA sample
+     Very large droplet
+     200/s donor, 150/s acceptor
+     Lost at t=104s
+
+003: Small droplet. Nothing present
+
+004: Slightly less than 1um droplet
+     Background counts except for a spurious burst in donor channel
+
+005: Similar sized droplet
+     Falloff in acceptor after during first second
+     Peker thinks that this couldn't have been lamp
+
+006: Spurious burst in acceptor just as we declared it empty
+     Lost track after 45s
+
+007: Large yet empty?
+     Nope, burst at t=25s in acceptor
+
+008: Something in here
+     Started with AOTF Amp=300
+     Changed to 500 at t~40s
+     Changed to 1000 at t=76s
+     Definitely saw several seconds of events followed by "bleaching"
+     150+ counts/10ms
+     Mostly donor
+     Several shorter bursts after this.
+     Large burst at t=223s
+     Another at t=239, 245, etc.
+     t=283s, >250/10ms
+     Many more bursts
+     Lost track at t=580s
+     Still more events
+
+Modulating laser with AOTF on/off, Amp=1000
+Tracker feedback rate=350Hz
+
+009: Turned on laser at t=13s
+     Immediately saw events
+     Things died down around t=30
+     More events
+     Lost track at t=75s
+
+010: Turned on laser at t=15s
+     Immediate increase in baseline intensity to 300/s donor
+     Many events, some with >300/10ms
+     Lost track at t~200s, didn't notice until t~500s
+
+011: Turned on laser at t=10
+     Strong signal for a few seconds, then more or less died
+     Again lost track (t=130s) without our noticing
+
+012: Turned on laser at t=14s
+     Again strong signal decaying to nothing
+     Lost at t=28s
+
+013: Turn on again obvious
+     Lost at t=40s
+
+014: Turn on at t=9s
+     Relatively little change
+     Lost at t=119s, large burst
+
+015: Large signal at turn-on
+     Usual steady stream of bursts
+     Lost at t=448s
+
+016: Again, large signal at turn-on, quickly decaying back to near background
+     Let's try reducing power
+     Amp=700 at t=118s
+     Noticeable reduction in background
+
+Enough looking at bursts
+Let's look at the turn-on period
+Start with power dependence
+
+017: Start with amp=200
+     Turned on at t=15?
+     Turned off at t=38?
+     Amp=500
+     Turned on a t=60
+     There's likely nothing in here
+
+018: Start with amp=400
+     Turnon at t=9s
+     No change
+     At t=31 set amp=1000
+     Large response, decayed
+     Bursts
+     Given the timing and magnitude of the response, it seems that high amplitudes affect response in nonlinear way?
+     Killed laser at t=200s
+     Turned on again at t=210s
+     turned off at t=220s
+     turned on with amp=800 at t=230s
+     Lost at t=310s
+
+
+019: Start at amp=700
+     Laser on at t=15s
+     Perhaps a longer decay than with higher powers?
+     Bursts
+     Turned off laser at t=100s
+     Turned on at t=120s
+     No change? WTF
+     Bursts
+     Lost track at t=293s
+
+Still no idea what is happening during turn-on
+Let's try modulating laser during turn-on
+We turn on laser, see beginning of decay, turn off
+Turn on again after some time
+One of three things could happen:
+  a) Recovers: Intensity returns to value it started decay at (unlikely)
+  b) Continues: Intensity picks up at the value it decayed to
+  c) Nothing: It has died despite laser being off
+
+Use timetag_seq to modulate laser: 100ms on, 100ms off
+amp = 700
+
+020: Laser on at t=7
+     See clear modulation
+     Decays gradually
+     See bursts and background modulated
+     Stopped at t=135s
+
+021: amp=500, modulated
+     Laser on at t=12s, no change
+     Change to amp=700 at t=33s
+     now we see signal, modulated as expected
+     Stopped at t=135s
+
+Strange, amp=500 we see nothing, amp=700 we see signal
+Spot clearly visible on optics at amp=500
+AOTF freq=70.950
+Despite this, power meter claims,
+
+        amp     power
+        500     0.1uW == 0
+        600     1.1uW
+        650     2.3uW
+        700     3.6uW
+        750     6.2uW
+        800     8.5uW
+        850     11.9uW
+        900     15uW
+        950     17.9uW
+        1000    22uW
+
+Output at laser aperture measured to be 370uW at fiber coupling with amp=950
+Fiber coupling efficiency = 5%, must be misaligned
+I guess that explains it
+
+

@@ -1,0 +1,109 @@
+2012-01-03
+
+DNA Oligo A, D
+50nM
+Droplets with minimal 
+
+Power: Amp=500 (~10uW)
+
+001: Saw acceptor decay
+
+Can't find any more in this sample, new sample
+
+002: Large droplet
+     Long decay
+     Far more than one molecule
+     Very slow donor decay
+     Stopped track around t=120s
+
+003: Another larger droplet but smaller than 002
+     Faster acceptor and donor decay?
+     t=87s, t=99s: bleach events
+     Very nice series of bleaches
+     Final donor bleach at t=257s
+
+Power: Amp320 (~0.1uW)
+Another new sample
+Doubled PCD, PCA concentration
+Five minute sonication
+004: Another larger droplet
+     A couple seconds of reasonable data before acceptor bleached
+     Stopped track at t=111s
+
+005: Much stronger signal
+     Acceptor died within 30s
+     Killed track at t=111s
+
+Perhaps the acceptor's early death is the result of IR
+IR power: from laser: 2.17W
+Let's try looking at droplet on surface without IR
+
+006: See red, perhaps it's from the glass?
+     Doesn't seem to be decaying
+     At t=586s increased power to amp=650 (10uW)
+     700/s
+     Still no decay
+     At t=730s increased power to amp=860 (100uW
+     1200/s
+     Still no decay
+
+Seems likely we were just seeing from the 
+
+Let's try top surface
+Power: amp=150 (0.1uW)
+007: Starts off at 30/10ms acceptor
+     Reasonable decay
+     Suddenly lost signal at t=45s
+     Partially regained a few seconds later
+     Similar fluctuations continued
+
+Let's try this again with IR for comparison
+008: Start at 10/10ms
+     Definitely faster decay than 007
+     No donor though, odd
+
+009: Nothing until t=36
+     Weird
+
+010: More strange fluctuations
+     Eventually back to background counts
+
+Droplet was quite far from our starting point
+Perhaps piezo stage is drifting
+Killed tracker
+
+011: Fluctuations
+     Eventually back to background counts
+
+Quite inconclusive
+Refocused in Z
+Try another without IR
+
+012: Strong acceptor signal
+     Slow decay, no fluctuations
+     Increased power to 1000 at t=196 to bleach remaining donor
+     Killed excitation at t=262s
+
+This definitely points towards IR having effect on photophysics
+Let's try IR again
+
+013: Also strong acceptor signal
+     Difficult to tell whether decay is faster or slower than 012
+     Nice decay, however, so a fit could tell us
+
+Judging by decay curves, IR has little effect on decay time
+Halflife ~ 50s in both cases
+
+Looking back at 2011-12-22:
+  0.2uW results in halflife of ~50s
+  1.0uW results in halflife of ~15s
+  10uW results in halflife of ~1s
+  
+In summary,
+  Lifetime scaling appears to be consistent with intuition
+  IR has little effect (insufficient power for multiple photon excitation)
+  PCD/PCA is working?
+  Five minute sonication time is sufficient for droplets yet doesn't melt DNA
+  At 0.1uW, acceptor lifetime is probably acceptable for FRET study
+  Will this intensity be sufficient for single-molecule study?
+

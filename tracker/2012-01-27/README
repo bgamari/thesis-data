@@ -1,0 +1,144 @@
+2012-01-27
+===========
+
+## Playing around with buffer, O2 scavenging system ##
+
+Peker realized that Trolox's efficacy is severely hampered by our buffer and the lack of O2
+Trolox is a ROXS system which depends upon photo-induced dissocciation by oxygen to supply a reducer
+Since we replace O2 with CO2 there is no reducer in the system therefore we much add it
+Trolox, reducer: 2mM
+
+First tests showed extremely "blinky" results
+
+Doubling trolox and reducer concentration while halfing PCA concentration greatly improved results
+
+2000 donor/s with 0.1-0.2uW (amp=250)
+
+## No Oxidizer, No CO2, 10nM DNA ##
+
+Power: Donor: 0.1uW (amp=250)
+       Acceptor: 0.1uW (amp=40)
+
+001: Quite blinky
+     Donor increased with acceptor death
+     Difficult to determine how many molecules
+     Stopped track at t=95s
+
+002: High donor before acceptor started blinking
+     Lost track at t=28s
+
+003: Lamp decay at t=6s
+     One acceptor bleach at t=43s
+     Lost track at t=180s
+
+## No Oxidizer, CO2, 10nM DNA ##
+
+004: Definite difference, Effectively no blinking
+     Donor died at t=34s
+     Came back 10s later?
+     Killed track at t=72s
+
+005: Empty
+
+006: Occassional small bursts
+
+007: Donor only?
+     Stopped track at t=54s
+
+008: Empty
+
+009: Very strong signal
+     Perhaps three molecules
+     Lost track at t=292s
+
+010: Empty
+
+011: Empty
+
+012: Empty
+
+013: Empty
+
+014: Empty
+
+015: Finally, a signal
+     Two or three molecules
+
+
+## Oxidizer, No CO2, 10nM DNA ##
+
+016: Very nice, long acceptor signal
+     Signal dropped out at t=96s
+     Came back at t=103s
+     Acceptor died at t=132s
+
+017: Empty
+
+018: Larger droplet, 3um?
+     1000 acceptor/s, 600 donor/s
+     Several molecules
+     Lost track at t=189s
+
+019: Single molecule?
+     Killed track at t=132s
+
+Power: Donor: 1uW (amp=534)
+
+020: Empty
+
+021: Empty
+
+022: Empty
+
+023: Empty
+
+024: On at t=31s
+     Slight glow in acceptor
+
+025: Empty
+
+026: Empty
+
+027: Empty
+
+028: Empty
+
+029: Finally
+     Acceptor: 1200/s
+     Donor: 800/s
+     Bleached quickly
+
+030: Acceptor: 900/s
+     Donor: 500/s
+     Very discrete acceptor death at t=98
+     Donor dies a few seconds later
+
+031: Faint acceptor signal
+     Killed excitation at t=76s
+
+032: Donor-only
+     Donor died at t=48s
+
+033: Empty
+
+## Oxidizer, CO2, 10nM DNA ##
+
+Power: Donor: 0.1uW (amp=250)
+
+034: Long-lived acceptor
+     Died at t=88s
+
+035: Lost trace at t=242s
+
+Power : Donor: 1uW (amp=534)
+
+036: Several donor only?
+
+037: Empty
+
+038: Empty
+
+039: Blinky and dim
+     Lost track at t=168s, got brighter
+     hmmm, looks like we still have some alignment to do
+

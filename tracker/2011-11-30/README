@@ -1,0 +1,62 @@
+Taking data on tracked droplets.
+10nM single-stranded DNA with Cy3 labels
+110uW excitation (measured at after cleanup filter)
+
+001: No notes
+
+002: Droplet slightly less than 1um diam.
+     A few hundred counts in each channel
+     Lost track at t=212 sec
+        
+Switched to 100nM DNA
+
+003: Large droplet, perhaps 2um diam.
+     Large fluorescence signal although transient
+     350-400 photons/sec
+     Perhaps track needs to be tighter?
+     Increase focal volume?
+     Lost track at t=330
+     Strange burst of fluorescence as it clamped
+
+004: Smaller droplets, ~1um
+     Not as many "bursts", shorter
+     Maximum peak ~ 40 photons/10ms
+     300 donor photons/sec
+     Stopped due to poor signal at t=300s
+
+005: Another 1um droplet
+     Again, short bursts
+     Lost track after 40sec
+
+006: 1um droplet
+     Saw 100 photon/10ms burst around t=70s
+     Stopped due to poor signal at t=450s
+
+007: 1-2um droplet
+     Around 115s intensity increased for ~10s
+     Clamped around t=145s
+
+008: 1um droplet
+     Some clear bursts
+     t=301: Several 100photon/10ms bursts
+     t=329: 600 photons/10ms
+     Very active fluorescence
+     Clamped around t=520s
+
+Clearly we can collect (some) fluorescence from
+droplets while tracking. What now?
+
+* Ensure tracking and fluorescence beams are
+  cofocal
+* Play around with tracking setpoint?
+* Need to improve track or increase focal volume
+  size?
+* Decrease IR background (filters coming)
+* Make operation smoother
+* Surfactant (Triton) is suboptimal
+
+Goal: (Near) constant burst rates
+
+Once this has been achieved we can try a FRET
+experiment
+

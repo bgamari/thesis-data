@@ -1,0 +1,97 @@
+2011-12-09
+
+Realign of APDs with Cy3
+
+Realign IR/visible with fluorescent beads
+Power = 1uW
+AOTF Amp = 600
+27kcounts/s when we started alignment
+Seemed to decay a bit, bleaching?
+20kcounts/s after alignment
+
+Power = 11uW
+AOTF Amplitude = 800
+
+Data on Ha's DNA, 100nM, doubly-labelled
+Using PCA, PCD (both newly prepared)
+
+001:  ~1um droplet
+      Start out with ~200/10ms
+      See first burst at t=582s
+      Increased power from amp=600 to amp=800 at t=601s
+      Immediate increase in signal
+      Decay
+      Lost track somewhere around 920s
+      Acceptor signal increased to 1100/s
+      Donor decreased to 200/s
+      No change 
+      Usual bursts
+      Stopped acquisition at t=1118s
+
+Lori suggested alternating in red to potentially kick dye out of dark state
+10ms/10ms alternation
+
+002: Very short data set
+     Saw acceptor decay
+     Quickly lost track
+
+003: Again, saw acceptor decay
+     Then modulated bursts
+     Lost at t=324s
+
+Clearly there is something which we don't understand here
+The bursts have no obvious explanation
+Lori suggests doing FCS on a concentrated Cy3 sample
+Peker prepared 100nM Cy3 droplet sample
+
+004: Chose larger droplet
+     See consistent 20% leakage of donor into acceptor channel
+     Similar bursts as we saw in double-stranded case
+     More of them?
+     Lost track at t=188s
+     Still see consistent bursts
+     Recentered tracker at t=250s
+     Took 1.6M photons
+
+Looking at correlation function, it seems the we have something resembling a diffusive process, tau~40ms
+With \eta=24, \omega=200nm this corresponds to 50nm droplet
+Can't be true
+
+It seems we might be too close to the top surface
+Let's move further into soloution
+
+005: Didn't bother tracking
+     Collected 1.4M photons
+
+Looks very similar to 004
+Let's try beads
+50nm red beads, diluted 1e5 times from stock with 70% glycerol (v/v)
+
+006: aotf amp=550, should be around 1uW
+     500 donor counts/s
+     Correlation function signal was too weak
+     Gave up after 700 seconds
+
+Try more dilute sample, less viscous, 50% glycerol (v/v)
+
+007: aotf amp=650
+     500 counts/s 
+
+from preliminary fits, it seems that 007's tau~350us. This is far less than what I would expect from a 50nm bead.
+
+Peker made sample with 60% glycerine and 10x more dilute in beads
+
+008: aotf amp=800
+     bursts very much like the droplets
+     more dense
+     600-1200 counts/sec
+     
+To summarize (by eye),
+
+        datum   tau     notes
+        004     23ms    unknown sizes, 24 centipoise
+        005     32ms    24 centipoise
+        007     460us   0.1 centipoise, 50nm beads
+        008     745us   0.4 centipoise, 50nm beads
+
+According to 008, the beam waist is 45nm. This can't be right.

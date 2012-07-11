@@ -1,0 +1,232 @@
+2011-12-22
+
+Yesterday we reconfigured IR beam to include better control of Z focal point
+
+IR was well aligned last night but today it seems to be quite far off, odd
+Realigned
+
+== FRET, 100nM ==
+
+100nM droplets
+Ha DNA, Oligo A, D
+Trolox, PCD, PCA
+
+Power: donor: 10uW, amp=876
+
+001: Both start at 200/10ms
+     Acceptor quickly decays
+     Donor decays by t=60s
+     Stopped track at t=106s
+
+002: started at D=30/10ms, A=20/10ms
+     Changed setpoint.x to 1e-3 at t=59s
+     Saw rapid increase in signal, lost track
+
+003: Still with sp.x=1e-3
+     Started at A=500/10ms, D=200/10ms
+     Normal decay
+     Set setpoint.x=0 at t=64s
+     Seeing 30/10ms bursts
+     Set back to 1e-3 at t=94s
+     Played around with y setpoint around t=110s
+     No change
+     Killed track at t=127s
+
+Let's decrease power to increase dye lifetime
+Power: D=1uW (amp=607)
+       A=0.55uW (amp=18)
+
+004: Donor: 6 /10ms
+     Lost track at t=23s
+     Large increase in intensity
+
+005: Nothing here?
+
+006: Definitely see signal of sorts
+     Lost at loss of track at t=22s
+
+007: Very low signal
+     Played around with X, Y, and Z setpoints
+     Fluorescence seemed sensitive to Y
+     Lost track at t=65s
+     
+Realigned visible and IR beams in X and Y
+
+008: Very good track
+     A: 15/10ms
+     D: 8/10ms
+     Acceptor decays, donor grows
+     Played around with X and Y setpoints
+     Intensity mildly sensitive to both
+     Lost track at t=95s
+
+009: Pretty steady fluorescence from both acceptor and donor
+     Acceptor decayed slowly
+     Played around with all three setpoints
+        X: +/-1e-3
+        Y: +/-2e-3
+        Z: +/-10e-3
+
+010: Had track, tried setting large (8e-3) setpoint, lost track
+     Recalibrated, tried to go back into feedback
+     Failed to reacquire lock
+
+011: Had good track, strong signal
+     Tried changing setpoint, lost track
+
+Giving up on setpoint for now, just using steering mirror to optimize intensity
+
+012: Waiting for acceptor to bleach
+     Peker started optimizing intensity at t=575s using donor fluorescence
+     Not terribly successful
+
+013: D: 25/10ms
+     A: 7/10ms
+     Dead acceptor?
+     Peker again started optimizing at t=30s
+     Stopped around t=50s
+     Waiting for donor to bleach
+     Lost track at t=160s
+
+Further reducing power
+
+Power: D: 0.2uW, amp=537
+       A: 0.12uW, amp=10
+
+014: D: background
+     A: 15/10us
+     Oops, this is acceptor excitation
+     Very slow decrease
+
+015: Continued 014 with donor excitation
+     D: 7/10us
+     A: Background
+
+016: Continued with 50ms/50ms ALEX
+     Turned off donor at t=98 to t=101
+     Turned off acceptor just before this, likely dead
+     Lost track at 116s
+
+Continuing with 50ms/50ms ALEX
+
+017: Unconvincing signal
+     Stopped track at t=52s
+
+018: Much better signal
+     See strong acceptor, lower donor
+     Acceptor slowly decaying, donor rising
+     This datum will be good candidate for further analysis
+     Lost track at t=266s
+
+019: No ALEX this time
+     Very gradual acceptor decay
+
+
+== 10uM Oligo A, D ==
+New 10uM droplet sample
+
+020: Lamp decay
+     Light on at t=8s
+     Negligible signal
+
+Increase power
+Power: D=1uW, amp=628
+       A=0.52uW, amp=19
+
+021: Light on at t=9s
+     Fairly weak signal
+     A: 9/10ms
+     Acceptor dead by t=21s
+
+022: Light on at t=8s
+     Donor only?
+
+=== ALEX ===
+50ms/50ms ALEX
+
+023: Light on at t=9s
+     Definite Acceptor signal
+     Died at t=21?
+     Difficult to discern donor signal
+
+024: Larger droplet
+     Light on at t=9s
+     Two molecules?
+     One acceptor died at t=24s?
+     Second died at t=46s?
+
+025: Light on at t=7s
+
+026: Light on at t=11
+     Single molecule?
+     Acceptor bleached after only a couple seconds
+     
+Acceptors are bleaching quite quickly
+Let's try adding more PCD, PCA
+
+== Oligo A,D 10nM, more Puglisi, Trolox ==
+Same as before but with 5x PCD, PCA, Trolox
+Still doing 50ms, 50ms ALEX
+
+027: Larger droplet
+     Only donor
+
+028: Light on at t=7s
+     Not a very compelling signal, very weak
+     Lost track at t=34s
+
+Let's try adding power
+
+Power: D: 1uW, amp=624
+       A: 0.5uW, amp=19
+
+029: Donor only, perhaps bleached with accidental high IR intesnsity
+
+030: Light on at t=13s
+     Nothing
+
+031: Light on at t=14s
+     Donor-only
+     Turned up donor to amp=1000 at t=45s
+     Three bleach events?
+
+032: Light on at t=14s
+     Unclear whether there is signal
+     Increased power to 1000 at 44s, lost track at 47s
+
+033: Light on at t=12s
+     donor only?
+     Set amp=1000 at t=60s
+     Lost track at t=72s
+
+Increase power
+Power: D: 10uW, amp=885
+       A: 5uW, amp=60
+
+034: See strong acceptor for 3 seconds
+     Bleaches
+     Donor doesn't change appreciable on bleach
+     Donor itself eventually bleaches
+     Lost track at t=90s
+
+035: Light on at t=12s
+     No clear signal
+
+036: Large droplet
+     Donor only
+     Lost track at t=95s
+
+037: Nothing
+
+038: Donor only
+
+Try looking at droplet adhered to top surface
+
+039: Largish droplet on surface
+     t=120s: Turned off donor then acceptor excitation
+     It seems that most of the acceptor photons are due to donor excitation, from glass?
+     t=153s: 60/10ms burst
+
+We tried collecting photons while exciting glass, see 400/s in acceptor channel, background in donor
+
+

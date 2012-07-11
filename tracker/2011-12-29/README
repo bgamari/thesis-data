@@ -1,0 +1,32 @@
+2011-12-29
+
+#DPower=0.2uW, amp=507
+
+IR beam was quite far from visible
+Optimized IR alignment to be confocal with visible with fluorescent beads
+
+Moving to DNA sample
+
+#DPower=1uW, amp=560
+Tried numerous times to track, failed
+
+Just trying to take diffusive FRET data
+
+#DPower=20uW, amp=770
+#APower=10uW, amp=110
+
+Starting with ALEX, 50us/50us
+
+001: Large bursts, many with no acceptor response
+
+
+002:
+        No ALEX this time
+        Also large bursts
+        Perhaps slightly larger than before
+
+Let's ensure that our signal isn't just the buffer or surfactant
+Trying FRET on droplet sample containing only HEPES, PCD, PCA, Trolox
+
+003: No ALEX
+004: ALEX, 50us, 50us

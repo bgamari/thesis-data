@@ -1,0 +1,204 @@
+2012-01-12
+
+Ha oligo A,D 10nM
+PCD, PCA, Trolox
+Prep in Peker's notes
+
+Power: slightly less than 1uW (amp=430)
+Large excitation volume: Excitation beam stopped down
+
+001: Several molecules bleached
+     
+Power: 1uW (amp=500)
+
+002: Empty
+
+003: Four decays?
+     Strong acceptor
+     Donor died and then came back intermittently
+     Confused
+
+Decreased excitation volume size; opened up excitation beam iris
+Power: 5uW (amp=500)
+
+004: Empty
+
+Going to try samples of droplets with glycerine
+10% glycerine, PCA, PCD, Trolox, 10nM Oligo A, D
+
+005: Brighter?
+     Bleached quickly
+     
+006: Also much brighter
+     Fucked up shit at t=100s
+     More fucked up shit at t=135s
+     Droplets in vicinity of observation volume?
+     Stopped acquisition at t=186s
+     No obvious droplets other than one under observation 
+
+007: Bleach at t=14s?
+     Strange decreases at t=29, 38s
+     Bleached
+     Need to reduce power it seems
+
+Power: 0.8uW (amp=300)
+008: 4 bleach events
+     Very strong acceptor
+     Donor seems quite stable
+     
+009: Empty
+
+010: Two molecules
+     
+011: Empty
+
+012: Empty
+
+013: Empty
+
+014: Empty
+
+015: Empty
+
+016: Empty
+
+Time for a new sample
+
+== New Sample ==
+
+017: Empty
+
+018: Beautiful
+     Two molecules
+     First lasted for >5s
+     Second bleached at t=29s
+     Stopped track at t=55s
+
+019: Single molecule?
+     Bleached at t=30s
+     Triplet around t=50s?
+
+020: Multiple molecules
+     Stopped track t=68s
+     
+Power: 0.5uW (amp=270)
+
+021: Very weak
+     
+022: Very nice
+     Definitely strong enough signal, decrease further
+     Acceptor bleached at t=29s
+     Killed track at t=104s
+
+Power: 0.1uW (amp=150)
+
+023: Smaller signal
+     Acceptor bleach around t=20s?
+     Lost track at t=66s
+
+Let's try ALEX (50us/50us) at higher power
+
+Power: D: 1uW (amp=335)
+       A: 0.5uW (amp=58)
+
+024: Something but very weak
+     
+025: Much better
+     Multiple molecules
+     Last bleach at t=22s
+     Strange bursts until t=70s
+     Stopped track at t=100s
+
+026: Bleach at t=23s
+     Another at t=29s
+     Killed track at t=87s
+
+027: Very intense (40/10ms) for a couple of seconds, bleach
+     Donor decays in steps around t=80s
+     Died entirely around t=100s
+     Lost track around t=125s
+
+== New Sample ==
+
+20% glyercol
+
+Power: 1uW (amp=335)
+
+028: Fairly small signal
+     
+029: Empty
+
+030: Empty
+
+031: 4um droplet
+     Empty or not coupling
+
+Too few droplets
+
+== New sample ==
+More dense
+20% glycerol
+
+032: Very short and dim signal
+     Killed track at t=70s
+
+033: Donor only, brighter
+     Killed track at t=34s
+
+034: Good acceptor signal for 5s
+     No donor until t=25s
+     Weird
+     Stopped track at t=51s
+
+035: At least two molecules
+     One quickly bleached
+     Second bleach at t=23s
+     Stopped track at t=81s
+
+036: Empty
+
+037: Lamp decay but otherwise empty
+
+038: Two molecules
+     Bleaches at t=15, 18s
+     Donor bleach at t=36s, 45s
+     Killed track at t=64s
+
+039: Single molecule
+     Acceptor decayed after 3s
+     Donor decay after 49s
+     Killed track at t=60s
+
+Power: 0.5uW (amp=270)
+
+040: Empty
+
+041: Donor only
+     Killed track at t=28s
+
+042: Weak signal, perhaps see acceptor bleach
+
+043: Empty or not coupling
+
+044: Donor only
+     Killed track at t=23s
+
+045: Decay at t=15s
+     Killed track at t=42s
+
+046: Fast bleach
+     Delay for donor to come up
+     Odd
+
+047: Empty other than lamp decay
+
+048: Two molecules?
+     Fast decay
+
+049: Killed track at t=56s
+
+050: Long-lived acceptor
+     Single molecule
+     No donor after acceptor death?
+     Odd.
+

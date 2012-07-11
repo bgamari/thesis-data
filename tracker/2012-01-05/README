@@ -1,0 +1,66 @@
+2012-01-05
+
+Power: D: 0.1uW (amp=180)
+
+Oligo A, D, 10nM
+Double conc. PCA, PCD
+Trolox
+
+Three empties discarded
+
+001: Sent at t=31s
+     Lost track at t=34s
+
+002: Empty
+
+003: On at t=62s
+     Only lasted for a few seconds
+     Donor persisted
+     Two donor bleaches, final at t=102s
+     Very good track, killed with stage
+
+004: Another fast acceptor death
+     Quench at t=55s
+     Triplet blinking thereafter?
+     Everything dead at t=78s
+
+005: On at t=8s
+     Only one acceptor quaench at t=12s
+     Donor died at t=142s
+
+006: 1s-long acceptor
+
+007: Sent at t=7s
+     Long-lived
+     two-molecules
+     last acceptor bleach at t=19s
+
+008: Single molecule
+     ~5s long acceptor
+
+009: Empty
+
+010: Empty
+
+011: Two acceptors lived for 10, 19 seconds
+     Stopped due to boredom
+     Still likely one living donor
+     
+012: Centered over droplet, didn't track
+     Started excitation at t=6s
+     Saw donor decay, ran rough calibration
+     Saw burst at t=8.5s
+
+013: Empty
+
+014: Empty
+
+015: Single molecule
+     No donor?
+
+016: Empty
+
+017: Empty
+
+018: Empty
+

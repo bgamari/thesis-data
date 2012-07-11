@@ -1,0 +1,71 @@
+Burst FRET Experiment on Ha's DNA ( Oligo D and A ) in Diffusing Droplets 
+-----------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+DENSE : Original emulsion right after sonication, as explained in page 85 of PEKER FRET 3 NOTEBOOK
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 270k/35k per sec
+Always 30 tics up into solution
+
+
+run_000:
+-------------------------------------------------
+  1) Buffer, See NOTE1
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration is around 18 minutes
+  5) Total counts in D/A is around 93k/75k
+
+run_001:
+-------------------------------------------------
+  1) From DENSE of run_000, MIX in FC40 (1/4)
+  2) 20uW 514nm Only
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 76k/72k
+
+run_002:
+-------------------------------------------------
+  1) 50nM Ha's DNA 
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration is around 16 minutes
+  5) Total counts in D/A is around 227k/130k
+
+run_003:
+-------------------------------------------------
+  1) 50nM Ha's DNA 
+  2) Same sample in run_002 (didn't change sample)
+  3) 10 ticks more up into solution for catching up droplet migration
+  4) ALEX 50usec alternation time
+  5) 20uW 514nm, 10uW 647nm
+  6) Data duration is around 16 minutes
+  7) Total counts in D/A is around 150k/113k
+
+run_004:
+-------------------------------------------------
+  1) 50nM Ha's DNA 
+  2) From DENSE of run_002 and run_003, MIX in FC40 (1/4)
+  3) 20uW 514nm Only
+  4) Data duration is around 16 minutes
+  5) Total counts in D/A is around 88k/68k
+
+run_005:
+-------------------------------------------------
+  1) 50nM Ha's DNA
+  2) New sample from same MIX of run_004
+  3) ALEX 50usec alternation time
+  4) 20uW 514nm, 10uW 647nm
+  5) Data duration is around 16 minutes
+  6) Total counts in D/A is around 63k/69k
+
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Buffer consists of 20mM pH 7.8 Hepes + 50mM NaCl + 5uL PCD (150x) + 10uL PCA (40x) + 4uL Trolox (100x)
+
+

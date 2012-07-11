@@ -1,0 +1,71 @@
+Test run on CO2 addition to RNA 16mer in Diffusing Droplets Experiment
+-----------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+RNA 16mer : Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+RNA 16mer Donor Only: Double strand Only Donor labeled (Cy3) RNA 16mer
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 171k/21k per sec
+Always ALEX with 50us alternation time
+Always 10uW 514nm and 5uW 647nm 
+Always 30 tics up into solution
+Always 10% Glycerol in buffer solution
+
+run_000:
+-------------------------------------------------
+  1) 100nM RNA, See NOTE1
+  2) MIX in CO2 dissolved FC770
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 89k/120k
+
+run_001:
+-------------------------------------------------
+  1) 100nM RNA, See NOTE1
+  2) From DENSE of run_000, MIX in CO2 dissolved FC40
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 80k/106k
+
+run_002:
+-------------------------------------------------
+  1) 100nM RNA, See NOTE1
+  2) From DENSE of run_000, MIX in FC770
+  3) Data duration is around 25 minutes
+  4) Total counts in D/A is around 89k/112k
+
+run_003:
+-------------------------------------------------
+  1) 100nM RNA, See NOTE1
+  2) From DENSE of run_000, MIX in FC40
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 74k/88k
+
+run_004:
+-------------------------------------------------
+  1) 100nM RNA, See NOTE1
+  2) From sample RNA solution of run_000, new DENSE in CO2 dissolved FC770
+  3) MIX in CO2 dissolved FC770
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 80k/112k
+
+run_005:
+-------------------------------------------------
+  1) 100nM RNA, See NOTE1
+  2) From DENSE of run_004, MIX in CO2 dissolved FC40
+  3) Data duration is around 25 minutes
+  4) Total counts in D/A is around 91k/127k
+  5) As an example of density and size of droplets
+a picture from sample is saved in data folder, 
+density_size_005.ppm
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) In this experiment RNA sample was 2 days old. Although i kept it ice, I am
+expecting to see some degredation/melting in sample. Therefore it may be safer to
+consider those concentrations as 90-80% of their reported values.
+

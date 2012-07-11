@@ -1,0 +1,82 @@
+Looking at droplets to verify track quality
+
+21.8uW power in green channel
+
+Used sample of 100nM Cy3-labelled oligo for alignment
+See Peker's notebook (pg. ) for prep
+
+Looking at 10uM TMR sample in droplets
+Peker aimed for larger droplets, see Peker's FRET notebook 3, pg. 30
+We'll look at droplets in the range of 1 to 3um in diameter
+
+
+001: Lost at t=15s
+     More spurious counts than we would like
+     Bursts of 300/10ms quite common
+
+002: Started at 2500 counts/10ms
+     Decayed nicely to 100/10ms by t=60s
+     Interesting blip at t=68s
+     Continues to decay but seeing quite large bursts (t=104s)
+     50 counts/10ms baseline
+     Stopped tracking at t=140s
+
+003: Excitation on at t=18s
+     Started at 2600 counts/10ms
+     Decayed to 200/10ms by t=30s
+     Lost track at t=74s
+
+004: On at t=11s
+     Started at 500/10ms
+     Decay to 100/10ms by t=30s
+     Lost track at t=105s
+
+So, we can clearly see decay, although it would be nice if the decay lifetime were a bit longer
+We'll try the same experiment with PCA/PCD/trolox tomorrow
+
+We'll next try 1uM TMR in even larger droplets (>3um, as produced by Peker this weekend)
+The goal is to try doing FCS
+
+Tried a very large droplet, >600k counts/s
+Gave up on this one
+
+Power = 18.5uW
+
+005: ~5um droplet
+     Started off at 500k/s
+     Decayed down to 12k/s
+     Stopped at t=275s
+
+Given decay, it seems unlikely we'll be able to get a reasonable FCS signal
+Reduced power to 0.6uW (on background of <0.1uW)
+
+006: ~5um droplet
+     Started at 6000/s
+     Decayed and then increased
+     Hmm, decayed to 300/s at t=80s yet still tracking
+     Stopped fluorescence aquisition
+     It seems we weren't tracking
+
+Reduce power a bit further to 0.2uW
+
+007: 5um droplet
+     1300/s
+     Lost at 54s
+     No appreciable decay
+
+008: 5um droplet
+     22k/s donor, 2300/s acceptor
+     Too large for FCS?
+     Stopped at 4e6 photons due to high intensity
+     No appreicable decay
+
+009: 3um droplet
+     1400/s donor, 220/s acceptor
+     Lost track around t=520s
+     Gathered ~500k photons total
+     
+010: 3um droplet
+     3600/s donor, 460/s acceptor
+     Seems to be increasing?
+     By t=120s, seems to be around 5000/s
+

@@ -1,0 +1,68 @@
+0.5 micron beads in 75% glycerine solution for calibration of
+beams and characterization of fluorescence during tracking
+
+
+001: Optimizing beams to be cofocal
+     Tried moving IR beam, lost track
+
+IR quite far from visible
+Realigned beams
+
+002: Brief data collection while tracking
+     10uW, 600kphotons/sec
+
+003: Another brief track
+     1uW, 60kphotons/sec
+     Lost after ~15s
+     Dropped to 15k/s
+
+004: 1uW, 75kphotons/sec
+     Fluctuates over course of tens of seconds from 80k to 40k
+     Lost at t=103s
+     Dropped to 12k/s
+
+005: Around 90k/s
+     Lost at t=105s
+     Again dropped to 12k/s
+
+006: Trapped bead
+     22k/s
+
+Move to droplets with 100nM single-stranded DNA, Cy3 labelled
+
+007: Large-ish droplet, 2um?
+     10k/s in donor, 2k/s in acceptor
+     Tapers off slowly
+     Lost track at 69s
+     Back to 50/s background
+
+008: 0.5um-1um droplet?
+     400/s donor, 100/s acceptor
+     By 90s, dropped to 200/s donor, 80/s acceptor
+     By 230s, dropped to 150/s donor, 60/s acceptor
+     Lost at
+
+009: 1um droplet?
+     300/s donor, 80/s acceptor
+     
+010: 1um droplet?
+     donor: 300/s decaying to 100/s
+     Lost track at t=110s
+
+Increase power to 19uW
+
+011: Decay from lamp for first second
+     High count rate for a second or so after lamp died
+     Decayed to 120/s donor, 50/s acceptor
+     Lost at around t=162s
+
+012: Decay from lamp
+     700/s after this
+     Lost at t=15s
+
+013: Interesting fluorescence at beginning
+     Lost after a few seconds
+
+014: Again, interesting bursty things for first 30 seconds
+     Lost at t=100s
+

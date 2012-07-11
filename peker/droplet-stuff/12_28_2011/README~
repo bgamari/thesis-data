@@ -1,0 +1,140 @@
+FRET Experiment on Ha's OligoD and A (DNA) in Droplets without Tracking, 
+Additionally new droplet prep trials 
+-----------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+For annealing of OligoD and Oligo A, See FRET NOTEBOOK 3 (PEKER) page 9
+For dilutions, See FRET NOTEBOOK 3 (PEKER) pages 75-77
+
+Dark Counts in detectors : A/D ~ 40/45 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 20uW 514nm . Counts : D/A ~ 300k/38k per sec
+Always 30 ticks up from bottom surface 
+
+Always 5uL PCD (150x), 20uL PCA (40x), 4uL Trolox (100x)
+
+run_000:
+-------------------------------------------------
+  1) Water Only droplets prepared as described in page 77
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration around 15 mins
+  5) Forgot Total counts
+  6) Picture saved in data folder, run_000density.ppm
+
+run_001:
+-------------------------------------------------
+  1) Water Only droplets prepared as described in page 78
+  2) From MIX
+  3) 20uW 514nm Only
+  4) Data duration around 16 mins
+  5) Total counts D/A ~ 61k/59k
+  6) Picture saved in data folder, run_001density.ppm
+
+run_002:
+-------------------------------------------------
+  1) Water Only droplets prepared as described in page 78
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration around 16 mins
+  5) Total counts D/A ~ 71k/60k
+  6) Picture saved in data folder, run_002density.ppm
+
+run_003:
+-------------------------------------------------
+  1) Water Only droplets prepared as described at the bottom of page 78
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration around 15 mins
+  5) Total counts D/A ~ 70k/62k
+  6) Picture saved in data folder, run_003density.ppm
+
+run_004:
+-------------------------------------------------
+  1) Water Only droplets prepared as described in page 79
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration around 15 mins
+  5) Total counts D/A ~ 70k/61k
+  6) Picture saved in data folder, run_004density.ppm
+
+
+run_005:
+-------------------------------------------------
+  1) Water Only droplets prepared as described in page 79
+  2) From DENSE
+  3) 20uW 514nm Only
+  4) Data duration around 18 mins
+  5) Total counts D/A ~ 75k/68k
+  6) Picture saved in data folder, run_005density.ppm
+
+run_006:
+-------------------------------------------------
+  1) 10nM DNA droplets prepared as described in page 79
+  2) From MIX
+  3) 20uW 514nm Only
+  4) Data duration around 20 mins
+  5) Total counts D/A ~ 90k/80k
+  6) Picture saved in data folder, run_006density.ppm
+
+run_007:
+-------------------------------------------------
+  1) 10nM DNA 
+  2) From DENSE of run_006, new MIX
+  3) ALEX with 50msec alternation time
+  4) 20uW 514nm, 10uW 647nm
+  5) Data duration around 20 mins
+  6) Total counts D/A ~ 63k/76k
+  7) Picture saved in data folder, run_007density.ppm
+
+run_008:
+-------------------------------------------------
+  1) 10nM DNA 
+  2) Same sample as in run_007 (didn't change it)
+  3) ALEX with 50usec alternation time
+  4) 20uW 514nm, 10uW 647nm
+  5) Data duration around 24 mins
+  6) Total counts D/A ~ 80k/91k
+
+run_009:
+-------------------------------------------------
+  1) 50nM DNA, same droplet prep as in run_006
+  2) From MIX  
+  3) 20uW 514nm Only
+  4) Data duration around 20 mins
+  5) Total counts D/A ~ 140k/106k
+  6) Picture saved in data folder, run_009density.ppm
+
+run_010:
+-------------------------------------------------
+  1) 50nM DNA 
+  2) Same sample as in run_009 (didn't change it)
+  3) For catching up the droplet migration 10 more ticks up
+  4) ALEX with 50usec alternation time
+  5) 20uW 514nm, 10uW 647nm
+  6) Data duration around 25 mins
+  7) Total counts D/A ~ 110k/140k
+  8) Picture saved in data folder, run_010density.ppm
+
+run_011:
+-------------------------------------------------
+  1) 50nM DNA 
+  2) From DENSE of run_009 and run_010, new MIX as described at the bottom of page 80
+  3) 20uW 514nm Only
+  4) Data duration around 15 mins
+  5) Total counts D/A ~ 100k/75k
+  6) Picture saved in data folder, run_011density.ppm
+
+run_012:
+-------------------------------------------------
+  1) 50nM DNA 
+  2) Same sample as in run_011 (didn't change it)
+  3) For catching up the droplet migration 10 more ticks up
+  4) ALEX with 50usec alternation time
+  5) 20uW 514nm, 10uW 647nm
+  6) Data duration around 20 mins
+  7) Total counts D/A ~ 105k/121k
+
+
+NOTES:
+-----------------------------------------------------------------------------------
+
