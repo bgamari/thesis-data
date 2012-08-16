@@ -1,0 +1,206 @@
+2012-02-10
+
+FRET on RNA 16mer Forward Attachment in Solution Trials for recovering (probably) isomerized Cy5
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+ALEX100: 50usec alternation time, 100uW 514nm and 50uW 647nm  
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX100: Only 100uW 514nm
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM TMR with 49uW 514nm . Counts : D/A ~ 170k/15k per sec
+Always 30 tics up into solution
+Always wells used and covered with BSA as described in page 185 of FRET NOTEBOOK III (PEKER)
+
+EVIL4 is PCD/PCA + Trolox + Methyl Viologen (MV)
+
+run_000:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 256k/85k, not sure on A!!!
+  5) Please see NOTE1
+
+run_001:
+-------------------------------------------------
+  1) 100pM FRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 32 minutes
+  4) Total counts in D/A is around 225k/165k
+
+run_002:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) Non-ALEX50
+  5) Data duration is around 30 minutes
+  6) Total counts in D/A is around 385k/297k
+
+run_003:
+-------------------------------------------------
+  1) 150pM FRNA DA + EVIL4
+  2) 5 mins 532nm applied by Fluorimeter
+  3) Non-ALEX50
+  4) Data duration is around 30 minutes
+  5) Total counts in D/A is around 408k/342k
+
+run_004:
+-------------------------------------------------
+  1) Buffer + EVIL4
+  2) Non-ALEX50
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 243k/184k
+
+run_005:
+-------------------------------------------------
+  1) 100pM FRNA D
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 180k/116k
+
+run_006:
+-------------------------------------------------
+  1) 100pM FRNA D + EVIL4
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 400k/256k
+
+run_007:
+-------------------------------------------------
+  1) 100pM FRNA D + EVIL4
+  2) 5 mins 532nm applied by Fluorimeter
+  3) Non-ALEX50
+  4) Data duration is around 30 minutes
+  5) Total counts in D/A is around 385k/254k
+
+run_008:
+-------------------------------------------------
+  1) Buffer
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 102k/73k
+
+run_009:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 143k/173k
+
+run_010:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) ALEX50
+  3) Data duration is around 31 minutes
+  4) Total counts in D/A is around 283k/316k
+
+run_011:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) 5 mins 532nm applied by Fluorimeter
+  3) ALEX50
+  4) Data duration is around 33 minutes
+  5) Total counts in D/A is around 261k/256k
+
+run_012:
+-------------------------------------------------
+  1) Buffer + EVIL4
+  2) ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 165k/161k
+
+run_013:
+-------------------------------------------------
+  1) 100pM FRNA D
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 132k/110k
+
+run_014:
+-------------------------------------------------
+  1) 100pM FRNA D + EVIL4
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 263k/198k
+  5) Please see NOTE2
+
+run_015:
+-------------------------------------------------
+  1) 100pM FRNA D + EVIL4
+  2) 5 mins 532nm applied by Fluorimeter
+  3) ALEX50
+  4) Data duration is around 35 minutes
+  5) Total counts in D/A is around 311k/248k
+
+!!!!!!!!!!!!NEW SAMPLES!!!!!!!!!!!!!
+
+Please see NOTE3
+
+run_016:
+-------------------------------------------------
+  1) Buffer using fresh Hepes from stock solution in large conical
+  2) Non-ALEX100
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 362k/267k
+
+run_017:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) 10 mins 532nm applied by Fluorimeter
+  3) Non-ALEX100
+  4) Data duration is around 22 minutes
+  5) Total counts in D/A is around 428k/335k
+
+run_018:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) 20 mins 532nm applied by Fluorimeter
+  3) Non-ALEX100
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 368k/270k
+
+run_019:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) 10 mins 488nm applied by Fluorimeter
+  3) Non-ALEX100
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 364k/281k
+
+run_020:
+-------------------------------------------------
+  1) 100pM FRNA DA + EVIL4
+  2) 20 mins 488nm applied by Fluorimeter
+  3) Non-ALEX100
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 378k/292k
+  6) Please see NOTE4
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Buffer counts somehow increased. In fact i figured out the reason
+in next experiment. It was probably because of BSA remnants in wells.
+
+  2) I forgot to dump records to file. Therefore i took this data after
+run_015.
+
+  3) According to "Carbocyanine Dyes as Efficient Reversible Single-Molecule
+Optical Switch" by Mike Heilemann, Emmanuel Margeat, Robert Kasper, Markus Sauer,
+ and Philip Tinnefeld, application of either 532nm or 488nm recovers the 
+isomerized Cy5 meanwhile Trolox and MV need to be present in solution.
+Interestingly there was only the result of 488nm application in one of the 
+graphs in the paper. Therefore i applied those lines in presence of EVIL4.
+
+  4) Because of very high counts, most probably contamination, i stopped 
+taking data on Donor only systems.
+

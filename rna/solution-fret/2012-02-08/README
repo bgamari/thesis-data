@@ -1,0 +1,217 @@
+2012-02-08
+
+FRET on RNA 16mer Reverse Attachment in Solution and comparison with Forward Attachment
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+532nm applied samples for cis-trans stuff called with respect to 532nm application time, i.e. 
+5 second will be FRNA DA5, likewise 10 seconds will be FRNA DA10 etc...
+
+ALEX: 50usec alternation time, 50uW 514nm and 25uW 647nm 
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX100: Only 100uW 514nm
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM TMR with 10uW 514nm . Counts : D/A ~ 170k/21k per sec
+Always 30 tics up into solution
+Always wells used and covered with BSA as described in page 185 of FRET NOTEBOOK III (PEKER)
+
+
+run_000:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 112k/75k
+
+run_001:
+-------------------------------------------------
+  1) 50pM RRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 270k/206k
+
+run_002:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) Non-ALEX50
+  5) Data duration is around 30 minutes
+  6) Total counts in D/A is around 328k/258k
+
+run_003:
+-------------------------------------------------
+  1) 150pM RRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 689k/582k
+
+run_004:
+-------------------------------------------------
+  1) 1M Sucrose solution in DEPC-water
+  2) Non-ALEX50
+  3) Data duration is around 17 minutes
+  4) Total counts in D/A is around 275k/130k
+
+run_005:
+-------------------------------------------------
+  1) 50pM RRNA D
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 280k/131k
+
+run_006:
+-------------------------------------------------
+  1) 100pM RRNA D
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 420k/149k
+
+run_007:
+-------------------------------------------------
+  1) 150pM RRNA D
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 550k/164k
+
+run_008:
+-------------------------------------------------
+  1) Buffer
+  2) ALEX
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 89k/79k
+  5) WRONG ALTERNATION SEQUENCE!!!
+
+run_009:
+-------------------------------------------------
+  1) 50pM RRNA DA
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 172k/219k
+  5) WRONG ALTERNATION SEQUENCE!!!
+
+run_010:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 215k/285k
+  5) WRONG ALTERNATION SEQUENCE!!!
+
+run_011:
+-------------------------------------------------
+  1) 150pM RRNA DA
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 390k/708k
+  5) WRONG ALTERNATION SEQUENCE!!!
+
+run_012:
+-------------------------------------------------
+  1) 50pM RRNA D
+  2) ALEX
+  3) Data duration is around 32 minutes
+  5) WRONG ALTERNATION SEQUENCE!!!
+  4) Total counts in D/A is around 170k/113k
+
+run_013:
+-------------------------------------------------
+  1) 100pM RRNA D
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 240k/124k
+  5) WRONG ALTERNATION SEQUENCE!!!
+
+run_014:
+-------------------------------------------------
+  1) 150pM RRNA D
+  2) ALEX
+  3) Data duration is around 33 minutes
+  4) Total counts in D/A is around 369k/152k
+  5) WRONG ALTERNATION SEQUENCE!!!
+
+!!!!!!!!!!!!NEW SAMPLES!!!!!!!!!!!!!
+
+run_015:
+-------------------------------------------------
+  1) 100pM FRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 172k/124k
+
+run_016:
+-------------------------------------------------
+  1) 100pM FRNA DA5
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 186k/133k
+
+run_017:
+-------------------------------------------------
+  1) 100pM FRNA DA10
+  2) Non-ALEX50
+  3) Data duration is around 32 minutes
+  4) Total counts in D/A is around 186k/136k
+
+run_018:
+-------------------------------------------------
+  1) 100pM FRNA DA20
+  2) Non-ALEX100
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 187k/134k
+
+run_019:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 299k/547k
+
+run_020:
+-------------------------------------------------
+  1) 50pM FRNA DA5 + 50pM RRNA DA 
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 178k/246k
+
+run_021:
+-------------------------------------------------
+  1) 50pM FRNA DA10 + 50pM RRNA DA 
+  2) ALEX
+  3) Data duration is around 33 minutes
+  4) Total counts in D/A is around 204k/292k
+
+run_022:
+-------------------------------------------------
+  1) 50pM FRNA DA20 + 50pM RRNA DA 
+  2) ALEX
+  3) Data duration is around 15 minutes
+  4) Total counts in D/A is around 187k/263k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Based on observation, concentration of FRNA is lower than RRNA. This has been
+shown by Sheema using FCS. Here the indicator is that FRNA Donor only bursts are more
+sparse than RRNA although they are supposed to have same concentration.
+
+  2) Again from FCS data Sheema took recently, diffusion coefficients of both 16mer 
+were very close. Similarly, in FRET Donor only burst hights were similar for both 16mers.
+This, i believe, can be taken as confirmation of FCS data.
+
+  3) Additionally, both above results tell us that RNA structures are fine upto 
+some degredation. In other words there are definitely nice double helical RNA in both
+systems. On the other hand, in FRNA case Cy5 is always dim in fact much dimmer relative
+to RRNA. The only easy explanation for that can be Cis-Trans isomerisation of Cy5.
+
+  4) To test the idea in NOTE 3, following the Trolox paper (T. J. Ha, Nature Methods)
+I applied 532nm light on to samples by using fluorimeter. Even though, they were not  
+systematic, Cy5 counts increased. Therefore i will try to play with this method for 
+making it little bit optimized.

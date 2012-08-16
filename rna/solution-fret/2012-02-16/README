@@ -1,0 +1,343 @@
+2012-02-16
+
+FRET on RNA 16mer Forward and Reverse Attachment in Solution, also some droplet data on Reverse Attachment
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+ALEX20: 50usec alternation time, 20uW 514nm and 10uW 647nm
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX20: Only 20uW 514nm
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM TMR with 50uW 514nm . Counts : D/A ~ 245k/32k per sec
+Always 30 tics up into solution
+Always wells used and covered with Sigmacote
+Trolox concentration is always 2mM
+Effective glycerol solution in usage of 5% Glycerol for FRNA is 2.5%, for RRNA 3.6%
+
+Throughout FRET experiments iris was closed and back-aperture of objective lens
+was underfilling. 
+
+In droplet experiments iris was fully opened and presumably diffraction limited spot used 
+as excitation volume. 
+
+In droplet data 5uL PCD (150x) + 20uL PCA (40x) + 4uL Trolox (100x) added to 100uL sample 
+In droplet data MIX solution always CO2 treated
+
+run_000:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 132k/125k
+
+run_001:
+-------------------------------------------------
+  1) 300pM FRNA DA 
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 182k/162k
+
+run_002:
+-------------------------------------------------
+  1) BUffer in 5% Glycerol solution
+  2) Non-ALEX50
+  5) Data duration is around 20 minutes
+  4) Total counts in D/A is around 209k/182k
+
+run_003:
+-------------------------------------------------
+  1) 300pM FRNA DA in 5% Glycerol solution
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 262k/209k
+
+run_004:
+-------------------------------------------------
+  1) Buffer + 2mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 174k/160k
+  5) Please see NOTE4
+
+run_005:
+-------------------------------------------------
+  1) 300pM FRNA DA + 2mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 217k/203k
+
+run_006:
+-------------------------------------------------
+  1) Buffer in 5% Glycerol solution + 2mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 265k/217k
+
+run_007:
+-------------------------------------------------
+  1) 300pM FRNA DA in 5% Glycerol solution + 2mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 314k/235k
+
+!!!!!!!!!!!!NEW SAMPLES !!!!!!!!!!!!!
+
+run_008:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 123k/125k
+
+run_009:
+-------------------------------------------------
+  1) 300pM FRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 178k/163k
+
+run_010:
+-------------------------------------------------
+  1) Buffer in 1% Glycerol
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 143k/142k
+
+run_011:
+-------------------------------------------------
+  1) 300pM FRNA DA in 1% Glycerol solution
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 215k/200k
+
+run_012:
+-------------------------------------------------
+  1) Buffer + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 159k/170k
+
+run_013:
+-------------------------------------------------
+  1) 300pM FRNA DA + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 201k/194k
+
+run_014:
+-------------------------------------------------
+  1) Buffer in 1% Glycerol solution + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 174k/163k
+
+run_015:
+-------------------------------------------------
+  1) 300pM FRNA DA in 1% Glycerol solution + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 265k/239k
+
+!!!!!!!!!!!!NEW SAMPLES !!!!!!!!!!!!!
+
+run_016:
+-------------------------------------------------
+  1) 300pM FRNA DA 
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 238k/280k
+
+run_017:
+-------------------------------------------------
+  1) 300pM FRNA D 
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 250k/202k
+
+run_018:
+-------------------------------------------------
+  1) 100pM RRNA DA 
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 273k/249k
+
+run_019:
+-------------------------------------------------
+  1) 100pM RRNA D 
+  2) Non-ALEX50
+  3) Data duration is around 33 minutes
+  4) Total counts in D/A is around 438k/248k
+
+run_020:
+-------------------------------------------------
+  1) 300pM FRNA DA in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 300k/278k
+
+run_021:
+-------------------------------------------------
+  1) 300pM FRNA D in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 35 minutes
+  4) Total counts in D/A is around 416k/300k
+
+run_022:
+-------------------------------------------------
+  1) 100pM RRNA DA in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 45 minutes
+  4) Total counts in D/A is around 500k/462k
+
+run_023:
+-------------------------------------------------
+  1) 100pM RRNA D in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 35 minutes
+  4) Total counts in D/A is around 698k/385k
+
+!!!!!!!!!!!!NEW SAMPLES !!!!!!!!!!!!!
+
+run_024:
+-------------------------------------------------
+  1) 300pM FRNA DA 
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 180k/160k
+
+run_025:
+-------------------------------------------------
+  1) 300pM FRNA D 
+  2) Non-ALEX50
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 217k/161k
+
+run_026:
+-------------------------------------------------
+  1) 100pM RRNA DA 
+  2) Non-ALEX50
+  3) Data duration is around 27 minutes
+  4) Total counts in D/A is around 338k/309k
+
+run_027:
+-------------------------------------------------
+  1) 100pM RRNA D 
+  2) Non-ALEX50
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 361k/177k
+
+run_028:
+-------------------------------------------------
+  1) 300pM FRNA DA in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 834k/750k
+  5) Please see NOTE4
+
+run_029:
+-------------------------------------------------
+  1) 300pM FRNA D in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 230k/165k
+
+run_030:
+-------------------------------------------------
+  1) 100pM RRNA DA in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 136k/157k
+
+run_031:
+-------------------------------------------------
+  1) 100pM RRNA D in 1% Glycerol + 1mM Trolox
+  2) Non-ALEX50
+  3) Data duration is around 35 minutes
+  4) Total counts in D/A is around 494k/241k
+  5) Please see NOTE4
+
+!!!!!!!!!!!!NEW SAMPLES (DROPLET DATA ON REVERSE SYSTEM)!!!!!!!!!!!!!
+
+run_032:
+-------------------------------------------------
+  1) 20nM RRNA DA in droplets
+  2) Sonicated 2 mins
+  3) MIX in FC770 with ratio 1:4 (DENSE:FC770)
+  4) ALEX20
+  5) Data duration is around 32 minutes
+  6) Total counts in D/A is around 114k/194k
+
+run_033:
+-------------------------------------------------
+  1) 20nM RRNA DA in droplets
+  2) Sonicated 3 mins
+  3) MIX in FC770 with ratio 1:4 (DENSE:FC770)
+  4) ALEX20
+  5) Data duration is around 30 minutes
+  6) Total counts in D/A is around 118k/214k
+
+run_034:
+-------------------------------------------------
+  1) 50nM RRNA DA in droplets
+  2) Sonicated 2 mins
+  3) MIX in FC770 with ratio 1:4 (DENSE:FC770)
+  4) ALEX20
+  5) Data duration is around 31 minutes
+  6) Total counts in D/A is around 133k/292k
+
+run_035:
+-------------------------------------------------
+  1) 50nM RRNA D in droplets
+  2) Sonicated 2 mins
+  3) MIX in FC770 with ratio 1:4 (DENSE:FC770)
+  4) ALEX20
+  5) Data duration is around 33 minutes
+  6) Total counts in D/A is around 116k/171k
+
+run_036:
+-------------------------------------------------
+  1) 50nM RRNA D in droplets fresh sample starting from dilution
+  2) Sonicated 2 mins
+  3) MIX in FC770 with ratio 1:4 (DENSE:FC770)
+  4) ALEX20
+  5) Data duration is around 30 minutes
+  6) Total counts in D/A is around 105k/155k
+
+run_037:
+-------------------------------------------------
+  1) Buffer in droplets, PCD/PCA and Trolox added 
+  2) Sonicated 2 mins
+  3) MIX in FC770 with ratio 1:4 (DENSE:FC770)
+  4) ALEX20
+  5) Data duration is around 33 minutes
+  6) Total counts in D/A is around 126k/180k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Upon Lori's suggestion i used only single color excitation throughout
+the FRET solution experiments.
+
+  2) Again, following Lori's other suggestion i underfilled the back-aperture of
+objective lens by closing down the iris which placed at the collimated part of
+excitation beam. Throughout the experiment it was fully closed but not forced to
+go smaller opening.
+
+  3) Before sarting new samples i decided to replace one of the filters in
+front of Red APD (ET 690/50m Band Pass) with another one (BLP01-635R-25 Long Pass).
+For further comments Please check FRET NOTEBOOK IV (PEKER) page 16-17 (Belongs to yesterday!!! 
+Included for continuity).
+
+  4) Whenever i added Trolox to solution there were almost always slow diffusing
+aggregate like stuff in live plot of data. This is one of those.
+

@@ -1,0 +1,187 @@
+FRET on RNA 16mer Forward Attachment in Solution
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+Buffer: 10% Glycerol solution in DEPC-water + 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 + 10-6 (v/v) Tween 20
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+ALEX: 50usec alternation time, 50uW 514nm and 25uW 647nm 
+Non-ALEX: Only 50uW 514nm
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM Cy3 labelled Ha's OligoD with 10uW 514nm . Counts : D/A ~ 170k/21k per sec
+Always 30 tics up into solution
+
+
+run_000:
+-------------------------------------------------
+  1) 50pM FRNA DA
+  2) ALEX
+  3) Data duration is around 37 minutes
+  4) Total counts in D/A is around 441k/519k
+
+run_001:
+-------------------------------------------------
+  1) 100pM FRNA DA
+  2) ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 469k/705k
+
+run_002:
+-------------------------------------------------
+  1) 150pM FRNA DA
+  2) ALEX
+  5) Data duration is around 31 minutes
+  6) Total counts in D/A is around 550k/980k
+
+run_003:
+-------------------------------------------------
+  1) 50pM FRNA D
+  2) ALEX
+  3) Data duration is around 31 minutes
+  4) Total counts in D/A is around 380k/153k
+
+run_004:
+-------------------------------------------------
+  1) 100pM FRNA D
+  2) ALEX
+  3) Data duration is around 31 minutes
+  4) Total counts in D/A is around 455k/160k
+
+run_005:
+-------------------------------------------------
+  1) 150pM FRNA D
+  2) ALEX
+  3) Data duration is around 32 minutes
+  4) Total counts in D/A is around 593k/183k
+
+run_006:
+-------------------------------------------------
+  1) Buffer
+  2) ALEX
+  3) Data duration is around 35 minutes
+  4) Total counts in D/A is around 297k/152k
+
+run_007:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 301k/114k
+
+run_008:
+-------------------------------------------------
+  1) 50pM FRNA DA
+  2) Non-ALEX
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 350k/180k
+
+run_009:
+-------------------------------------------------
+  1) 100pM FRNA DA
+  2) Non-ALEX
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 482k/277k
+
+run_010:
+-------------------------------------------------
+  1) 150pM FRNA DA
+  2) Non-ALEX
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 600k/373k
+
+run_011:
+-------------------------------------------------
+  1) 50pM FRNA D
+  2) Non-ALEX
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 360k/112k
+
+run_012:
+-------------------------------------------------
+  1) 100pM FRNA D
+  2) Non-ALEX
+  3) Data duration is around 25 minutes
+  4) Total counts in D/A is around 570k/155k
+
+run_013:
+-------------------------------------------------
+  1) 150pM FRNA D
+  2) Non-ALEX
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 650k/158k
+
+run_014:
+-------------------------------------------------
+  1) DEPC-water Only
+  2) Non-ALEX
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 138k/102k
+
+run_015:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water
+  2) Non-ALEX
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 123k/78k
+
+run_016:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water + 50mM NaCl
+  2) Non-ALEX
+  3) Data duration is around 23 minutes
+  4) Total counts in D/A is around 142k/91k
+
+run_017:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water + 5mM MgCl2
+  2) Non-ALEX
+  3) Data duration is around 25 minutes
+  4) Total counts in D/A is around 205k/94k
+
+run_018:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water + 10-6 (v/v) Tween 20
+  2) Non-ALEX
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 133k/79k
+
+run_019:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water + 50mM NaCl + 5mM MgCl2
+  2) Non-ALEX
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 185k/85k
+
+run_020:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water + 50mM NaCl + 5mM MgCl2 + 10-6 (v/v) Tween 20
+  2) Non-ALEX
+  3) Data duration is around 21 minutes
+  4) Total counts in D/A is around 175k/81k
+
+run_021:
+-------------------------------------------------
+  1) 10% Glycerol solution in DEPC-water + 20mM Hepes pH 7.8
+  2) Non-ALEX
+  3) Data duration is around 22 minutes
+  4) Total counts in D/A is around 212k/95k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) Apparently we had a background problem in those experiments. From live plots of
+data DEPC-water, 10% Glycerol solution in DEPC-water, and NaCl solution in DEPC-water
+were clean. On the other hand MgCl2 solution in DEPC-water, 10-4 Tween 20 solution in 
+DEPC-water, and Hepes were most probably contaminated.
+
+  2) As it has been explained in lab notebook, FRET 3 NOTEBOOK (PEKER) pages 160-162
+i took a UV-Vis data on annealed products. Apparently measured concentrations for both 
+FRNA DA and FRNA D have lower concentrations. The range for RNA samples are probably
+some where between 10-25% of expected concentrations. For further info, Please see the
+notebook.
+
+
+

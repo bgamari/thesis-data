@@ -1,0 +1,225 @@
+2012-02-12
+
+FRET on RNA 16mer Forward and Reverse Attachment in Solution also Check for Buffer Components
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+Buffer: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+Non-ALEX50: Only 50uW 514nm
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM TMR with 50uW 514nm . Counts : D/A ~ 139k/12k per sec
+Always 30 tics up into solution
+Always wells used and covered with Sigmacote
+
+
+run_000:
+-------------------------------------------------
+  1) DEPC-water
+  2) Non-ALEX50
+  3) Data duration is around 10 minutes
+  4) Total counts in D/A is around 51k/37k
+
+run_001:
+-------------------------------------------------
+  1) 1M NaCl
+  2) Non-ALEX50
+  3) Data duration is around 11 minutes
+  4) Total counts in D/A is around 62k/45k
+
+run_002:
+-------------------------------------------------
+  1) 100mM MgCl2
+  2) Non-ALEX50
+  5) Data duration is around 13 minutes
+  6) Total counts in D/A is around 77k/53k
+
+run_003:
+-------------------------------------------------
+  1) 200mM Hepes pH 7.8
+  2) Non-ALEX50
+  3) Data duration is around 10 minutes
+  4) Total counts in D/A is around 71k/47k
+
+run_004:
+-------------------------------------------------
+  1) BSA solution 5 mg/mL
+  2) Non-ALEX50
+  3) Data duration is around 7 minutes
+  4) Total counts in D/A is around 1400k/930k
+
+run_005:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX50
+  3) Data duration is around 10 minutes
+  4) Total counts in D/A is around 56k/42k
+
+run_006:
+-------------------------------------------------
+  1) Trolox (100x)
+  2) Non-ALEX50
+  3) Data duration is around 7 minutes
+  4) Total counts in D/A is around 2300k/1810k
+
+run_007:
+-------------------------------------------------
+  1) Methyl Viologen (MV) (100x)
+  2) Non-ALEX50
+  3) Data duration is around 7 minutes
+  4) Total counts in D/A is around 1570k/1700k
+
+run_008:
+-------------------------------------------------
+  1) Buffer
+  2) ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 127k/76k
+
+run_009:
+-------------------------------------------------
+  1) 50pM RRNA DA
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 232k/151k
+
+run_010:
+-------------------------------------------------
+  1) 100pM RRNA DA 
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 240k/320k
+
+run_011:
+-------------------------------------------------
+  1) 100pM FRNA DA
+  2) ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 159k/153k
+  5) Please see NOTE1
+
+run_012:
+-------------------------------------------------
+  1) 1M Sucrose solution, Autoclaved + Filtered
+  2) ALEX50
+  3) Data duration is around 7 minutes
+  4) Total counts in D/A is around 216k/96k
+
+run_013:
+-------------------------------------------------
+  1) 50pM RRNA D
+  2) ALEX50
+  3) Data duration is around 31 minutes
+  4) Total counts in D/A is around 372k/146k
+
+run_014:
+-------------------------------------------------
+  1) 100pM RRNA D 
+  2) ALEX50
+  3) Data duration is around 33 minutes
+  4) Total counts in D/A is around 500k/163k
+
+run_015:
+-------------------------------------------------
+  1) 100pM FRNA D
+  3) ALEX50
+  4) Data duration is around 31 minutes
+  5) Total counts in D/A is around 167k/119k
+
+!!!!!!!!!!!!NEW SAMPLES!!!!!!!!!!!!!
+
+Please see NOTE3
+
+run_016:
+-------------------------------------------------
+  1) Buffer
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 117k/79k
+
+run_017:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 126k/86k
+  5) Please see NOTE2
+
+run_018:
+-------------------------------------------------
+  1) 200pM FRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 20 minutes
+  4) Total counts in D/A is around 120k/85k
+  5) Please see NOTE2
+
+!!!!!!!!!!!!NEW SAMPLES!!!!!!!!!!!!!
+
+run_019:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 218k/145k
+  5) Please see NOTE3
+
+run_020:
+-------------------------------------------------
+  1) 200pM FRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 206k/140k
+  5) Please see NOTE3
+
+run_021:
+-------------------------------------------------
+  1) 300pM FRNA DA
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 217k/127k
+  5) Please see NOTE3
+
+run_022:
+-------------------------------------------------
+  1) 100pM RRNA D
+  2) Non-ALEX50
+  3) Data duration is around 36 minutes
+  4) Total counts in D/A is around 453k/181k
+
+run_023:
+-------------------------------------------------
+  1) 200pM FRNA D
+  2) Non-ALEX50
+  3) Data duration is around 34 minutes
+  4) Total counts in D/A is around 233k/152k
+  5) Please see NOTE3
+
+run_024:
+-------------------------------------------------
+  1) 300pM FRNA D
+  2) Non-ALEX50
+  3) Data duration is around 30 minutes
+  4) Total counts in D/A is around 220k/137k
+  5) Please see NOTE3
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) FRNA is from last Friday. I prepared dilutions starting from 
+1uM samples.
+
+  2) In this set of samples i believe i had a concentration issue. 
+Bursts were really and unexpectedly rare.
+
+  3) Bursts are sparse and sort of implies that i had again a 
+concentration issue. Unfortunately i have no idea why that did happen.
+
+

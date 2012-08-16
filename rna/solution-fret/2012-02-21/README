@@ -1,0 +1,300 @@
+2012-02-21
+
+FCS, solution FRET, and Diffusing Droplets FRET Experiments on RNA 16mer Forward and Reverse Attachments 
+--------------------------------------------------------------------------------------------------------------------------
+For additional notes and corrections/comments on data PLEASE, See the notes end of the document
+
+
+Quick Nomenclature: 
+------------------------------------
+SAMPLE : RNA in buffer + PCD/PCA + Trolox mixture before droplet prep
+DENSE : Original emulsion right after sonication
+MIX : Diluted emulsion in oil without extra surfactant, often times Emulsion/Oil (v/v) is around 1/4
+
+Buffer for solution: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 
+Buffer for droplets: 20mM Hepes pH 7.8 + 50mM NaCl + 5mM MgCl2 + "PCD/PCA + Trolox + MV" -> As described below
+
+Forward Attached RNA 16mer (FRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Forward Attached RNA 16mer Donor Only (FRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+Reverse Attached RNA 16mer (RRNA DA): Double strand FRET pair (Cy3,Cy5) labeled RNA 16mer
+Reverse Attached RNA 16mer Donor Only (RRNA D): Double strand Only Donor labeled (Cy3) RNA 16mer
+
+ALEX50: 50usec alternation time, 50uW 514nm and 25uW 647nm
+ALEX20: 50usec alternation time, 20uW 514nm and 10uW 647nm
+Non-ALEX50: Only 50uW 514nm
+Non-ALEX20: Only 20uW 514nm
+Non-ALEX10: Only 10uW 514nm
+
+Fully Closed Iris (FCI): The Smallest beam diameter in collimated region so Under-filling Objective Lens
+Fully Opened Iris (FOI): The Largest beam diameter in collimated region so Critically-filling Objective Lens
+
+Dark Counts in detectors : A/D ~ 40/40 per sec
+Alignment Check with 100 nM old TMR with 50uW 514nm . Counts : D/A ~ 240k/32k per sec
+
+Always 30 tics up into solution
+Always dissolve CO2 in MIX oil before adding droplets from DENSE
+Always add 1uL PCD (150x), 5uL PCA (40x), 1uL Trolox (100x), 1uL Methyl Viologen (MV) (100x) into 100uL RNA sample before DENSE prep
+
+
+FCS Experiments
+---------------------------------------------------------
+
+run_000:
+-------------------------------------------------
+  1) Buffer for solution
+  2) FOI
+  3) Non-ALEX50
+  4) Data duration is around 5 minutes
+  5) Total counts in D/A is around 29k/29k
+
+run_001:
+-------------------------------------------------
+  1) 10nM FRNA DA
+  2) FOI
+  3) Non-ALEX50
+  4) Data duration is around 3 minutes
+  5) Total counts in D/A is around 1.3m/1.7m
+
+run_002:
+-------------------------------------------------
+  1) 10nM FRNA D
+  2) FOI
+  3) Non-ALEX50
+  4) Data duration is around 7 minutes
+  5) Total counts in D/A is around 1.2m/260k
+
+run_003:
+-------------------------------------------------
+  1) 10nM RRNA DA
+  2) FOI
+  3) Non-ALEX50
+  4) Data duration is around 4 minutes
+  5) Total counts in D/A is around 4.5m/6.7m
+
+run_004:
+-------------------------------------------------
+  1) 10nM RRNA D
+  2) FOI
+  3) Non-ALEX50
+  4) Data duration is around 2 minutes
+  5) Total counts in D/A is around 3.6m/660k
+
+run_005:
+-------------------------------------------------
+  1) 10nM FRNA DA
+  2) FOI
+  3) Non-ALEX20
+  4) Forgot to note data duration
+  5) Total counts in D/A is around 1.2m/1.6m
+
+run_006:
+-------------------------------------------------
+  1) 10nM FRNA D
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 13 minutes
+  5) Total counts in D/A is around 1.1m/241k
+
+run_007:
+-------------------------------------------------
+  1) 10nM RRNA DA
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 12 minutes
+  5) Total counts in D/A is around 5.7m/8.5m
+
+run_008:
+-------------------------------------------------
+  1) 10nM RRNA D
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 7 minutes
+  5) Total counts in D/A is around 6m/1m
+
+run_009:
+-------------------------------------------------
+  1) 10nM FRNA DA
+  2) FOI
+  3) Non-ALEX10
+  4) Data duration is around 15 minutes
+  5) Total counts in D/A is around 1.65m/2.2m
+
+run_010:
+-------------------------------------------------
+  1) 10nM FRNA D
+  2) FOI
+  3) Non-ALEX10
+  4) Data duration is around 15 minutes
+  5) Total counts in D/A is around 800k/185k
+
+run_011:
+-------------------------------------------------
+  1) 10nM FRNA DA
+  2) FCI
+  3) Non-ALEX50
+  4) Data duration is around 6 minutes
+  5) Total counts in D/A is around 5m/5.5m
+
+run_012:
+-------------------------------------------------
+  1) 10nM FRNA D
+  2) FCI
+  3) Non-ALEX50
+  4) Data duration is around 4 minutes
+  5) Total counts in D/A is around 1.37m/280k
+
+run_013:
+-------------------------------------------------
+  1) 10nM RRNA DA
+  2) FCI
+  3) Non-ALEX50
+  4) Data duration is around 3 minutes
+  5) Total counts in D/A is around 5.9m/8m
+
+run_014:
+-------------------------------------------------
+  1) 10nM RRNA D
+  2) FCI
+  3) Non-ALEX50
+  4) Data duration is around 9 minutes
+  5) Total counts in D/A is around 2.5m/4.4m
+
+run_015:
+-------------------------------------------------
+  1) 10nM RRNA D
+  2) FCI
+  3) Non-ALEX10
+  4) Data duration is around 15 minutes
+  5) Total counts in D/A is around 10m/1.7m
+
+
+Solution FRET Experiments
+---------------------------------------------------------
+
+run_016:
+-------------------------------------------------
+  1) 1nM FRNA DA
+  2) FCI
+  3) Non-ALEX20
+  4) Data duration is around 21 minutes
+  5) Total counts in D/A is around 301k/360k
+
+run_017:
+-------------------------------------------------
+  1) 1nM FRNA D
+  2) FCI
+  3) Non-ALEX20
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 145k/99k
+
+run_018:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) FCI
+  3) Non-ALEX20
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 132k/150k
+
+run_019:
+-------------------------------------------------
+  1) 100pM RRNA D
+  2) FCI
+  3) Non-ALEX20
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 174k/103k
+
+run_020:
+-------------------------------------------------
+  1) 1nM FRNA DA + 1mM Trolox
+  2) FCI
+  3) Non-ALEX20
+  4) Data duration is around 21 minutes
+  5) Total counts in D/A is around 166k/155k
+  6) Please see NOTE2
+
+run_021:
+-------------------------------------------------
+  1) 1nM FRNA DA 
+  2) FCI
+  3) Non-ALEX10
+  4) Data duration is around 21 minutes
+  5) Total counts in D/A is around 195k/230k
+
+run_022:
+-------------------------------------------------
+  1) 1nM FRNA D
+  2) FCI
+  3) Non-ALEX10
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 103k/75k
+
+run_023:
+-------------------------------------------------
+  1) 100pM RRNA DA
+  2) FCI
+  3) Non-ALEX10
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 87k/95k
+
+run_024:
+-------------------------------------------------
+  1) 100pM RRNA D
+  2) FCI
+  3) Non-ALEX10
+  4) Data duration is around 20 minutes
+  5) Total counts in D/A is around 120k/78k
+
+Diffusing Droplets FRET Experiments
+---------------------------------------------------------
+
+run_025:
+-------------------------------------------------
+  1) 50nM FRNA DA
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 65 minutes
+  5) Total counts in D/A is around 327k/363k
+
+run_026:
+-------------------------------------------------
+  1) 50nM FRNA D
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 67 minutes
+  5) Total counts in D/A is around 326k/334k
+
+run_027:
+-------------------------------------------------
+  1) 50nM RRNA DA
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 66 minutes
+  5) Total counts in D/A is around 328k/369k
+
+run_028:
+-------------------------------------------------
+  1) 50nM RRNA D
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 72 minutes
+  5) Total counts in D/A is around 401k/379k
+
+run_029:
+-------------------------------------------------
+  1) Buffer for droplets
+  2) FOI
+  3) Non-ALEX20
+  4) Data duration is around 60 minutes
+  5) Total counts in D/A is around 243k/296k
+
+NOTES:
+-----------------------------------------------------------------------------------
+  1) In parallel to Lori's advice, i used 1nM samples for Forward attached
+RNA 16mer. In fact i felt like it was little more crowded. I think it will
+be more clear when we analyze it.
+
+  2) In this sample, there was (probably) an aggregate around 14 minutes.
+I previously thought that with the addition of less Trolox i might not have
+those kind of junk in sample. Unfortunately, as i pointed out, this sample
+broke this idea. Therefore i am not taking remaining Trolox included samples'
+data.
