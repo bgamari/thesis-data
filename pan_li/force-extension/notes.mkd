@@ -1,0 +1,74 @@
+# Notes on Pan Li force-extension analysis
+
+Looking at force-extension data discussed in meeting with Pan Li on 16
+Nov 2012. In particular, extension fluctuations at constant force
+sitting on "plateau" of force-extension curve of highly looped
+RNA.
+
+![Force-extension curve with red points showing fluctuations at constant force](constant-force.png)
+
+Pan proposed that this plateau is due to opening of numerous
+small loops. He also observed rare dwell events where large extension
+excursions would persist for seconds.
+
+![An excursion in extension](long-dwell.png)
+
+Pan's initial analysis consists of a Fourier analysis as well as a
+pairwise distance histogram. It seems to me that the proper treatment
+for this sort of data would to examine the autocorrelation function.
+
+Pan sent `hopdata.txt`, a time series of force and extension. The time
+series lasts for ~170 seconds. Unfortunately, the sample period is
+fairly long (~5ms) with a fair amount of jitter.
+
+![Histogram of intersample time showing timing jitter](jitter.png)
+
+Given the difficulty of computing a correlation function of unevenly
+spaced data, I will have to interpolate for now. Unfortunately
+quadratic interpolation seems to be too costly so I will have to
+settle for linear for now.
+
+I will use the standard Fourier transform expression of the
+autocorrelation function,
+
+    a = fft(x)
+    g = ifft(a * np.conj(a))
+
+Given we are looking at fluctuation correlations, I'll be
+mean-centering the signal. This results in,
+
+![Correlation function of extension](extension-corr.png)
+![Correlation function of force](force-corr.png)
+
+As expected, the force is roughly uncorrelated (presumably up to the
+bandwidth of the trap?). Moreover, the extension exhibits what might
+be at least one correlation timescales
+
+Given this data appears to be a random walk, let's just try a standard
+Ornstein-Uhlenbeck process. That is, Gaussian displacement with
+exponential correlation,
+
+$$\langle x(t) x(t+\tau) \rangle_t \propto e^{-t / \tau_D} $$
+
+Let's see if this model fits. We will ignore lags greater than 10
+seconds in the fit due to lack of statistics. Moreover, in order to
+account for the apparent long time correlation, we will allow an
+offset in the fit function. We will clamp the amplitude at 1, as this
+should be the case by our definition of $G$,
+
+![Correlation function of extension with fit](extension-corr-fit.png)
+
+This shows $\tau_D = 36$ milliseconds, although the fit is fairly
+poor, especially at longer times, as expected. It seems there may be
+some interesting behavior around $\tau = 10$ seconds. Looking at the
+extension signal itself, there is a clear drift, with the mean extension
+of the first 1000 points being -25.19 and that of the last 1000 points
+being -20.18. This is most easily seen in the moving average of the
+extension signal (window size of 1000 points). This is overlaid on a
+two-dimensional histogram, with the mean extension (-22.8 nm)
+indicated by the horizontal black line.
+
+![Timeseries of extension signal](extension-timeseries.png)
+
+This clear drift largely explains the offset necessary in the
+correlation function fit.
