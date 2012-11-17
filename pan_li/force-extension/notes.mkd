@@ -79,6 +79,15 @@ model. Need to think further about why this might be the case.
 
 ![Correlation function of diffusion with sub-diffusive fit](extension-corr-subdiff-fit.png)
 
+Allowing the model to fit an amplitude also appears to improve the
+fit. This makes sense as the offset will affect the normalization of
+the curve. Moreover, I now compute the confidence interval ($\alpha =
+0.05$) of the autocorrelation. This is shown as the grey tube. We see
+that the behavior around $\tau = 300$ ms is clearly outside of the
+expected error of the estimator.
+
+![Correlation function of diffusion with sub-diffusive fit](extension-corr-subdiff-fit-2.png)
+
 Looking at the extension signal itself, there is a clear drift, with
 the mean extension of the first 1000 points being -25.19 nm and that
 of the last 1000 points being -20.18 nm. This is most easily seen in
@@ -116,7 +125,7 @@ statistical noise, although one could only tell with a longer time-series.
    the structure here isn't clear
  * A longer time series might help clear up or confirm the behavior
    around $\tau = 100$ms. This is by far one of the most significant
-   outstanding issues in the analysis.
+   outstanding questions in the analysis.
  * The drift is probably due to experimental artifacts. It seems
    unlikely that this system displays dynamics on such large
    timescales (>10 seconds). That being said, it would be nice to
