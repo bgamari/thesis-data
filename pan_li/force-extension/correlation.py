@@ -27,7 +27,7 @@ def autocorr(d, dt=6e-3):
 def correlation_plot(d, dt=6e-3, **kwargs):
     taus, corr = autocorr(d, dt)
     ax = pl.gca()
-    ax.plot(taus, corr, **kwargs)
+    ax.semilogx(taus, corr, **kwargs)
     ax.set_xscale('log')
     ax.set_xlabel(r'$\tau$ (seconds)')
     ax.set_ylabel(r'$G(\tau)$')
@@ -44,18 +44,20 @@ def plot_force_extension(d):
     grid[1].set_ylabel('force')
     grid[1].set_xlabel('time (s)')
 
+pl.clf()
 pl.hist(d['time'][1:] - d['time'][:-1], range=(-1e-3, 1e-2))
 pl.xlabel('inter-sample time (s)')
 pl.ylabel('counts')
 pl.savefig('jitter.png')
 pl.clf()
 
-print 'mean extension', np.mean(d['ext'][:1000]), np.mean(d['ext'][-1000:])
-def plot_smoothed(x, y, window, **kwargs):
-    s = np.r_[y, y[-1:-window:-1]]
+def smooth(x, window):
+    s = np.r_[x, x[-1:-window:-1]]
     w = np.ones(window, 'd')
-    smoothed = np.convolve(w/sum(w), s, mode='valid')
-    pl.plot(x, smoothed, **kwargs)
+    return np.convolve(w/sum(w), s, mode='valid')
+
+def plot_smoothed(x, y, window, **kwargs):
+    pl.plot(x, smooth(y, window), **kwargs)
 
 def plot_timeseries(x, y, window, bins):
     pl.xscale('linear')
@@ -67,18 +69,22 @@ dt = 5e-3
 
 xs = np.arange(min(d['time']), max(d['time']), dt)
 interp = interp1d(d['time'], d['ext'], kind='linear')(xs)
+pl.figure()
 correlation_plot(interp, dt=dt, c='b', marker='+', label='ext')
-#pl.show()
 
-def ornstein_uhlenbeck(tau, taud, offset):
-    amp = 1
-    return offset + amp * exp(-tau/taud)
+def ornstein_uhlenbeck(tau, taud, offset=0, alpha=1, amp=1):
+    return offset + amp * exp(-(tau/taud)**alpha)
 
 taus, corr = autocorr(interp, dt)
-((taud,offset), cov) = curve_fit(ornstein_uhlenbeck,
-                                 taus[taus<1e1], corr[taus<1e1],
-                                 p0=[1e-3, 0])
+fit_taus = taus[taus<1e1]
+fit_corr = corr[taus<1e1]
+(params, cov) = curve_fit(ornstein_uhlenbeck,
+                          fit_taus, fit_corr,
+                          p0=[1e-3, 0, 1])
+print 'Chi^2', np.sum((ornstein_uhlenbeck(fit_taus, *params) - fit_corr)**2)
+
+(taud,offset,alpha) = params
+print params
 taus_ = np.logspace(-3, log10(max(taus)), 1000)
-print 'tau_d', taud
-pl.plot(taus_, ornstein_uhlenbeck(taus_, taud, offset), '-k', label='Model')
+pl.semilogx(taus_, ornstein_uhlenbeck(taus_, *params), '-k', label='Model')
 pl.show()
