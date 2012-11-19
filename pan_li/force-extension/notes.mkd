@@ -130,7 +130,7 @@ interactions or is there also a significant geometric (e.g. bending
 energy) contribution? I suppose there are probably also strong
 positive energy contributions from interaction of mismatched A-A
 bases. If so, it might be interesting to study other systems with
-diluted interaction points (CAAG, etc.).
+more dilute interaction points (CAAG, etc.).
 
 Judging by the stability of the structures given in Pan's slides, it
 seems that larger loops might be less stable than smaller loops. Is
@@ -168,7 +168,7 @@ One would think a temperature dependence could also be of interest
 here although this could be very messy given the number of
 experimental factors with non-trivial temperature dependencies.
 
-Salt dependence? Would this tend
+Salt dependence?
 
 
 ## Summary
@@ -183,8 +183,8 @@ Salt dependence? Would this tend
  * Other interesting features are visible $\approx 100$ ms, although
    the structure here isn't clear
  * A longer time series might help clear up or confirm the behavior
-   around $\tau = 100$ms. This is by far one of the most significant
-   outstanding questions in the analysis.
+   around $\tau = 100$ms. This is one of the most significant
+   outstanding questions in this preliminary analysis.
  * The drift is probably due to experimental artifacts. It seems
    unlikely that this system displays dynamics on such large
    timescales (>10 seconds). That being said, it would be nice to
@@ -192,9 +192,10 @@ Salt dependence? Would this tend
    for localization of the specimen?
  * Some questions: Where on the strand is the pulling force being
    applied?  Is this done with one end trapped while the other is
-   fixed? Is there a tether being used?
+   fixed? What sort of tether is being used? What is its stiffness?
  * A better understanding of the energetics of this system would help
    guide model construction. Are the G-C interactions dominant? Is
-   there any significant bending energy? Is there some sufficient
+   there any significant bending energy? How can we account for the
+   entropic contribution to the free energy? Is there some sufficient
    statistic that might capture a configuration's properties nicely?
 

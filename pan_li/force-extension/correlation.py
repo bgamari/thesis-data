@@ -67,6 +67,11 @@ def plot_timeseries(x, y, window, bins):
     pl.hist2d(x, y, bins=bins, alpha=0.5)
     plot_smoothed(x, y, window, c='k')
     pl.axhline(np.mean(y), c='k')
+    pl.xlabel('time (s)')
+    pl.ylabel('extension (nm)')
+
+plot_timeseries(d['time'], d['ext'], 1000, (100,100))
+pl.savefig('extension-timeseries.png')
     
 dt = 5e-3
 
