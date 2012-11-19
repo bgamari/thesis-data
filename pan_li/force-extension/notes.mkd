@@ -29,17 +29,17 @@ inter-sample time histogram.
 # Autocorrelation
 
 Given the difficulty of computing a correlation function of unevenly
-spaced data, I will have to interpolate for now. Unfortunately
-quadratic interpolation seems to be too costly so I will have to
-settle for first-order for now.
+spaced data, I will have to interpolate and resample for
+now. Unfortunately quadratic interpolation seems to be too costly so I
+will have to settle for first-order for now.
 
 I will use the standard Fourier transform expression of the
 auto-correlation function,
 
     a = fft(x)
-    g = ifft(a * np.conj(a))
+    g = ifft(a * conj(a))
 
-Given we are looking at fluctuation correlations, I'll be
+Since we are looking for fluctuation correlations, I'll be
 mean-centering the signal. This results in the autocorrelation
 function shown below,
 
@@ -74,11 +74,11 @@ clearly the standard error of the estimator is well below the
 magnitude to the residual. In light of this, there may be something
 interesting going on here.
 
-Perhaps a anomalous diffusion model would fit better? Slightly better
+Perhaps an anomalous diffusion model would fit better? Slightly better
 (at least in the low $\tau$ regime) with $\alpha=0.951$ ($\tau_D=35.7$
 milliseconds, offset=0.027, $\chi^2 = 0.419$) the fits seems to
-improve the fit around 10 milliseconds. This is a subdiffusive
-model. Need to think further about why this might be the case.
+improve around 10 milliseconds. This is a subdiffusive model. Need to
+think further about why this might be the case.
 
 ![Correlation function of diffusion with sub-diffusive fit](extension-corr-subdiff-fit.png)
 
@@ -93,11 +93,11 @@ ms is clearly outside of the expected error of the estimator.
 ![Correlation function of diffusion with sub-diffusive fit](extension-corr-subdiff-fit-2.png)
 
 Looking at the extension signal itself, there is a clear drift, with
-the mean extension of the first 1000 points being -25.19 nm and that
-of the last 1000 points being -20.18 nm. This is most easily seen in
+the mean extension of the first 1000 points being $-25.19$ nm and that
+of the last 1000 points being $-20.18$ nm. This is most easily seen in
 the moving average of the extension signal (window size of 1000
 points). This is overlaid on a two-dimensional histogram, with the
-mean extension (-22.8 nm) indicated by the horizontal black line.
+mean extension ($-22.8$ nm) indicated by the horizontal black line.
 
 ![Smoothed time series of extension signal](extension-timeseries.png)
 
