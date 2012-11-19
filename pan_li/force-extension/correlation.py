@@ -91,3 +91,4 @@ print params
 taus_ = np.logspace(-3, log10(max(taus)), 1000)
 pl.semilogx(taus_, ornstein_uhlenbeck(taus_, *params), '-k', label='Model')
 pl.show()
+

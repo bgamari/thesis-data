@@ -1,5 +1,6 @@
 # Notes on Pan Li force-extension analysis
 
+# Background
 Looking at force-extension data discussed in meeting with Pan Li on 16
 Nov 2012. In particular, extension fluctuations at constant force
 sitting on "plateau" of force-extension curve of highly looped
@@ -24,6 +25,8 @@ fairly long (~5ms) with a fair amount of jitter as seen in the
 inter-sample time histogram.
 
 ![Histogram of inter-sample time showing timing jitter](jitter.png)
+
+# Autocorrelation
 
 Given the difficulty of computing a correlation function of unevenly
 spaced data, I will have to interpolate for now. Unfortunately
@@ -81,10 +84,11 @@ model. Need to think further about why this might be the case.
 
 Allowing the model to fit an amplitude also appears to improve the
 fit. This makes sense as the offset will affect the normalization of
-the curve. Moreover, I now compute the confidence interval ($\alpha =
-0.05$) of the autocorrelation. This is shown as the grey tube. We see
-that the behavior around $\tau = 300$ ms is clearly outside of the
-expected error of the estimator.
+the curve. However, $\alpha$ moves closer to diffusive ($\alpha =
+0.974$) when the amplitude is fitted. Moreover, I now compute the
+confidence interval ($\alpha = 0.05$) of the autocorrelation. This is
+shown as the grey tube. We see that the behavior around $\tau = 300$
+ms is clearly outside of the expected error of the estimator.
 
 ![Correlation function of diffusion with sub-diffusive fit](extension-corr-subdiff-fit-2.png)
 
@@ -111,6 +115,61 @@ Going back to the correlation function, there are interesting features
 with correlation times of order 100ms. These really don't look the
 statistical noise, although one could only tell with a longer time-series.
 
+Perhaps examining a Laplace transform could shed some light on this
+funny non-diffusive behavior?
+
+## Thoughts on modelling
+
+It would be nice to make use of the distribution over $\Delta G$ of
+the ensemble of computed conformers. I'm not too familiar with the
+energetics of loop formation, but a naive energetic model might take
+the energy of a conformation to be a sum over size-dependent loop
+energies. Does this work at all? Are interactions between loops a
+significant factor? Is the loop energy largely determined by G-C
+interactions or is there also a significant geometric (e.g. bending
+energy) contribution? I suppose there are probably also strong
+positive energy contributions from interaction of mismatched A-A
+bases. If so, it might be interesting to study other systems with
+diluted interaction points (CAAG, etc.).
+
+Judging by the stability of the structures given in Pan's slides, it
+seems that larger loops might be less stable than smaller loops. Is
+this true? Directly comparing the energies of structures differing by
+only a single loop would be instructive here. Is this possible?
+
+I can't seem to get mfold to give me anything resembling the highly
+looped structures Pan shows in his slides. Even with high optimality
+and a low window size I see only single-loop structures. I need to
+look into what comprises mfold's modelling assumptions.
+
+If we can describe the energy of the system entirely by the loops
+formed, it might be interesting to reason about the transitions
+between configurations. By looking at the statistics of $\Delta G$ of
+transitions, it should be possible to back out something about the
+effective transition rate, would should be related to the correlation
+time. We can do this by framing the problem as a Markov process with
+sparse transitions (since you in general need to unfold a loop before
+you can fold another). It should be possible to relate the expected
+dwell time distribution of the process to the correlation on the
+observations resulting from its evolution. TODO: Work through math
+
+## Other dependencies
+
+An obvious idea here would be to examine the dependence of the
+correlation function on the constant force used. Perhaps most
+interesting would be the high-force limit, where you can examine rare
+excursions of a structure almost entirely frozen in a highly
+extended state with a relatively low density of accessible neighboring
+states. One might be able to back out a $\Delta G$ of a single loop
+formation (if such a thing is meaningful, going back to the previous
+section).
+
+One would think a temperature dependence could also be of interest
+here although this could be very messy given the number of
+experimental factors with non-trivial temperature dependencies.
+
+Salt dependence? Would this tend
+
 
 ## Summary
 
@@ -134,5 +193,8 @@ statistical noise, although one could only tell with a longer time-series.
  * Some questions: Where on the strand is the pulling force being
    applied?  Is this done with one end trapped while the other is
    fixed? Is there a tether being used?
- 
+ * A better understanding of the energetics of this system would help
+   guide model construction. Are the G-C interactions dominant? Is
+   there any significant bending energy? Is there some sufficient
+   statistic that might capture a configuration's properties nicely?
 
