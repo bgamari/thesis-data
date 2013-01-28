@@ -130,7 +130,8 @@ interactions or is there also a significant geometric (e.g. bending
 energy) contribution? I suppose there are probably also strong
 positive energy contributions from interaction of mismatched A-A
 bases. If so, it might be interesting to study other systems with
-more dilute interaction points (CAAG, etc.).
+more dilute interaction points (CAAG, etc.). Is there any simple way
+to determine the entropic contribution to the free energy?
 
 Judging by the stability of the structures given in Pan's slides, it
 seems that larger loops might be less stable than smaller loops. Is

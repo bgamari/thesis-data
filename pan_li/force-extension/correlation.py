@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import sys
 import numpy as np
 from numpy import exp, log, log10, newaxis, abs
 import scipy.signal
@@ -36,7 +37,10 @@ def correlation_plot(d, dt=6e-3, **kwargs):
     ax.set_ylabel(r'$G(\tau)$')
     ax.grid()
 
-d = read_traj('hopdata.txt')
+fname = 'hopdata.txt'
+if len(sys.argv) >= 2:
+    fname = sys.argv[1]
+d = read_traj(fname)
 
 def plot_force_extension(d):
     from mpl_toolkits.axes_grid1 import AxesGrid
@@ -72,6 +76,9 @@ def plot_timeseries(x, y, window, bins):
 
 plot_timeseries(d['time'], d['ext'], 1000, (100,100))
 pl.savefig('extension-timeseries.png')
+
+plot_timeseries(d['time'], d['force'], 1000, (100,100))
+pl.savefig('force-timeseries.png')
     
 dt = 5e-3
 
@@ -86,14 +93,17 @@ def ornstein_uhlenbeck(tau, taud, offset=0, alpha=1, amp=1):
 taus, corr = autocorr(interp, dt)
 fit_taus = taus[taus<1e1]
 fit_corr = corr[taus<1e1]
-(params, cov) = curve_fit(ornstein_uhlenbeck,
-                          fit_taus, fit_corr,
-                          p0=[1e-3, 0, 1, 1])
-print 'Chi^2', np.sum((ornstein_uhlenbeck(fit_taus, *params) - fit_corr)**2)
+try:
+    (params, cov) = curve_fit(ornstein_uhlenbeck,
+                              fit_taus, fit_corr,
+                              p0=[1e-3, 0, 1, 1])
+    print 'Chi^2', np.sum((ornstein_uhlenbeck(fit_taus, *params) - fit_corr)**2)
 
-(taud,offset,alpha,amp) = params
-print params
-taus_ = np.logspace(-3, log10(max(taus)), 1000)
-pl.semilogx(taus_, ornstein_uhlenbeck(taus_, *params), '-k', label='Model')
+    (taud,offset,alpha,amp) = params
+    print params
+    taus_ = np.logspace(-3, log10(max(taus)), 1000)
+    pl.semilogx(taus_, ornstein_uhlenbeck(taus_, *params), '-k', label='Model')
+except Exception as e:
+    print 'Fit failed', e
 pl.show()
 
