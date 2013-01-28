@@ -1,0 +1,32 @@
+Always Only 514 excitation 
+Always 50 ticks up into the solution 
+Always floating stage
+
+run_000 : 50pM Pan Li WPD, 56uW 
+run_001 : 50pM Pan Li WG1 (Gap1), 62uW
+run_002 : 50pM Pan Li WG5 (Gap5), 64uW
+run_003 : 50pM Pan Li WG10 (Gap10), 66uW
+run_004 : 50pM Pan Li WN (Nick), 66uW
+run_005 : Buffer *, 64uW
+run_006 : 50pM Pan Li WPD, 10mM NaCl, 64uW 
+run_007 : 50pM Pan Li WG1 (Gap1), 10mM NaCl, 66uW 
+run_008 : 50pM Pan Li WG5 (Gap5), 10mM NaCl, 66uW 
+run_009 : 50pM Pan Li WG10 (Gap10), 10mM NaCl, 66uW, Box Door Open !
+run_010 : 50pM Pan Li WG10 (Gap10), 10mM NaCl, 66uW, REPEAT 9 
+run_011 : 50pM Pan Li WN (Nick), 10mM NaCl, 66uW 
+run_012 : Buffer *, 10mM NaCl, 64uW
+run_013 : 50pM Pan Li WPD, 50mM NaCl, 62uW 
+run_014 : 50pM Pan Li WG1 (Gap1), 50mM NaCl, 62uW 
+run_015 : 50pM Pan Li WG5 (Gap5), 50mM NaCl, 62uW 
+run_016 : 50pM Pan Li WG10 (Gap10), 50mM NaCl, 63uW 
+run_017 : 50pM Pan Li WN (Nick), 50mM NaCl, 63uW 
+run_018 : Buffer *, 50mM NaCl, 60uW
+run_019 : 50pM Pan Li WPD, 100mM NaCl, 62uW 
+run_020 : 50pM Pan Li WG1 (Gap1), 100mM NaCl, 62uW 
+run_021 : 50pM Pan Li WG5 (Gap5), 100mM NaCl, 62uW 
+run_022 : 50pM Pan Li WG10 (Gap10), 100mM NaCl, 60uW 
+run_023 : 50pM Pan Li WN (Nick), 100mM NaCl, 61uW 
+run_024 : Buffer *, 100mM NaCl, 61uW
+
+* : Buffer in this experiment consists of 20mM Hepes pH 7.8
+

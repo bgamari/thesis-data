@@ -1,0 +1,37 @@
+Always 50uW Only 514 excitation 
+Always 50 ticks up into the solution 
+Always floating stage
+
+run_000 : 100pM Pan Li WPD
+run_001 : 50pM Pan Li WPD
+run_002 : 100pM Pan Li WPD, 10% Glycerol (v/v)
+run_003 : 50pM Pan Li WPD, 10% Glycerol (v/v)
+run_004 : 100pM Pan Li WPD, 20% Glycerol (v/v)
+run_005 : 50pM Pan Li WPD, 20% Glycerol (v/v)
+run_006 : Buffer 
+run_007 : 100pM Pan Li 0vs1
+run_008 : 50pM Pan Li 0vs1
+run_009 : 100pM Pan Li 1vs1
+run_010 : 50pM Pan Li 1vs1
+run_011 : 100pM Pan Li 1vs2
+run_012 : 50pM Pan Li 1vs2
+run_013 : 100pM Pan Li 1vs5
+run_014 : 50pM Pan Li 1vs5
+run_015 : 100pM Pan Li 0vs1, 10% Glycerol (v/v)
+run_016 : 50pM Pan Li 0vs1, 10% Glycerol (v/v)
+run_017 : 100pM Pan Li 1vs1, 10% Glycerol (v/v)
+run_018 : 50pM Pan Li 1vs1, 10% Glycerol (v/v)
+run_019 : 100pM Pan Li 1vs2, 10% Glycerol (v/v)
+run_020 : 50pM Pan Li 1vs2, 10% Glycerol (v/v)
+run_021 : 100pM Pan Li 1vs5, 10% Glycerol (v/v)
+run_022 : 50pM Pan Li 1vs5, 10% Glycerol (v/v)
+run_023 : 100pM Pan Li 0vs1, 20% Glycerol (v/v)
+run_024 : 50pM Pan Li 0vs1, 20% Glycerol (v/v)
+run_025 : 100pM Pan Li 1vs1, 20% Glycerol (v/v)
+run_026 : 50pM Pan Li 1vs1, 20% Glycerol (v/v)
+run_027 : 100pM Pan Li 1vs2, 20% Glycerol (v/v)
+run_028 : 50pM Pan Li 1vs2, 20% Glycerol (v/v)
+run_029 : 100pM Pan Li 1vs5, 20% Glycerol (v/v)
+run_030 : 50pM Pan Li 1vs5, 20% Glycerol (v/v)
+run_031 : Buffer, 10% Glycerol (v/v)
+run_032 : Buffer, 20% Glycerol (v/v)
