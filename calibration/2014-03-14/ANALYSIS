@@ -1,0 +1,50 @@
+withAP = with afterpulsing correction by run016
+trunc  = truncate correlation function at 1e-5 s to eliminate afterpulsing
+A0     = Acceptor channel autocorrelation
+X01    = Donor/acceptor channel cross-correlation
+
+                   withAP        trunc
+                   A0          X0
+run010    a        78.7
+          n        5.559
+          tau_d    79.53
+
+run011    a        59.3
+          n        5.6
+          tau_d    76.0 
+
+run012    a        26.0
+          n        5.7
+          tau_d    77.96
+
+run013    a        616
+          n        5.829
+          tau_d    78.5
+
+run014   Something is very wrong here
+
+run015    c        0.62
+          a        224
+          n        5.8
+          tau_d    78.2
+
+run018    c        0.65
+          a        5152               
+          n        5.97
+          tau_d    80.0
+
+tun019    c        0.77
+          a        31.1
+          n        5.79
+          tau_d    78.4
+
+
+run020    c        0.69
+          a        301.0
+          n        5.57
+          tau_d    77.6
+
+run021    c        0.81
+          a        105.4
+          n        5.59
+          tau_d    78.4
