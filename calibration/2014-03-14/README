@@ -1,0 +1,25 @@
+# 2014-03-14: Instrument prep with Anand
+
+run     description
+----    -------------------------------------------
+002     ~10nM, polymer/Atto488 sample from Anand
+003     10nM fluoroscein in solution
+004     10nM TMR, 100uW @ 488
+005     10nM TMR after 5 min in sonicator, 100uW
+006     Same sample as 005, 200uW
+007     Again
+008     400uW
+note    Noticed large clumps diffusing in brightfield
+009     Fresh 100nM TMR sample prepared by Anand, 100uW
+010     Again
+011     200uW
+012     Again
+013     Again
+014     Again
+015     Again
+016     Uncorrelated ambient light for afterpulsing correction
+017     Again, 200uW
+018     400uW, too close to surface as evidenced by red signal
+019     moved into solution
+020     Again
+021     Again
