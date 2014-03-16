@@ -1,50 +1,67 @@
-withAP = with afterpulsing correction by run016
-trunc  = truncate correlation function at 1e-5 s to eliminate afterpulsing
-A0     = Acceptor channel autocorrelation
-X01    = Donor/acceptor channel cross-correlation
+# Analysis from 2014-03-16
 
-                   withAP        trunc
-                   A0          X0
-run010    a        78.7
-          n        5.559
-          tau_d    79.53
+withAP  ≡ with afterpulsing correction by run016
+truncAP ≡ truncate correlation function at 1e-5 s to eliminate afterpulsing
+noAP    ≡ cross-correlation, no afterpulsing correction
+A0      ≡ Acceptor channel autocorrelation
+X01     ≡ Donor/acceptor channel cross-correlation
+N/C     ≡ failed to converge
+c       ≡ reduced chi-squared statistic, χ² / DOF
+tau_d   ≡ diffusion time in microseconds
 
-run011    a        59.3
-          n        5.6
-          tau_d    76.0 
 
-run012    a        26.0
-          n        5.7
-          tau_d    77.96
+run       param    withAP        truncAP      noAP
+                   A0            A0           X01
+=======   =======  ========      =========    =========
+run010    c        0.61          N/C          21.74
+          a        44                         0.58
+          n        5.52                       14.7
+          tau_d    78.7                       215
 
-run013    a        616
-          n        5.829
-          tau_d    78.5
+run011    c        0.64          10.68        88.19
+          a        138           1362         0.44
+          n        5.55          5.66         16.3
+          tau_d    74.8          79.29        222
+
+run012    c        0.86          N/C          2.9
+          a        35.1                       30.7
+          n        5.69                       10.7
+          tau_d    76.61                      67.5
+
+run013    c        0.76          N/C          1.98
+          a        1276                       77.8
+          n        5.75                       10.5
+          tau_d    76.9                       93.8
 
 run014   Something is very wrong here
 
-run015    c        0.62
-          a        224
-          n        5.8
-          tau_d    78.2
-
-run018    c        0.65
-          a        5152               
-          n        5.97
-          tau_d    80.0
-
-tun019    c        0.77
-          a        31.1
+run015    c        0.77          N/C          N/C
+          a        289
           n        5.79
-          tau_d    78.4
+          tau_d    78.0
+
+run018    c        1.40          2.66        1.06
+          a        1616          1366        -41.8
+          n        5.83          6.02        30.6
+          tau_d    80.1          85.5        87.1
+
+run019    c        0.96          1.28        1.02
+          a        79.1          674         801
+          n        5.64          5.78        15.3
+          tau_d    74.6          78.9        92.6
 
 
-run020    c        0.69
-          a        301.0
-          n        5.57
-          tau_d    77.6
+run020    c        0.98          2.15        1.30
+          a        1431          2450        2081
+          n        5.52          5.58        16.0
+          tau_d    76.5          78.7        83.3
 
-run021    c        0.81
-          a        105.4
-          n        5.59
-          tau_d    78.4
+run021    c        1.09          2.36        2.79
+          a        5.03          1832        11.8
+          n        5.48          5.60        11.6
+          tau_d    75.9          79.3        73.4
+
+global    c        1.08
+run019    a        490
+run020    n        5.53
+run021    tau_d    76.0
