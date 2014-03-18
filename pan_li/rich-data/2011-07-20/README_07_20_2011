@@ -1,0 +1,33 @@
+Always only 514 excitation with 55 uW power
+Always 50 ticks up into the solution 
+Always floating stage
+
+run_000 : 100pM Pan Li WPD 
+run_001 : 100pM Pan Li WPD, 10% Glycerol (v/v)
+run_002 : 100pM Pan Li WPD, 10pM Ha OligoD 
+run_003 : 100pM Pan Li WPD, 20pM Ha OligoD
+run_004 : Buffer
+run_005 : Buffer, 10% Glycerol (v/v)
+run_006 : 100pM Pan Li WG1 (Gap1) 
+run_007 : 100pM Pan Li WG5 (Gap5)
+run_008 : 100pM Pan Li WG10 (Gap10)
+run_009 : 100pM Pan Li WN (Nick)
+run_010 : 100pM Pan Li WG1 (Gap1), 10% Glycerol (v/v)
+run_011 : 100pM Pan Li WG5 (Gap5), 10% Glycerol (v/v)
+run_012 : 100pM Pan Li WG10 (Gap10), 10% Glycerol (v/v)
+run_013 : 100pM Pan Li WN (Nick), 10% Glycerol (v/v)
+run_014 : DEPC Water
+run_015 : Buffer
+run_016 : Fresh prepared Buffer
+run_017 : 10% Glycerol (v/v) Solution 
+run_018 : Buffer, 10% Glycerol (v/v)
+run_019 : Fresh prepared Buffer, 10% Glycerol (v/v)
+run_020 : HEPES
+run_021 : 50pM RNA 16mer, New annealing by Formula3 in web page* 
+run_022 : 50pM RNA 16mer, standard DNA annealing
+run_023 : 50pM RNA 16mer, standard DNA annealing with 5mM MgCl2
+run_024 : 50pM RNA 16mer, New annealing by Formula3 in web page*, 10% Glycerol (v/v)
+run_025 : 50pM RNA 16mer, standard DNA annealing, 10% Glycerol (v/v)
+
+* : http://www.protocol-online.org/prot/Protocols/siRNA--RNA-Oligo--Annealing-Protocol-3369.html
+

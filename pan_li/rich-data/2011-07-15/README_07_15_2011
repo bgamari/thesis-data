@@ -1,0 +1,30 @@
+Always only 514 excitation with 55 uW power
+Always 50 ticks up into the solution 
+Always floating stage
+
+run_000 : Buffer
+run_001 : 100pM Pan Li WPD 
+run_002 : 100pM Pan Li WG1 (Gap1)
+run_003 : 100pM Pan Li WG5 (Gap5)
+run_004 : 100pM Pan Li WG10 (Gap10)
+run_005 : Buffer with 10% Glycerol (v/v)
+run_006 : 100pM Pan Li WPD, 10% Glycerol (v/v)
+run_007 : 100pM Pan Li WG1 (Gap1), 10% Glycerol (v/v)
+run_008 : 100pM Pan Li WG5 (Gap5), 10% Glycerol (v/v)
+run_009 : 100pM Pan Li WG10 (Gap10), 10% Glycerol (v/v)
+run_010 : Buffer with 100uM Socrose (v/v)
+run_011 : 100pM Pan Li WPD, 100uM Socrose (v/v)
+run_012 : 100pM Pan Li WG1 (Gap1), 100uM Socrose (v/v)
+run_013 : 100pM Pan Li WG5 (Gap5), 100uM Socrose (v/v)
+run_014 : 100pM Pan Li WG10 (Gap10), 100uM Socrose (v/v)
+run_015 : Buffer with 20% Glycerol (v/v)
+run_016 : 100pM Pan Li WPD, 20% Glycerol (v/v)
+run_017 : 100pM Pan Li WG1 (Gap1), 20% Glycerol (v/v)
+run_018 : 100pM Pan Li WG5 (Gap5), 20% Glycerol (v/v)
+run_019 : 100pM Pan Li WG10 (Gap10), 20% Glycerol (v/v)
+run_020 : Buffer with 200uM Socrose (v/v)
+run_021 : 100pM Pan Li WPD, 200uM Socrose (v/v)
+run_022 : 100pM Pan Li WG1 (Gap1), 200uM Socrose (v/v)
+run_023 : 100pM Pan Li WG5 (Gap5), 200uM Socrose (v/v)
+run_024 : 100pM Pan Li WG10 (Gap10), 200uM Socrose (v/v)
+

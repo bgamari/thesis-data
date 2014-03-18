@@ -12,6 +12,21 @@ data/peker/Droplet Stuff:
 2012-03-13
   fwd:    000 001 002 003
   fwd-d:  004 005 006 007
+2012-07-06
+  rev:    000
+  rev-d:  001 002
+  fwd:    004
+  fwd-d:  005
+2012-07-09
+  rev:    001 002 009
+  rev-d:  003
+  fwd:    004 005
+  fwd-d:  006 007
+2012-07-11
+  fwd:    000 001 006
+  fwd-d:  002
+  rev:    003
+  rev-d:  004
 
 data/peker/FRET:
 2012-02-01 (poor background)

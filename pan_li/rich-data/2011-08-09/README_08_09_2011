@@ -1,0 +1,26 @@
+Always 50uW Only 514 excitation 
+Always 50 ticks up into the solution 
+Always floating stage
+
+run_000 : Buffer *
+run_001 : 100pM Pan Li WPD
+run_002 : 50pM Pan Li WPD
+run_003 : 100pM Pan Li WG1 (Gap1) 
+run_004 : 100pM Pan Li WG5 (Gap5) 
+run_005 : 100pM Pan Li WG10 (Gap10) 
+run_006 : 100pM Pan Li WN (Nick)
+run_007 : 50pM Pan Li WG1 (Gap1) 
+run_008 : 50pM Pan Li WG5 (Gap5) 
+run_009 : 50pM Pan Li WG10 (Gap10)
+run_010 : 50pM Pan Li WN (Nick)
+run_011 : 100pM Pan Li 0vs1
+run_012 : 100pM Pan Li 1vs1
+run_013 : 100pM Pan Li 1vs2
+run_014 : 100pM Pan Li 1vs5
+run_015 : 50pM Pan Li 0vs1
+run_016 : 50pM Pan Li 1vs1
+run_017 : 50pM Pan Li 1vs2
+run_018 : 50pM Pan Li 1vs5
+
+* : Buffer in this experiment consists of 20mM Tris-HCl pH 7.5 + 50mM NaCl. In all previous experiments it was 20mM Hepes pH 7.8
+

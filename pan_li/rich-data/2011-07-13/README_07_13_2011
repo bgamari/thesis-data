@@ -1,0 +1,17 @@
+run_000 and run_001 50 ticks up, remaining 80 ticks up
+Always just 514 excitation with 50 uW power 
+run_000 and run_001 non-floating stage, remaining floating stage
+
+run_000 : Buffer + PCD/PCA + Trolox 
+run_001 : 500pM  Pan Li WPD, PCD/PCA + Trolox  
+run_002 : 500pM  Pan Li WPD, PCD/PCA + Trolox    
+run_003 : 500pM  Pan Li WG1 (Gap1), PCD/PCA + Trolox  
+run_004 : 500pM  Pan Li WG5 (Gap5), PCD/PCA + Trolox  
+run_005 : 500pM  Pan Li WG10 (Gap10), PCD/PCA + Trolox  
+run_006 : Buffer 
+run_007 : 500pM  Pan Li WPD
+run_008 : 500pM  Pan Li WG1 (Gap1)
+run_009 : 500pM  Pan Li WG5 (Gap5)
+run_010 : 500pM  Pan Li WG10 (Gap10), laser stopped close to the end
+run_011 : 500pM  Pan Li WG10 (Gap10)
+run_012 : Buffer, just Water and Hepes
