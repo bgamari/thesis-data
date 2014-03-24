@@ -1,0 +1,5 @@
+run004      10nM fluoroscein, 2.1uW @ 488nm
+run005      uncorrelated light
+run006      10nM fluoroscein, 20uW @ 488nm
+switch to big laser
+run007      10nM fluoroscein, 37uW @ 488nm
