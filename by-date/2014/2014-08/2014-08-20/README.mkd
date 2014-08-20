@@ -1,0 +1,13 @@
+# 2014-08-20
+
+Artifacts from alignment of chimera
+
+## run000
+
+ * Oregon green, 10nM
+ * 30uW 514nm excitation
+ * 30k counts/second
+
+## run001
+
+ * uncorrelated light
