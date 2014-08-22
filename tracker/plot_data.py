@@ -11,6 +11,17 @@ from mpl_toolkits.mplot3d import Axes3D
 import warnings
 warnings.filterwarnings("always")
 
+scale = np.array([75.750, 75.525, 50.900]) # um/10V
+scale /= 10                                # um/V
+scale *= 5. / 2**16                        # um/codepoint
+
+def rescale(v):
+        for i,c in enumerate('xyz'):
+                for k in v.dtype.fields:
+                        if k.endswith(c):
+                                v[k] *= scale[i]
+        return v
+
 def guess_size(data):
         return [ len(np.unique(data[axis])) for axis in 'x y z'.split() ]
                         
