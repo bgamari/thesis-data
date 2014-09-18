@@ -1,1 +1,15 @@
-../.git/annex/objects/30/X8/SHA256-s475--862dbaab02a6f66759cbb90ec597e8832e9bbdab89f65de729a397c2e37d78c7/SHA256-s475--862dbaab02a6f66759cbb90ec597e8832e9bbdab89f65de729a397c2e37d78c7
+#!/usr/bin/python
+
+import subprocess
+
+class Tracker(object):
+        def __init__(self):
+                PIPE=subprocess.PIPE
+                args = ('ssh', 'tracker', './tracker')
+                self.p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+
+        def read_not_prompt(self):
+                while True:
+                        l = self.p.stdout.readline()
+                        if not l.startswith('>'):
+                                return l
