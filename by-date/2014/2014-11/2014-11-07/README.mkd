@@ -1,0 +1,10 @@
+# 2014-11-07
+
+See page 121, Ben notebook #3
+
+run009: pH 5.5
+run010: pH 4.5
+run011: pH 3.5
+run012: pH 3.5, higher power
+run013: pH 2.5, higher power
+run014: IRF
