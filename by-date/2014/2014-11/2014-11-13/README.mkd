@@ -1,0 +1,40 @@
+# 2014-11-13
+
+Examining Oregon Green 514 for calibration of pH measurement. Several
+samples of 100 nM fluorophore differing by buffer (all 100mM),
+
+ * Cit2.5: Citrate phosphate pH 2.5
+ * Cit3.5: Citrate phosphate pH 3.5
+ * Cit4.5: Citrate phosphate pH 4.5
+ * Cit5.5: Citrate phosphate pH 5.5
+ * Pip5.5: PIPES pH 5.5
+ * Pip6.5: PIPES pH 6.5
+ * Pip7.5: PIPES pH 7.5
+
+Data taken in sterile wells. Tried to get around 8 million counts for
+each run.
+
+## Runs
+
+Excitation 2.26mW @ 511nm
+
+ * run000: IRF
+ * run001: another IRF for good measure
+ * run002: Cit2.5
+ * run003: Cit3.5
+ * run004: Cit4.5
+ * run005: Cit5.5
+ * run006: Pip5.5
+ * run007: Pip6.5
+ * run008: Pip7.5
+ * run009: IRF
+
+Reduced excitation to 830 mW
+
+ * run010: Pip7.5
+ * run011: Pip6.5
+ * run012: Pip5.5
+ * run013: Cit5.5
+ * run014: Cit4.5
+ * run015: Cit3.5
+ * run016: Cit2.5
