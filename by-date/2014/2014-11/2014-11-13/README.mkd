@@ -1,7 +1,9 @@
 # 2014-11-13
 
+## Oregon Green 514 runs
+
 Examining Oregon Green 514 for calibration of pH measurement. Several
-samples of 100 nM fluorophore differing by buffer (all 100mM),
+samples of 100 nM fluorophore differing by buffer (all 100 mM),
 
  * Cit2.5: Citrate phosphate pH 2.5
  * Cit3.5: Citrate phosphate pH 3.5
@@ -13,8 +15,6 @@ samples of 100 nM fluorophore differing by buffer (all 100mM),
 
 Data taken in sterile wells. Tried to get around 8 million counts for
 each run.
-
-## Runs
 
 Excitation 2.26mW @ 511nm
 
@@ -38,3 +38,17 @@ Reduced excitation to 830 mW
  * run014: Cit4.5
  * run015: Cit3.5
  * run016: Cit2.5
+
+## Oregon Green 488 runs
+
+Changed dichroic and filters for 488 to allow for studies of Oregon
+Green 488 and fluorescein,
+
+  * Dichroic:     Chroma 514/640rpc       =>  Semrock Di01-R488
+  * Detector 1:   Semrock FF01-550/49-25  =>  Chroma HQ525/50 + a 488 notch
+  * Detector 2:   3rd 540-590nm           =>  Chroma ET525/50
+
+Prepared 1 uM sample of Oregon Green 488, no buffer.
+
+ * run017: Oregon Green
+ * run018: IRF
