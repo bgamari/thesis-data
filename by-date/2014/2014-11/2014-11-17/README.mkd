@@ -1,0 +1,24 @@
+# 2014-11-17
+
+Working through filter issues
+
+ * run000 - run03
+
+ * run004: IRF off glass
+
+ * run005: 1uM fluorescein as sanity check
+
+pH calibration with Fluorescein. 1 uM
+ * run006: IRF off glass
+ * run007: Fluorescein, 2.5pH citrate phosphate
+ * run008: pH 3.5 cit.
+ * run009: pH 4.5 cit.
+ * run010: pH 5.5 cit.
+ * run011: pH 5.5 PIPES
+ * run012: pH 6.5 PIPES
+ * run013: pH 7.5 PIPES
+ * run014: IRF with ludox
+ * run015: IRF with new ludox, undiluted
+ * run016: IRF with KI quennched Oregon Green 488
+
+ 
