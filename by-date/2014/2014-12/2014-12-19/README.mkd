@@ -1,0 +1,6 @@
+# 2014-12-19
+
+Playing around with IRF issues
+
+ * run001: IRF off of glass
+ * run002: IRF off of KI quenched Oregon Green
