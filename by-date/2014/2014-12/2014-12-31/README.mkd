@@ -1,0 +1,28 @@
+# 2014-12-31
+
+data from Oregon Green 488 in new citrate buffers (2M ionic strength @
+200mM concentration).
+
+buffer concentration: 100mM citrate buffer
+fluorophore concentration: 1uM
+
+ * run000: long IRF off of glass coverslip
+
+power 64uW
+
+ * run001: pH 4.45 buffer for background, looks clear
+ * run002: pH 3.13 citrate buffer
+ * run003: pH 3.51 citrate buffer
+ * run004: pH 4.07 citrate buffer
+ * run005: pH 4.45 citrate buffer
+ * run006: pH 4.96 citrate buffer
+
+lowered power to 12.8uW
+
+ * run007: pH 5.?? citrate buffer
+ * run008: pH 5.59 citrate buffer
+
+ * run009: IRF off of well coverslip
+ * run010: IRF off of KI quenched Oregon Green 488
+Increased power to maximum
+ * run011: IRF off of KI quenched Oregon Green 488
