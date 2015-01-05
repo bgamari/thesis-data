@@ -1,0 +1,29 @@
+# 2015-01-05
+
+pH calibration with fluorescein
+1uM fluorophore, 100mM buffer
+
+power: 2mW
+
+ * run000: IRF off empty well
+
+power 13.2 uW
+
+ * run001: Citrate pH 5.0
+ * run002: Citrate pH 5.5
+ * run003: PIPES pH 5.53
+ * run004: PIPES pH 6.01
+ * run005: PIPES pH 6.45
+
+counts too high, reduced power to 5uW
+
+ * run006: PIPES pH 6.45
+ * run007: PIPES pH 6.90
+
+new well plate
+
+ * run008: IRF off empty well
+ * run009: PIPES pH 6.90
+ * run010: PIPES pH 7.46
+ * run011: PIPES pH 7.93
+
