@@ -9,8 +9,8 @@ power: 2mW
 
 power 13.2 uW
 
- * run001: Citrate pH 5.0
- * run002: Citrate pH 5.5
+ * run001: Citrate pH 4.96
+ * run002: Citrate pH 5.59
  * run003: PIPES pH 5.53
  * run004: PIPES pH 6.01
  * run005: PIPES pH 6.45
