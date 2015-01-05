@@ -19,7 +19,7 @@ power 64uW
 
 lowered power to 12.8uW
 
- * run007: pH 5.?? citrate buffer
+ * run007: pH 4.96 citrate buffer
  * run008: pH 5.59 citrate buffer
 
  * run009: IRF off of well coverslip
