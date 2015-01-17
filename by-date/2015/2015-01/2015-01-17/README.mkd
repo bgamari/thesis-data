@@ -1,0 +1,54 @@
+# 2015-01-17: BCECF characterization
+
+20uM BCECF in 100mM buffer
+data taken in sterile wells
+
+power = 1.8 mW @ 488nm
+
+ * run000: IRF off glass
+ * run001: Water for background
+
+power = 1.7 uW
+
+ * run002: Citrate 5.5
+ * run003: Citrate 5.0
+ * run004: Citrate 4.5
+
+power = 8.5 uW
+
+ * run005: Citrate 4.0
+ * run006: Citrate 3.5
+ * run007: Citrate 3.0
+ * run008: Citrate 2.5
+
+Well plate change
+
+ * run009: PIPES 5.5
+
+power = 2.9 uW
+
+ * run010: PIPES 5.5
+
+Computer crashed, rebooted
+
+ * run011: PIPES 5.5
+ * run012: PIPES 6.0
+
+Power = 1.15 uW
+
+ * run013: PIPES 6.5
+ * run014: PIPES 7.0
+
+Power = 0.9 uW
+
+ * run015: PIPES 7.5
+ * run016: PIPES 8.0
+ * run017: No buffer, just for giggles
+ * run018: H2O for background
+
+Power = 2.8 mW
+
+ * run019: H2O for background
+ * run020: IRF off glass
+ * run021: Another IRF
+ * run022: IRF off cover slip
