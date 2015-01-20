@@ -1,0 +1,24 @@
+# 2015-01-09: Droplets
+
+ * run000: IRF off glass cover slip
+
+power = 3 mW @ 488nm
+
+ * run001: 100mM pH 5.0 citrate buffer, 5uW Oregon Green in FC-40
+ * run002: H2O in well plate
+
+Odd dynamics, let's look at time evolution.
+
+ * run003: 50uW Oregon Green, 100mM pH 5.0 Citrate buffer in FC-40
+ * run004: Restarted run003 after 2 minutes
+ * run005: again restarted after 2 minutes
+ * run006: again
+ * run007: 20 uL of 50uM dye in 200 mL FC-40
+ * run008: Restarted run007 after 2 minutes
+ * run009: Restarted after 2 minutes
+ * run010: Restarted again
+
+Waited about an hour
+
+ * run011: Another run on run007 sample
+
