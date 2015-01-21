@@ -1,0 +1,25 @@
+# 2015-01-20
+
+Trying examine effect of viscosity on rotational diffusion of Oregon Green 488
+
+Modulating viscosity with glycerol
+
+See page 166 of Ben #3.
+
+Power = 5.7uW @ 488nm
+
+ * run000: Mass fraction 0.0
+ * run001: Mass fraction 0.1
+
+Power = 85.3uW
+
+ * run002: Mass fraction 0.2
+ * run003: Mass fraction 0.3
+
+Power = 768uW
+
+ * run004: Mass fraction 0.6
+ * run005: Mass fraction 0.6
+ * run006: Mass fraction 0.7
+ * run007: IRF off empty well
+ * run008: IRF off empty well
