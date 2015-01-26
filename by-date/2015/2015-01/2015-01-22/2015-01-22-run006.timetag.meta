@@ -1,0 +1,11 @@
+{
+  "description": "", 
+  "instrument": "FPGA time tagger", 
+  "hardware version": "6", 
+  "channels": {
+    "strobe0": "Donor", 
+    "strobe1": "Acceptor"
+  }, 
+  "start": "2015-01-22T21:03:13.742760", 
+  "clockrate": 128000000
+}
