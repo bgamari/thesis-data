@@ -1,0 +1,17 @@
+# 2015-01-19
+
+Looking at ionic strength dependence of Oregon Green 488 in PIPES
+
+1uM dye concentration, varying buffer up to 150mM ionic strenght
+Adding further salt with varying NaCl concentration
+
+ * run000: IRF off empty well
+
+Power: 31uW @ 488nm
+
+ * run001: IS=1mM, pH 6 PIPES
+ * run002: IS=10mM, pH 6 PIPES
+ * run003: IS=50mM, pH 6 PIPES
+ * run004: IS=200mM, pH 6 PIPES
+ * run005: IS=400mM, pH 6 PIPES
+ * run006: IS=800mM, pH 6 PIPES, very little fluorescence
