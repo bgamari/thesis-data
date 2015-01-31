@@ -1,0 +1,41 @@
+# 2015-01-30
+
+Another attempt at calibrating fluorescein. See Ben #3 pg. 177-179
+
+All 1uM fluorescein in 100mM buffer
+
+power = 220uW @ 488nm
+
+ * run000: IRF off empty well (rather short)
+ * run001: pH 2.5 citrate
+ * run002: pH 3.0 citrate
+ * run003: pH 3.5 citrate
+
+power = 32uW @ 488nm
+
+ * run004: pH 4.0 citrate
+ * run005: pH 3.5 citrate
+ * run006: pH 4.0 citrate
+
+power = 2.7uW @ 488nm
+
+ * run007: pH 5.0 citrate
+ * run008: pH 5.5 citrate
+
+increased power to roughly maximum
+
+ * run009: IRF off empty well
+
+New well plate with PIPES samples
+
+ * run010: PIPES pH 5.5
+
+Power = 2.8uW @ 488nm
+
+ * run011: PIPES pH 5.5
+ * run012: PIPES pH 6.0
+ * run013: PIPES pH 6.5
+ * run014: PIPES pH 7.0 (not sure this was correctly prepared)
+ * run015: PIPES pH 7.5
+ * run016: PIPES pH 8.0
+ * run017: PIPES pH 7.0 (correctly prepared)
