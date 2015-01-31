@@ -1,0 +1,15 @@
+# 2014-01-22
+
+Alignment of Olympus scope. See Ben #3 pg. 168
+
+ * run000: FCS on Oregon Green 514, 10M
+
+Power = 70uW @ 514nm
+
+ * run001: 10nM Oligo A + 10 nM Oligo D + 50 mM NaCl
+ * run002: Uncorrelated light
+
+Power = 50uW @ 514nm
+
+ * run003: 20mM oligo D + 30 nM Oligo A + 50 mM NaCl
+ 
