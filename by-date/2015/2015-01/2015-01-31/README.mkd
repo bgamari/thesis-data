@@ -35,6 +35,15 @@ Power: 7.1uW
 
 ## BCECF in Droplets
 
+Examining droplets made of 10uM BCECF + \$buffer where \$buffer is,
+
+  * 200mM NaCl
+  * IS=200mM PIPES 8.0
+  * IS=200mM Citrate 3.5
+  * IS=200mM Citrate 5.5
+
+Droplets are 5uL solution in 200uL oil (2.5% RainDance w/w)
+
 Power: 950uW
 
  * run018: NaCl + BCECF in droplets, low count rate
