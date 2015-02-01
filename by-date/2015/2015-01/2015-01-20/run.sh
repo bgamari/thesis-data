@@ -9,4 +9,4 @@ for c in $corrs; do
         files="$files run${c}.pt3.ch1.txt run${c}.pt3.ch2.txt"
 done
 
-python ~/lori/analysis/photon-tools/anisotropy $files -p2 -c2 -o fits.png >| fits.txt
+python ~/lori/analysis/photon-tools/anisotropy $files -p2 -c2 -o fits.png -e >| fits.txt
