@@ -1,0 +1,63 @@
+# 2015-01-31
+
+See Ben #3 pp. 180-184
+
+## Revisiting yesterday's samples
+
+Try running yesterday's Fluorescein samples
+
+Power: 2.5uW @ 488nm
+
+ * run001: PIPES 7.0 sample from yesterday
+ * run002: PIPES 8.0 sample from yesterday
+ * run003: PIPES 7.5
+ * run004: PIPES 7.0?
+ * run005: PIPES 6.5
+ * run006: PIPES 6.0
+ * run007: PIPES 5.5 (insufficient oil)
+ * run008: PIPES 5.5
+ * run009: Citrate 2.5
+ * run010: Citrate 3.0
+ * run011: Citrate 3.5
+ * run012: Citrate 4.0
+ * run013: Citrate 4.5
+
+Power: 19uW
+
+ * run014: Citrate 5.0
+
+Power: 7.1uW
+
+ * run015: Citrate 5.5
+
+ * run016: IRF off empty well
+ * run017: IRF off empty well
+
+## BCECF in Droplets
+
+Power: 950uW
+
+ * run018: NaCl + BCECF in droplets, low count rate
+ * run019: Scannning around randomly in droplet sample while taking data
+ * run020: Scanning back and forth along one axis
+
+Clearly photobleaching, let's try a basic buffered sample
+
+ * run021: PIPES 8.0, BCECF in droplets, more counts, eventually taper off
+ * run022: Scanning around
+
+Prepare new samples
+
+ * run023: NaCl + BCECF droplets, introduced into sample directly after starting acquisition
+ * run024: PIPES 8.0 + BCECF droplets, introduced into sample directly after starting acquisition
+ * run025: PIPES 8.0 + BCECF droplets after several minutes, aspirate with pipette, fluorescence rebounds
+
+Let's try citrate buffers
+
+ * run026: Citrate 5.5 + BCECF in droplets
+ * run027: Citrate 3.5 + BCECF in droplets
+
+increased power
+
+ * run028: Citrate 5.5 + BCECF in droplets
+ * run029: Citrate 3.5 + BCECF in droplets
