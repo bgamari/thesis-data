@@ -3,7 +3,7 @@
 irf=000
 
 corrs="001 002 003 004 005" # Oregon Green 488
-corrs="006 007 008 009" # BCECF
+corrs="006 007 008 009 010" # BCECF
 
 files="--irf=run${irf}.pt3.ch1.txt --irf=run${irf}.pt3.ch2.txt"
 for c in $corrs; do
