@@ -1,6 +1,6 @@
 #!/bin/bash
 
-irf=000
+irf=011
 
 corrs="001 002 003 004 005" # Oregon Green 488
 corrs="006 007 008 009 010" # BCECF
