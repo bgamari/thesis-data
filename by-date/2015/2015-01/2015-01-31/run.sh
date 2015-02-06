@@ -2,8 +2,8 @@
 
 irf=016
 
-cit_corrs="009 010 011 012 013 014 015"
-#pipes_corrs="001 002 003 004 005 006 007 008"
+#cit_corrs="009 010 011 012 013 014 015"
+pipes_corrs="001 002 003 004 005 006 007 008"
 corrs="$cit_corrs $pipes_corrs"
 
 files="--irf=run${irf}.pt3.ch1.txt --irf=run${irf}.pt3.ch2.txt"
