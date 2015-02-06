@@ -1,0 +1,11 @@
+# 2015-02-06
+
+Attempting to work out observation volume of chimera
+
+power: 124uW @ 514nm (AOTF amp=168)
+
+ * run000: 10 nM Oregon Green 514
+ * run001: uncorrelated light
+ * run002: 1nM Oregon Green 514
+ * run003: 2nM Oregon Green 514
+
