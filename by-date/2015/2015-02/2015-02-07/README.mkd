@@ -1,0 +1,20 @@
+# 2015-02-07: Droplet FCS
+
+Prepared droplets with 100mM pH 5.5 Citrate buffer, 900nM Oregon Green 488
+
+5uL aqueous phase in 200mL FC-40 of various Raindance concentrations
+
+ * run001: Uncorrelated light
+
+Power: 127uW @ 514nm
+
+ * run002: 1% surfactant
+ * run003: 1% surfactant
+ * run004: 1% surfactant
+ * run005: 2% surfactant
+ * run006: 2% surfactant
+ * run007: 2% surfactant
+ * run008: 0.1% surfactant
+ * run009: 0.1% surfactant
+ * run010: 0.1% surfactant
+ * run011: 0.1% surfactant
