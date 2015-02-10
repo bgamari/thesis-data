@@ -82,5 +82,4 @@ The water in the sonicator is now quite warm, around 53 degrees Celcius
  * run044: 2.0%
  * run045: 2.0%
 
-
- 
+ * run046: 1nM Oregon Green 514 in solution for instrument calibration
