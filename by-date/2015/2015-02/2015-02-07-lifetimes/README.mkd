@@ -1,0 +1,29 @@
+# 2015-02-07: Droplet lifetime measurements
+
+Prepared droplets with 100mM pH 5.5 Citrate buffer, 900nM Oregon Green 488
+
+5uL aqueous phase in 200mL FC-40 of various Raindance concentrations
+
+ * run001: 1% Raindance droplets
+ * run002: 1% Raindance droplets
+ * run003: 1% Raindance droplets
+ * run004: 2% Raindance droplets
+ * run005: 2% Raindance droplets
+ * run006: 0.1% Raindance droplets
+ * run007: 0.1% Raindance droplets
+ * run008: 0.1% Raindance droplets
+
+Previous datasets were bad due to laser drifting
+
+ * run009: 0.1% Raindance droplets
+ * run010: 0.1% Raindance droplets
+ * run011: 0.1% Raindance droplets
+ * run012: 2% Raindance droplets
+ * run013: IRF off coverslip
+ * run014: 1% Raindance droplets
+ * run015: 1% Raindance droplets
+ * run016: 2% Raindance droplets
+ * run017: 0.1% Raindance droplets
+ * run018: 2% Raindance droplets
+ * run019: 0.1% Raindance droplets (bad due to computer crash)
+ * run020: 1% Raindance droplets
