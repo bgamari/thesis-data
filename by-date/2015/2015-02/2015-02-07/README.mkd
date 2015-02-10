@@ -2,7 +2,7 @@
 
 Prepared droplets with 100mM pH 5.5 Citrate buffer, 900nM Oregon Green 488
 
-5uL aqueous phase in 200mL FC-40 of various Raindance concentrations
+5uL aqueous phase in 200uL FC-40 of various Raindance concentrations
 
  * run001: Uncorrelated light
 
