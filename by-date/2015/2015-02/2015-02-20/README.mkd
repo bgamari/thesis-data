@@ -1,0 +1,43 @@
+# 2015-02-21: FCS on droplets
+
+The last several attempts at performing FCS on droplets have failed
+due to laser fluctuations (correlations out at τ~1 second) and high
+droplet concentrations
+
+See Ben #4 pg. 15
+
+ * run000: 2nM Oregon Green 514
+ * run001: Uncorrelated light
+
+Let's look at 50uM Oregon Green 488 in Citrate 5.5 with reduced
+aqueous volume in emulsion stock (2 uL)
+
+ * run002: 2uL of 50uM OG488 + Citrate 5.5 in 200uL 2% Raindance/FC-40
+ * run003: Again
+ * run004: Again, throw away past t=175 seconds; opened door too early
+
+Now let's try the usual 5uL aqeous volume,
+
+ * run005: 5uL of 50uM OG488 + Citrate 5.5 in 200uL 2% Raindance/FC-40
+ * run006: Again
+
+Lowered power to unknown
+
+ * run007: Again
+ * run008: Again
+
+This looks pretty good, let's retry the surfactant concentration
+series experiment attempted on 2015-02-10 and 2015-02-12
+
+Use 2uL aqueous phase in 200uL [0.1%, 0.5%, 1.0%, 1.5%, 2.0%]
+Raindance/FC-40
+
+ * run009, run010, run011, run012: 1.0%
+ * run013, run014, run015, run016: 0.5%
+ * run017, run018, run019, run020: 0.1%
+ * run021, run022, run023, run024: 1.5%
+ * run025, run026, run027, run028: 2.0%
+
+ * run29, run030: 2nM OG514
+
+ 
