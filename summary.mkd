@@ -1,0 +1,192 @@
+# pH summary
+
+ * Oregon Green 488: pK_a = 4.8
+     * Documented in @Sun1997
+ * Oregon Green 514: pK_a = 4.8
+     * TCSPC in @Lin1999 (lifetimes are 2.31 ns and 4.12 ns)
+ * Fluorescein: pK_a = 6.5
+     * TCSPC in @Hammer2005, photophysics in @Sjoback
+ * BCECF: pK_a = 7.0
+     * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
+
+## 2015-02-12: FCS on Oregon Green 514 in droplets varying surfactant conc.
+
+## 2015-02-11: BCECF calibration in HEPES
+
+ * pH 6.5, 7.0, 7.5, 8.0
+ * 20uM and 2uM BCECF
+
+## 2015-02-10: Oregon Green 488 in droplets as a function of surfactant, aging
+
+ * Simple non-MEM fit (with aspect=12 and fitted offset)
+
+     run        power   surfactant    tauD       comments
+     =======    ======  ===========   =======    ============
+     run001     138uW   0.1%          3.34ms
+     run002     138uW   0.1%          3.15ms
+     run003     138uW   0.1%          2.81ms
+    
+     run004     138uW   0.5%          3.80ms
+     run005     138uW   0.5%          3.28ms
+     run006     138uW   0.5%          3.27ms
+     run007     138uW   0.5%          3.21ms
+    
+     run008     44uW    1.0%          4.40ms
+     run009     44uW    1.0%          4.36ms
+     run010     44uW    1.0%          4.16ms
+     run011     44uW    1.0%          4.32ms
+     run012     44uW    1.0%          3.98ms
+
+     run013     17uW    1.5%          7.57ms     very poor fit
+	 run014     17uW    1.5%          4.89ms
+	 run015     17uW    1.5%          5.12ms     not great fit
+	 run016     17uW    1.5%          4.76ms
+	 run017     17uW    1.5%          4.64ms
+
+     run018     17uW    2.0%          7.57ms     questionable fit
+	 run019     17uW    2.0%          5.58ms
+	 run020     17uW    2.0%          6.72ms     poor fit
+	 run021     17uW    2.0%          5.56ms
+	 run022     17uW    2.0%          5.25ms
+
+	 run023     17uW    0.1%          6.81ms
+	 run024     17uW    0.5%          5.84ms
+	 run025     17uW    1.0%          4.90ms
+	 run026     17uW    1.5%          4.96ms
+	 run027     17uW    2.0%          5.05ms
+
+     run028     17uW    0.1%          4.47ms
+	 run029     17uW    0.1%                     can't fit
+	 run030     17uW    0.1%          4.53ms
+
+	 run031     17uW    0.5%          4.58ms
+	 run032     17uW    0.5%          4.07ms
+	 run033     17uW    0.5%          4.16ms
+	 run034     17uW    0.5%          4.38ms
+
+	 run035     17uW    1.0%          4.51ms
+	 run036     17uW    1.0%          5.00ms
+	 run037     17uW    1.0%          3.93ms
+	 run038     17uW    1.0%                     can't fit
+
+	 run039     17uW    1.5%          6.44ms     poor fit
+	 run040     17uW    1.5%          4.98ms
+	 run041     17uW    1.5%          4.17ms
+
+	 run042     17uW    2.0%          7.41ms     poor fit
+	 run043     17uW    2.0%          8.45ms     poor fit
+	 run044     17uW    2.0%          6.55ms     poor fit
+	 run045     17uW    2.0%          5.39ms
+	 
+
+## 2015-02-07: Oregon Green 488 in droplets
+
+ * Lifetime and FCS measurements on 1uM Oregon Green + 100 mM pH 5.5 Citrate
+ * 5 uL aqueous phase in 200 mL degassed FC-40 of varying surfactant concentrations
+ * Lifetime measurements:
+   * Generally a mess
+ * FCS measurements
+   * run008 (0.1%): 5703us ± 347
+   * run009 (0.1%): 5570us ± 128
+   * run010 (0.1%): 7177us ± 431
+   * run011 (0.1%): 6242us ± 132
+
+   * run002 (1%): 6536 ± 180
+   * run003 (1%): 6368 ± 124
+   * run004 (1%): 5673 ± 125
+
+   * run005 (2%): 3351 ± 33
+   * run006 (2%): 3679 ± 59
+   * run007 (2%): 3560 ± 41
+   
+   
+
+## 2015-02-05: Phosphate buffer
+
+ * Evaluate phosphate buffer as a replacement for PIPES
+ * TODO
+
+
+## 2015-02-03: RNA
+
+ * RNA samples in solution and in droplets, buffered at pH 7.8 and 5.0, using 0.1%, 1.0%, and 2.0% oil/surfactant
+ * Diffusivity is nearly random:
+
+      run       surfactant      donor tau      acceptor tau
+	  =======   ===========     ==========     =============
+	  run005    0.1%            14.2ms         9.5ms
+      run004    1.0%            40.5ms         23.0ms
+	  run008    2.0%            23.4ms         14.9ms
+
+## 2015-02-03: Tris
+
+ * Evaluating Tris as a replacement for PIPES
+ * 1uM Oregon Green 488
+ * Poor fits but with apparent pH dependence
+ 
+## 2015-01-31: Droplet measurements
+
+ * Reexamine fluorescein samples fromm 2015-01-30
+   * Still odd business with PIPES, clear signal with citrate
+   * tau0 = 2.48 ns, tau1 = 4.16 ns, tau_r = 123 ps
+ * Take variety of droplet data
+   * tau0 = 2.54 ns, tau1 = 5.44 ns, tau_r = 467 ps
+   * Weak fluorescence
+   * 10uM BCECF + $buffer
+   * Buffers:
+      * 200mM NaCl
+	  * IS=200mM PIPES 8.0
+	  * IS=200mM Citrate 3.5
+	  * IS=200mM Citrate 5.5
+   * Going to need to account for IRF leakage to analyze properly
+
+## 2015-01-30: Recharacterize fluorescein
+ * Re-pH'd buffers
+ * Calibration in citrate and PIPES
+ * See strong amplitude modulation with citrate buffer
+ * Very little change with PIPES
+ * Perhaps we should try lowering the concentration to test for specific effects?
+ * Try another neutral buffer?
+ * tau0 = 2.55 ns, tau1 = 4.51 ns, tau_rot = 120 ps
+
+## 2015-01-20: Rotational diffusion
+  * Oregon green 488 varying glycerol
+
+## 2015-01-19: Ionic strength
+ * Re-pH'd buffers
+ * Oregon green 488 in PIPES pH 6.0 and Citrate pH 3.5
+ * Ionic strengths set with NaCl: 1 mM, 10 mM, 20 mM, 50 mM, 200 mM, 500 mM, 1 M
+ * tau0 = 2.86 ns, tau1 = 5.13 ns, tau_r = 125 ps
+
+## 2015-01-17: BCECF
+ * Calibration of BCECF in citrate and PIPES
+ * Seems to be sensitive
+ * tau1 = 2.38 ns, tau2 = 4.20 ns, tau_r = 265 ps
+
+## 2015-01-12: Try droplets again
+
+ * Strange intensity fluctuations
+
+## 2015-01-09: Try droplets
+ * TODO: analysis
+ 
+## 2015-01-07: Fluorescein in Citrate
+
+ * Also checked buffer background
+ * Something was very wrong here
+ * tau1 = 1.93 ns, tau2 = 4.05 ns, tau_r = 121 ps
+
+## 2015-01-05: Fluorescein in PIPES, citrate
+
+ * Fluorescein, 100mM buffer, 1uM fluorophore
+ * tau1 = 3.14 ns, tau2 = 4.92 ns, tau_r = 136 ps
+
+## 2014-12-31: Oregon Green 488 calibration
+
+ * Oregon Green 488 in citrate buffers
+ * tau1 = 2.54 ns, tau2 = 4.45 ns, tau_rot = 129 ps
+
+## 2015-12-29: Buffer preparation
+
+ * Citrate and PIPES
+ * measured pH
