@@ -25,5 +25,5 @@ Previous datasets were bad due to laser drifting
  * run016: 2% Raindance droplets
  * run017: 0.1% Raindance droplets
  * run018: 2% Raindance droplets
- * run019: 0.1% Raindance droplets
+ * run019: 0.1% Raindance droplets (bad due to computer crash)
  * run020: 1% Raindance droplets

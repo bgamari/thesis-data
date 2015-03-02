@@ -1,0 +1,86 @@
+# 2015-02-10: FCS on droplets
+
+This is a follow-up experiment to that performed on 7 Feb 2015. This
+time we will increase the dye concentration to isolate droplet
+diffusion dynamics from photobleaching and dye diffusion.
+
+Examining five surfactant conditions: 0.1%, 0.5%, 1.0%, 1.5%, 2.0%
+Mixed from 2% FC-40/Raindance and pure FC-40
+
+50uM Oregon Green 488 in FC40 buffered with 100mM Citrate 5.5
+5uL aqueous phase in 200uL oil
+
+ * run000: Uncorrelated light
+
+Power: 138uW @ 514nm
+
+ * run001: 0.1%
+ * run002: 0.1%
+ * run003: 0.1%
+
+ * run004: 0.5%
+ * run005: 0.5%
+ * run006: 0.5%
+ * run007: 0.5%
+
+Power: 44uW @ 514nm
+
+ * run008: 1.0%
+ * run009: 1.0%
+ * run010: 1.0%
+ * run011: 1.0%
+ * run012: 1.0%
+
+Power 16.8uW @ 514nm
+
+ * run013: 1.5%
+ * run014: 1.5%
+ * run015: 1.5%
+ * run016: 1.5%
+ * run017: 1.5%
+
+ * run018: 2.0%
+ * run019: 2.0%
+ * run020: 2.0%
+ * run021: 2.0%
+ * run022: 2.0%
+
+Now we'll re-measure the above slide preparations to see how they have
+aged.
+
+ * run023: 0.1%
+ * run024: 0.5%
+ * run025: 1.0%
+ * run026: 1.5%
+ * run027: 2.0%
+
+Now we'll prepare a new set of samples from the droplet stocks which
+have been left sonicating since the beginning of the experiment
+
+The water in the sonicator is now quite warm, around 53 degrees Celcius
+
+ * run028: 0.1%
+ * run029: 0.1%
+ * run030: 0.1%
+
+ * run031: 0.5%
+ * run032: 0.5%
+ * run033: 0.5%
+ * run034: 0.5%
+
+ * run035: 1.0%
+ * run036: 1.0%
+ * run037: 1.0%
+ * run038: 1.0%, opened door prematurely at end of experiment, discard last 5 seconds
+
+ * run039: 1.5%
+ * run040: 1.5%
+ * run041: 1.5%
+ 
+ * run042: 2.0%
+ * run043: 2.0%
+ * run044: 2.0%
+ * run045: 2.0%
+
+
+ 
