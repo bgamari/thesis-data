@@ -1,0 +1,66 @@
+# 2015-03-02: BCECF characterization
+
+BCE CF characterization across entire pH range
+
+Power: 1.4mW @ 488nm
+
+ * run000: IRF off SiO_2
+ * run001: IRF off SiO_2
+
+Power: 100nW @ 488nW
+
+ * run002: 5uM Alexa 488
+
+Power: 1.5mW @ 488nm
+
+ * run003: IRF off glass
+ * run004: IRF off saturated sodium citrate solution
+
+Power: 44uW @ 488nm
+
+Buffer: Citrate, 200mM, IS=2M
+
+ * run005: pH 2.5 citrate buffer+ BCE CF
+ * run006: pH 3.0
+ * run007: pH 3.5
+ * run008: pH 4.0
+ * run009: pH 4.5
+ * run010: pH 5.0
+ * run011: pH 5.5
+
+Buffer: Phosphate, 200mM, IS=2M
+Power: 2.9uW @ 488nm
+
+ * run012: pH 6.0 phosphate buffer + BCE CF
+ * run013: pH 6.5
+ * run014: pH 7.0
+ * run015: pH 7.5
+ * run016: pH 8.0
+
+
+## Buffers used
+
+Measured today.
+
+Buffer              Nominal pH        Actual pH       Temperature
+=============       ===========       ==========      ============
+Phosphate           6.0               5.95            
+Phosphate           6.5               6.37            
+Phosphate           7.0               6.87            21.7
+Phosphate           7.5               7.39            21.7
+Phosphate           8.0               7.33            21.9
+
+Citrate             5.5               5.74            21.5
+Citrate             5.0               5.09            21.4
+Citrate             4.5               4.56            22.1
+Citrate             4.0               4.09            21.6
+Citrate             3.5               3.57            21.4
+Citrate             3.0               3.15            21.5
+Citrate             2.5               2.57            21.8
+
+PIPES               5.5               5.53            21.9
+PIPES               6.0               6.06            22.0
+PIPES               6.5               6.55            22.1
+PIPES               7.0               7.06            22.0
+PIPES               7.5               7.59            22.2
+PIPES               8.0               8.08            21.9
