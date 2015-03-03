@@ -2,7 +2,8 @@
 
 irf=004
 
-corrs="005 006 007 008 009 010 011" # Citrate
+# run005 is funny
+corrs="006 007 008 009 010 011" # Citrate
 corrs="$corrs 012 013 014 015 016" # Phosphate
 
 files="--irf=run${irf}.pt3.ch1.txt --irf=run${irf}.pt3.ch2.txt"
