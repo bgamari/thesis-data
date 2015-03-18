@@ -20,7 +20,7 @@ Power: 44uW @ 488nm
 
 Buffer: Citrate, 200mM, IS=2M
 
- * run005: pH 2.5 citrate buffer+ BCE CF
+ * run005: pH 2.5 citrate buffer + BCE CF
  * run006: pH 3.0
  * run007: pH 3.5
  * run008: pH 4.0
@@ -37,6 +37,27 @@ Power: 2.9uW @ 488nm
  * run015: pH 7.5
  * run016: pH 8.0
 
+A few hours later retake the same samples
+
+Power: 2.7 uW @ 488nm
+
+ * run017: pH 8.0 phosphate buffer + BCE CF
+ * run018: pH 7.5
+ * run019: pH 7.0
+ * run020: pH 6.5
+ * run021: pH 6.0
+
+ * run022: pH 5.5 citrate buffer + BCE CF
+ * run023: pH 5.0
+ * run024: pH 4.5
+
+Power: 3.1uW @ 488nm
+
+ * run025: pH 4.0
+ * run026: pH 3.5
+ * run027: pH 3.0
+ * run028: pH 2.5
+ 
 
 ## Buffers used
 
