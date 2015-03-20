@@ -9,7 +9,41 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-03-13: DLS on extruded droplets
+
+## 2015-03-12: FCS on Extruded droplets
+
+ * Trying out extruder
+ * Very nice correlation functions
+ 
+## 2015-03-02: Lifetime on BCECF 
+
+ * New SiO2 for IRF
+ * pH 2.5 - 8.0
+ * Remeasured pH of buffers
+
+## 2015-02-25 (with Avi): DLS/FCS on droplets
+
+## 2015-02-19: droplet FCS as a function of surfactant concentration
+
+ * Repeating experiments of 10 Feb 2015 and 12 Feb 2015 but switching
+   to Coherent laser due to poor stability of Melles-Griot
+
+## 2015-02-18 (Avi): BCECF lifetime calibration in phosphate
+
+ * Lifetime calibration of BCECF in phosphate buffer
+ 
+
+## 2015-02-17: FCS on Oregon Green 488 in droplets
+
+ * Varying power
+ * 5uL 50uM OG488 in 200 uL 2% w/w Raindance/FC-40
+ * Saw substantial power instability from laser (Melles Griot)
+
 ## 2015-02-12: FCS on Oregon Green 514 in droplets varying surfactant conc.
+
+ * FCS on Oregon Green 514 in droplets
+ * Raindance surfactant w/w 0.1%, 0.5%, 1.0%, 1.5%, 2.0%
 
 ## 2015-02-11: BCECF calibration in HEPES
 
