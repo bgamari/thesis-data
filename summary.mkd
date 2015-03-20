@@ -9,6 +9,20 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-03-19: Examining OG514 triplet/bleaching via FCS
+
+ * Motivated by RNA experiments, low counts in pH lifetime measurements in droplets
+ * Clearly see triplet appear at high powers
+ * Tried Phosphate 7.5, Citrate 4.0, and Citrate 3.0 buffers, no clear difference?
+
+## 2015-03-18: Trying photophysical soups
+
+## 2015-03-17: Droplet pH with OG488 and BCECF
+
+ * A complete set of droplet lifetime measurements
+ * Very low counts, fluorescence quickly decays
+ * Oscillated view back and forth to elicit more counts, perhaps characterize decay lifetime
+ 
 ## 2015-03-13: DLS on extruded droplets
 
 ## 2015-03-12: FCS on Extruded droplets
