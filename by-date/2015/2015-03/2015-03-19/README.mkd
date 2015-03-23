@@ -1,4 +1,4 @@
-# 2015-03-19
+# 2015-03-19: Photophysical characterization on Oregon Green 514 with FCS
 
 Started by trying to measure excitation beam profile. Stopped down 
 beam substantially so as to underfill back aperture

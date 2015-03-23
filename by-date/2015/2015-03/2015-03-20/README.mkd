@@ -1,0 +1,22 @@
+# 2015-03-20: Photophysical characterization of OG514 in droplets with FCS
+
+Exciting with 514nm
+
+2nM Oregon Green 514 in 10mM phosphate 7.5
+3uL aqueous in 300uL 1% w/w FC-40/Raindance
+Droplets made with 21 passes through 100nm membrance in extruder
+Mostly closed excitation iris
+
+ * run001: droplets, power=83.1uW
+ * run002: same, power=46.9uW
+ * run003: same, power=27.3uW
+ * run004: same, power=13.3uW
+ * run005: same, power=606uW
+
+I believe runs 003, 004, and 005 were looking at a bubble of some sort
+(air?). Filled new cell with sample of new sample droplets
+
+ * run006: droplets, power=606uW
+ * run007: same, power=14.1uW
+ * run008: same, power=27.6uW
+ * run009: again
