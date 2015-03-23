@@ -1,0 +1,27 @@
+# 2015-02-12: FCS on Oregon Green 514 in droplets varying surfactant conc.
+
+Lori suggested rerunning the experiments from 2015-02-10 at a higher
+pH and more concentrated fluorophore
+
+200uM Oregon Green 514
+10mM PIPES 7.5 buffer
+surfactant: Raindance, 0.1%, 0.5%, 1.0%, 1.5%, 2.0%
+
+ * run001: 0.1%
+ * run002: 0.1%
+ * run003: 0.1%
+ * run004: 0.1%
+
+Dropped 0.5% sample on floor
+
+ * run005: 1.0%
+ * run006: 1.0%
+ * run007: 1.0%
+ * run008: 1.0%
+
+ * run009: 1.5%
+ * run010: 1.5%
+ * run011: 1.5%
+ * run012: 1.5%
+
+ * run013: 2.0%, very little signal, tried to aggitate solution at end

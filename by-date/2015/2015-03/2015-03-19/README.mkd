@@ -1,0 +1,60 @@
+# 2015-03-19
+
+Started by trying to measure excitation beam profile. Stopped down 
+beam substantially so as to underfill back aperture
+
+ * run001: Excitation beam profile
+ * run002: Excitation beam profile
+
+Measuring power before final steering mirror into microscope, exciting with 514nm
+
+ * run003: 2nM Oregon Green 514 in 10mM phosphate 7.5, power=3.2uW
+
+Realigned excitation spot
+
+ * run004: Same, power=11uW
+ * run005: Same, power=17.7uW
+ * run006: Same, power=35.8uW
+ * run007: Same, power=64.8uW
+ * run008: Same, power=116uW
+ * run009: Same, power=165uW
+ * run010: Same, power=210uW
+ * run011: Same, power=256uW
+ * run012: Same, power=294uW
+ * run013: Same, power=429uW
+ * run014: Same, power=556uW
+ * run015: Same, power=651uW
+ * run016: Same, power=756uW
+ * run017: Same, power=34.8uW
+ * run018: Same, power=15.1uW
+ * run019: Same, power=6.5uW
+ * run020: Same, power=2.8uW
+
+Now we'll try lowering the pH.
+
+ * run021: 2nM Oregon Green 514 in 10mM citrate 4.0 (IS=100mM), power=2.8uW
+ * run022: Same, power=15.5uW
+ * run023: Same, power=83.3uW
+ * run024: Same, power=393uW
+ * run025: Same, power=739uW
+ * run026: Same, power=1.09mW
+ * run027: Same, power=300uW
+ * run028: Same, power=207uW
+
+Now we'll lower the pH further,
+
+ * run029: 2nM Oregon Green 514 in 10mM citrate 3.09 (IS=100mM), power=207uW
+ * run030: Same, power=165uW
+ * run031: Same, power=76uW
+ * run032: Same, power=41.9uW
+ * run033: Same, power=605uW
+ * run034: Same, power=328uW
+
+Now let's try adding some photophysical stabilizers, Ascorbic Acid and Methylviologen,
+
+ * run035: 2nM Oregon Green 514 in 10mM citrate 4.0 + 1mM AA + 1mM MV, power=340uW
+ * run036: Same, power=95.4uW
+ * run037: Again
+
+ * run038: Uncorrelated light for afterpulsing correction
+ 
