@@ -262,3 +262,7 @@
 
  * Citrate and PIPES
  * measured pH
+
+## 2013-08-28: RNA data in droplets and solution by Peker
+
+ * Looking at RNA 16-mer
