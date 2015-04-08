@@ -9,6 +9,20 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-03-19: Examining OG514 triplet/bleaching via FCS
+
+ * Motivated by RNA experiments, low counts in pH lifetime measurements in droplets
+ * Clearly see triplet appear at high powers
+ * Tried Phosphate 7.5, Citrate 4.0, and Citrate 3.0 buffers, no clear difference?
+
+## 2015-03-18: Trying photophysical soups
+
+## 2015-03-17: Droplet pH with OG488 and BCECF
+
+ * A complete set of droplet lifetime measurements
+ * Very low counts, fluorescence quickly decays
+ * Oscillated view back and forth to elicit more counts, perhaps characterize decay lifetime
+ 
 ## 2015-03-13: DLS on extruded droplets
 
 ## 2015-03-12: FCS on Extruded droplets
@@ -16,13 +30,26 @@
  * Trying out extruder
  * Very nice correlation functions
  
-## 2015-03-02: Lifetime on BCECF 
+## 2015-03-02: Calibration on BCECF 
 
  * New SiO2 for IRF
- * pH 2.5 - 8.0
+ * pH 2.5 - 8.0 using citrate and phosphate buffers
  * Remeasured pH of buffers
 
-## 2015-02-25 (with Avi): DLS/FCS on droplets
+## 2015-02-25 (with Avi): FCS/DLS on droplets
+
+ * See Ben #4 pg 19, Avi #1 pg. 
+ * pH 7.8 phosphate, 0.1%, 0.5%, 1.0%, 1.5%, 2.0% w/w surfactant
+ * pH 5.5 citrate, 2.0% w/w surfactant
+ * 2uL aqueous phase in 200uL oil/surfactant
+ * All sonicated for at least 30 minutes
+ * DLS sample: 100mM buffer
+ * FCS sample: 100mM buffer + 50uM Oregon Green 488
+
+## 2015-02-20: FCS on Oregon Green 488 in droplets, changing aqueous volume
+
+ * Tried reducing aqeous phase volume to 2uL / 200 uL oil while making droplets
+ * This is likely a better concentration for FCS
 
 ## 2015-02-19: droplet FCS as a function of surfactant concentration
 
@@ -32,13 +59,24 @@
 ## 2015-02-18 (Avi): BCECF lifetime calibration in phosphate
 
  * Lifetime calibration of BCECF in phosphate buffer
- 
 
 ## 2015-02-17: FCS on Oregon Green 488 in droplets
 
  * Varying power
  * 5uL 50uM OG488 in 200 uL 2% w/w Raindance/FC-40
  * Saw substantial power instability from laser (Melles Griot)
+
+## 2015-02-17 (Avi): BCECF in phosphate buffer
+
+ * Calibration
+
+    nominal pH          actual pH
+	===========         ===========
+	6.0                 5.89
+	6.5                 6.36
+	7.0                 6.87
+	7.5                 7.37
+	8.0                 7.86
 
 ## 2015-02-12: FCS on Oregon Green 514 in droplets varying surfactant conc.
 
