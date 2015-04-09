@@ -1,5 +1,6 @@
 2015-04-08
 BCECF and OG488 in Citrate and Phosphate
+see page 135-145
 
 Phs as measured today
 
@@ -86,3 +87,12 @@ run_052 w/citrate pH 4.0
 run_053 w/citrate pH 3.5
 run_054 w/citrate pH 3.0
 run_055 w/citrate pH 2.5
+
+Droplet BCECF data in pH 7.3 phosphate buffer
+run_057 2% surfactant
+run_058 1% surfactant
+run_059 1% surfactant
+run_060 1% surfactant no buffer
+run_061 1% surfactant no buffer w/scanning
+run_062 1% surfactant w/scanning
+run_063 0.1% surfactant w/scanning
