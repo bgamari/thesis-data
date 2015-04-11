@@ -1,8 +1,9 @@
-2015-04-08
-BCECF and OG488 in Citrate and Phosphate
-see page 135-145
+# 2015-04-08
 
-Phs as measured today
+BCECF and OG488 in Citrate and Phosphate
+see page 135-145 in Avi's notebook
+
+pHs as measured today 
 
 Citrate
 Labeled		Actual
