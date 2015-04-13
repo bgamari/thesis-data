@@ -34,17 +34,14 @@ def go(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period=
     irfs = anisotropy.normalize_irfs(irfs.map(lambda x: x[:n]['counts']))
     corrs = [FitSet('%d' % i, irfs, read_run('run_%03d.pt3' % i).map(lambda x: x[:n]['counts']))
             for i,_ in files]
-    if run:
-        res0, res = anisotropy.fit(corrs, jiffy_ps=jiffy_ps,
-                                   exc_period=exc_period, periods=periods,
-                                   n_components=ncomps)
-        cPickle.dump(res, open('%s.pickle' % root, 'w'))
-        open('%s.mkd' % root, 'w').write(squmfit.pretty.markdown_fit_result(res))
-        fig = pl.figure(figsize=(4,12))
-        anisotropy.plot(fig, corrs, jiffy_ps, res, sep_resid=True)
-        pl.savefig('%s.png' % root)
-    else:
-        res = cPickle.load('%s.pickle' % root)
+
+    res0, res = anisotropy.fit(corrs, jiffy_ps=jiffy_ps,
+                                exc_period=exc_period, periods=periods,
+                                n_components=ncomps)
+    open('%s.mkd' % root, 'w').write(squmfit.pretty.markdown_fit_result(res))
+    fig = pl.figure(figsize=(4,12))
+    anisotropy.plot(fig, corrs, jiffy_ps, res, sep_resid=True)
+    pl.savefig('%s.png' % root)
 
     taus = [1/res.params['lambda%d' % i] for i in range(ncomps)]
     amps = [[res.params['%s_amplitude%d' % (pair.name, i)] * tau
@@ -52,15 +49,20 @@ def go(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period=
             for pair in corrs]
     frac = [a/(a+b) for a,b in amps]
     phs = [ph for _,ph in files]
-    return np.rec.fromarrays([frac, phs], dtype=[('ph','f4'), ('frac','f4')])
+    res = np.rec.fromarrays([frac, phs], dtype=[('ph','f4'), ('frac','f4')])
+    cPickle.dump(res, open('%s.pickle' % root, 'w'))
+    return res
 
-def analyze(phs):
+def analyze(phs, root):
+    from scipy.optimize import curve_fit
+    p0 = [4, 0, 1, 1]
+    print phs
+    p = curve_fit(sigmoid, phs['ph'], phs['frac'], p0)
+    xs = np.linspace(2.5, 8, 500)
+
     pl.plot(phs['ph'], phs['frac'], '+')
+    pl.plot(xs, sigmoid(xs, *p))
     pl.xlabel('pH')
     pl.ylabel('population fraction')
     pl.savefig('%s-ph.png' % root)
 
-    from scipy.optimize import curve_fit
-    p0 = [4, 0, 1, 1]
-    p = curve_fit(sigmoid, phs['ph'], frac['frac'], p0)
-    print p
