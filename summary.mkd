@@ -9,6 +9,10 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-04-08: pH data from Avi
+
+ * Looking at BCECF and Oregon Green 488 as function of pH
+
 ## 2015-03-19: Examining OG514 triplet/bleaching via FCS
 
  * Motivated by RNA experiments, low counts in pH lifetime measurements in droplets
