@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 from ph import *
+import ph
+#ph.use_cache = False
 
 irfs = read_run('run_002.pt3')
 
@@ -19,7 +21,7 @@ files = {
     26: 4.0,   27:  3.5,
     28: 3.0,   29:  2.5,
 }
-analyze(go(irfs, files, 'og488'), 'og488')
+analyze(go(irfs, files, 'og488'), 'og488', -1)
 
 # BCECF
 files = {
@@ -37,6 +39,6 @@ files = {
     52: 4.0,   53: 3.5,
     54: 3.0,   55: 2.5,
 }
-analyze(go(irfs, files, 'bcecf'), 'bcecf')
+analyze2(go(irfs, files, 'bcecf'), 'bcecf', -1)
 
 # Droplet
