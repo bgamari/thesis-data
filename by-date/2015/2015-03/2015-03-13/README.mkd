@@ -1,0 +1,29 @@
+# 2015-03-13: DLS by Avi
+
+See page 126 in Avi's notebook
+
+Using Raindance surfactant and FC-40
+4uL 200mM pH 7.8 phosphate buffer in 500uL FC-40
+Starts with run 17 in exported file?
+
+Examine evolution of droplet population over passes
+
+ * run001: 1% surfactant, 2x100nm filters, 1 pass
+ * run002: 1% surfactant, 2x100nm filters, 3 pass
+ * run003: 1% surfactant, 2x100nm filters, 5 pass
+ * run004: 1% surfactant, 2x100nm filters, 7 pass
+ * run005: 1% surfactant, 2x100nm filters, 9 pass
+ * run006: 1% surfactant, 2x100nm filters, 13 pass
+ * run007: 1% surfactant, 2x100nm filters, 17 pass
+ * run008: 1% surfactant, 2x100nm filters, 25 pass
+
+ * run009: 2% surfactant, 2x100nm filters, 21 pass
+ * run010: 1% surfactant, 1x100nm filters, 21 pass
+ * run011: 1% surfactant, 1x200nm filters, 21 pass
+ * run012: 1% surfactant, 1x200nm filters, 21 pass
+ * run013: 1% surfactant, 1x200nm filters, 21 pass
+ * run014: 1% surfactant, 1x200nm filters, 21 pass
+ * run015: 2% surfactant, 1x200nm filters, 21 pass
+ * run016: 2% surfactant, 1x200nm filters, 21 pass
+ * run017: 2% surfactant, 1x200nm filters, 21 pass
+ * run018: 2% surfactant, 1x200nm filters, 21 passes

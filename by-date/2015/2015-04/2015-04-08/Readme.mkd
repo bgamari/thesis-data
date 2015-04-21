@@ -1,0 +1,99 @@
+# 2015-04-08
+
+BCECF and OG488 in Citrate and Phosphate
+see page 135-145 in Avi's notebook
+
+pHs as measured today 
+
+Citrate
+Labeled		Actual
+--------	-------
+2.5		2.58
+3.0		3.08
+3.5		3.54
+4.0		4.05
+4.5		4.49
+5.0		5.06
+5.5		5.57
+
+Phosphate
+Labeled		Actual
+--------	-------
+6.0		5.90
+6.5		6.30
+7.0		6.82
+7.5		7.34
+8.0		7.27
+
+run_000 IRF off coverslip
+run_001 IRF off coverslip
+run_002 IRF off coverslip (use this one)
+run_003 IRF off PDMS
+
+Alexa 488 for measuring g
+run_004 alexa 488
+run_005 alexa 488
+
+OG488 Calibration
+run_006 w/citrate pH 2.5
+run_007 w/citrate pH 3.0
+run_008 w/citrate pH 3.5
+run_009 w/citrate pH 4.0
+run_010 w/citrate pH 4.5
+run_011 w/citrate pH 5.0
+run_012 w/citrate pH 5.5
+run_013 w/phosphate pH 6.0
+run_014 w/phosphate pH 6.5
+run_015 w/phosphate pH 7.0
+run_016 w/phosphate pH 7.5
+run_017 w/phosphate pH 8.0
+run_018 w/phosphate pH 8.0
+run_019 w/phosphate pH 7.5
+run_020 w/phosphate pH 7.0
+run_021 w/phosphate pH 6.5
+run_022 w/phosphate pH 6.0
+run_023 w/citrate pH 5.5
+run_024 w/citrate pH 5.0
+run_025 w/citrate pH 4.5
+run_026 w/citrate pH 4.0
+run_027 w/citrate pH 3.5
+run_028 w/citrate pH 3.0
+run_029 w/citrate pH 2.5
+
+run_030 IRF off PDMS
+
+BCECF Calibration
+run_031 w/citrate pH 2.5
+run_032 w/citrate pH 3.0
+run_033 w/citrate pH 3.5
+run_034 w/citrate pH 4.0
+run_035 w/citrate pH 4.5
+run_036 w/citrate pH 5.0
+run_037 w/citrate pH 5.5
+run_038 w/phosphate pH 6.0
+run_039 w/phosphate pH 6.5
+run_040 w/phosphate pH 7.0
+run_041 w/phosphate pH 7.5
+run_042 w/phosphate pH 8.0
+run_043 w/phosphate pH 8.0
+run_044 w/phosphate pH 8.0
+run_045 w/phosphate pH 7.5
+run_046 w/phosphate pH 7.0
+run_047 w/phosphate pH 6.5
+run_048 w/phosphate pH 6.0
+run_049 w/citrate pH 5.5
+run_050 w/citrate pH 5.0
+run_051 w/citrate pH 4.5
+run_052 w/citrate pH 4.0
+run_053 w/citrate pH 3.5
+run_054 w/citrate pH 3.0
+run_055 w/citrate pH 2.5
+
+Droplet BCECF data in pH 7.3 phosphate buffer
+run_057 2% surfactant
+run_058 1% surfactant
+run_059 1% surfactant
+run_060 1% surfactant no buffer
+run_061 1% surfactant no buffer w/scanning
+run_062 1% surfactant w/scanning
+run_063 0.1% surfactant w/scanning
