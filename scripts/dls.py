@@ -8,10 +8,7 @@ import argparse
 import scipy.optimize
 from scipy.stats import lognorm
 from scipy.integrate import quad
-
-parser = argparse.ArgumentParser()
-parser.add_argument('file')
-args = parser.parse_args()
+from photon_tools.utils import parse_int_list
 
 def lognormal_diff(tau, amp, mu, sigma):
     print amp, mu, sigma
@@ -31,30 +28,56 @@ def squared_error(f, x, y, sigma):
         return res
     return go
 
-def f(tau, taud, amp):
-    return amp / (1 + tau / taud)
+def cumulant(tau, amp, gamma, *cumulants):
+    cumulants = np.array(cumulants)
+    idxs = np.arange(2, len(cumulants)+2)
+    signs = np.array([+1 if i % 2 == 0 else -1 for i in idxs])
+    #terms = signs * cumulants / np.factorial(idxs) * tau**idxs
+    terms = signs[newaxis,:] * cumulants[newaxis,:] * tau[:,newaxis]**idxs[newaxis,:]
+    return amp * np.exp(-tau * gamma) * (1 + np.sum(terms, axis=1))
 
-a = np.genfromtxt(args.file, skip_header=1, usecols=range(8,8+2*192), delimiter='\t')
-for i in [24]: #range(a.shape[0]):
-    taus = a[i,0:192].T
-    Gs = a[i,192:192*2].T
-    sigma = 1e-2
-    pl.errorbar(taus, Gs, label='run %d' % i, yerr=sigma)
-    #p, pcov = scipy.optimize.curve_fit(f, taus, Gs, [1e-3, 1])
+def fit_lognormal(taus, Gs, sigma):
     p0 = [1, 2, 1]
-    p=p0
-    #p, pcov = scipy.optimize.curve_fit(lognormal_diff, taus, Gs, p0, sigma=sigma)
     res = scipy.optimize.minimize(squared_error(lognormal_diff, taus, Gs, sigma), p0,
                                   bounds=[(0,None), (0, None), (0, None)],
                                   method='l-bfgs-b')
-    p = res.x
-    pl.plot(taus, lognormal_diff(taus, *p))
-    print p
-    #print pcov
+    return res.x
 
-pl.xscale('log')
-pl.legend()
-pl.xlabel('$\\tau$ (microseconds)')
-pl.ylabel('$G(\\tau)$')
-pl.axhline(0, c='k')
-pl.show()
+def fit_cumulants(taus, Gs, sigma, nCum=1):
+    p0 = [1, 1e-3] + [0] * nCum
+    p, pcov = scipy.optimize.curve_fit(cumulant, taus, Gs, p0)
+    return p
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('file', help='Export file from Malvern ZetaSizer software')
+    parser.add_argument('-r', '--runs', type=str, required=True, help='run numbers (ranges and lists supported; e.g. "--runs=1-4,5,8")')
+    args = parser.parse_args()
+
+    runs = parse_int_list(args.runs)
+    fit_type = 'lognorm'
+    assert fit_type in ['cum', 'lognorm']
+
+    a = np.genfromtxt(args.file, skip_header=1, usecols=range(8,8+2*192), delimiter='\t')
+    for i in runs:
+        taus = a[i,0:192].T
+        Gs = a[i,192:192*2].T
+        sigma = 1e-2
+        pl.errorbar(taus, Gs, label='run %d' % i, yerr=sigma)
+        if fit_type == 'lognorm':
+            p = fit_lognormal(taus, Gs, sigma)
+            pl.plot(taus, lognormal_diff(taus, *p))
+        elif fit_type == 'cum':
+            p = fit_cumulants(taus, Gs, sigma, nCum=2)
+            pl.plot(taus, cumulant(taus, *p))
+        print p
+
+    pl.xscale('log')
+    pl.legend()
+    pl.xlabel('$\\tau$ (microseconds)')
+    pl.ylabel('$G(\\tau)$')
+    pl.axhline(0, c='k')
+    pl.show()
+
+if __name__ == '__main__':
+    main()
