@@ -9,6 +9,11 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-04-15: FCS on Oregon Green 488 from Samson
+
+ * Looking at Oregon Green (5nM) on Zeiss scope
+ * Power series
+
 ## 2015-04-08: pH data from Avi
 
  * Looking at BCECF and Oregon Green 488 as function of pH
