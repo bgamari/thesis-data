@@ -9,6 +9,20 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-04-22: More FCS on droplets
+
+ * Repeat experiments from 2015-04-20 with more attention to cleanliness
+ 
+## 2015-04-21: Fluorescence lifetime on GFP
+
+## 2015-04-20: FCS on droplets
+
+ * 10uM OG514, 2uL aqueous in 300uL 1% FC-40/Raindance
+ 
+## 2015-04-19: FCS on droplets
+
+ * dye too dense, droplets too sparse, repeat tomorrow
+ 
 ## 2015-04-08: pH data from Avi
 
  * Looking at BCECF and Oregon Green 488 as function of pH
