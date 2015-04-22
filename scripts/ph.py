@@ -46,9 +46,9 @@ def run(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period
     corrs = [FitSet('%d' % i, irfs, read_run('run_%03d.pt3' % i).map(lambda x: x[:n]['counts']))
             for i,_ in files]
 
-    res0, res = anisotropy.fit(corrs, jiffy_ps=jiffy_ps,
-                                exc_period=exc_period, periods=periods,
-                                n_components=ncomps)
+    res0, res, desc = anisotropy.fit(corrs, jiffy_ps=jiffy_ps,
+                                     exc_period=exc_period, periods=periods,
+                                     n_components=ncomps)
     open('%s.mkd' % root, 'w').write(squmfit.pretty.markdown_fit_result(res))
     fig = pl.figure(figsize=(4,12))
     anisotropy.plot(fig, corrs, jiffy_ps, res, sep_resid=True)
