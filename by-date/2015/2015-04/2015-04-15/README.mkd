@@ -1,0 +1,24 @@
+# 2015-04-15: FCS on Oregon Green 488
+
+See pg. 49 of Samson's notebook
+
+Using big frame laser, power series
+
+ * run000: 15uW
+ * run001: 10uW
+ * run002: 5uW
+ * run003: 2uW
+ * run004: 25uW
+ * run005: 30uW
+ * run006: 35uW
+ * run007: 40uW
+ * run008: 50uW
+ * run009: 60uW
+ * run010: 70uW
+ * run011: 80uW
+ * run012: 90uW
+ * run013: 130uW
+ * run014: 200uW
+ * run015: 325uW
+ * run016: 360uW
+ 

@@ -14,11 +14,11 @@ data PoissonBoltzmann = PB { pbL       :: Double  -- ^ geometric parameter
                            }
 -- | Produce the expansion parameters @b_n@.
 coeffs :: PoissonBoltzmann    -- ^ radius of sphere
-       -> [Double]  -- ^ successive approximations
+       -> [Double]            -- ^ successive approximations
 coeffs (PB l delta a) = 1 : 0 : go' 0 (S.fromList [0,1])
   where
     -- Invariants:
-    --   * `length bs` == n-1
+    --   * length bs == n-1
     go' :: Int           -- ^ n
         -> S.Seq Double  -- ^ [b_{n+1}, b_n, b_{n-1}, ..., b_1, b_0]
         -> [Double]      -- ^ b_{n+2} : b_{n+3} : ...
