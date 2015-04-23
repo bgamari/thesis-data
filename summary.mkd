@@ -14,6 +14,16 @@
  * Looking at Oregon Green (5nM) on Zeiss scope
  * Power series
 
+## 2015-04-21: Fluorescence lifetime on GFP
+
+## 2015-04-20: FCS on droplets
+
+ * 10uM OG514, 2uL aqueous in 300uL 1% FC-40/Raindance
+ 
+## 2015-04-19: FCS on droplets
+
+ * dye too dense, droplets too sparse, repeat tomorrow
+ 
 ## 2015-04-08: pH data from Avi
 
  * Looking at BCECF and Oregon Green 488 as function of pH
