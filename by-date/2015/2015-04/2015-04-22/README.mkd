@@ -1,0 +1,43 @@
+# 2015-04-22: FCS on droplets
+
+Oregon Gren 514, excited with big frame laser @ 514nm
+
+See Ben #4 pg. 83 
+28L aqueous + 300uL 1% FC-40/Raindance, 43 passes with extruder
+
+ * run001: 200nm membrane
+ * run002: Again
+ * run003: Again
+ * run004: 400nm membrane
+ * run005: Again
+ * run006: Again
+ * run007: 800nm membrane
+
+Observing signs of saturation, reduced excitation power
+
+ * run008: Again, ran off to group meeting during run, returned to find objective dry
+ * run009: Again
+ * run010: Back to 400nm sample from earlier
+ * run011: Again
+ * run012: Back to 200nm sample
+ * run013: Again
+ * run014: 50nm
+
+## Analysis
+
+Only looking at runs after power reduction
+
+run          pore       tau
+--------     -------    -----
+008          800nm      54.2ns
+009          800nm      29.6ns
+010          400nm      12.2ns
+011          400nm      17.8ns
+012          200nm      16.8ns
+013          200nm      15.1ns
+014          50nm       poor fit
+015          50nm       65.5ns
+016          50nm       26.4ns
+017          100nm      72.9ns
+018          100nm      36.1ns
+
