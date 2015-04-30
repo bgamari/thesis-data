@@ -9,11 +9,10 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
-## 2015-04-15: FCS on Oregon Green 488 from Samson
+## 2015-04-22: More FCS on droplets
 
- * Looking at Oregon Green (5nM) on Zeiss scope
- * Power series
-
+ * Repeat experiments from 2015-04-20 with more attention to cleanliness
+ 
 ## 2015-04-21: Fluorescence lifetime on GFP
 
 ## 2015-04-20: FCS on droplets
@@ -24,6 +23,11 @@
 
  * dye too dense, droplets too sparse, repeat tomorrow
  
+## 2015-04-15: FCS on Oregon Green 488 from Samson
+
+ * Looking at Oregon Green (5nM) on Zeiss scope
+ * Power series
+
 ## 2015-04-08: pH data from Avi
 
  * Looking at BCECF and Oregon Green 488 as function of pH
