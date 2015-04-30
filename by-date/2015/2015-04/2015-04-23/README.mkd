@@ -1,0 +1,8 @@
+# 2015-04-23: DLLS with Samson on extruded droplets
+
+See pg. 50 in Samson's notebook
+
+ * record 1 is bad due to wrong cuvette
+ * records 2, and 3 are on 220nm diameter polystyrene beads
+ * records 4 and 5 were set up with incorrect materials, on 200nm pore droplets
+ * recs. 6 and 7 were on 200nm pore droplets

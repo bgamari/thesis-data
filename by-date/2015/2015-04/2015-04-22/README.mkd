@@ -29,15 +29,15 @@ Only looking at runs after power reduction
 
 run          pore       tau
 --------     -------    -----
-008          800nm      54.2ns
-009          800nm      29.6ns
-010          400nm      12.2ns
-011          400nm      17.8ns
-012          200nm      16.8ns
-013          200nm      15.1ns
+008          800nm      54.2us
+009          800nm      29.6us
+010          400nm      12.2us
+011          400nm      17.8us
+012          200nm      16.8us
+013          200nm      15.1us
 014          50nm       poor fit
-015          50nm       65.5ns
-016          50nm       26.4ns
-017          100nm      72.9ns
-018          100nm      36.1ns
+015          50nm       65.5us
+016          50nm       26.4us
+017          100nm      72.9us
+018          100nm      36.1us
 
