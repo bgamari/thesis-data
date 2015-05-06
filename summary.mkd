@@ -9,7 +9,15 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
-## 2015-04-23: DLLS with Samson on extruded droplets
+## 2015-05-02: FCS on droplets
+
+ * Replaced dichroic with non-polarizing beamsplitter
+ * run001: Very long data set, 10nM Oregon Green 514 in 100mM phosphate 7.5
+ * run002: Oregon Green 514 droplets
+
+## 2015-04-29: FCS on droplets
+
+## 2015-04-23: DLS with Samson on extruded droplets
 
 * 50nm, 100nm and 200nm pores all produce same droplet size distribution?
 
