@@ -83,12 +83,12 @@ for f in args.file:
     triplet = True
     offset = True
     lifetimes = [fit.param('tauD-%d' % i, initial=initial)
-                 for i,initial in enumerate([100, 400])]
+                 for i,initial in enumerate([100, 1000])]
     lag = squmfit.Argument('lag')
     model = 0 if not offset else fit.param('offset', 0)
     model += 1
     for comp_idx, tauD in enumerate(lifetimes):
-        n = fit.param('N-%d' % (comp_idx), initial=10)
+        n = fit.param('N-%d' % (comp_idx), initial=1. / g[-1]['G'] / len(lifetimes))
         model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=aspect, n=n, alpha=1)
     if triplet:
         tauF = fit.param('tauF', initial=0.5)
