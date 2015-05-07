@@ -52,6 +52,7 @@ for f in args.file:
 
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
+        d = None
         try:
             d = ts.channel(c)
         except Exception as e:
