@@ -88,7 +88,7 @@ for f in args.file:
     corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
 
 
-    handles, labels = plots.get_legend_handles_labels()
+    handles, labels = corr_plt.get_legend_handles_labels()
     fig.legend(handles=handles, labels=labels,
                loc='upper left',
                bbox_to_anchor= gs[2,2].get_position(fig),
