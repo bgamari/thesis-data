@@ -52,7 +52,12 @@ for f in args.file:
 
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
-        d = ts.channel(c)
+        try:
+            d = ts.channel(c)
+        except Exception as e:
+            print 'Error reading timestamps for channel %d: %s' % (c, e)
+            continue
+
         N = len(d)
         if N == 0:
             continue
