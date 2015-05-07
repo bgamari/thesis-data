@@ -22,7 +22,7 @@ args = parser.parse_args()
 large_bin = 1 # second
 small_bin = 2e-3 # second
 small_length = 1 # second
-engine = 'favia'
+engine = 'hphoton'
 
 for f in args.file:
     ts = read_photons.open(f.name)
@@ -40,8 +40,8 @@ for f in args.file:
     large_traj_plt.set_ylabel('counts per %g sec' % large_bin)
     large_traj_plt.locator_params(nbins=3)
 
-    corr_plt = pl.subplot(gs[2, 0:2])
-    resid_plt = pl.subplot(gs[3, 0:2])
+    corr_plt = pl.subplot(gs[2:4, 0:2])
+    resid_plt = pl.subplot(gs[4, 0:2])
     corr_plt.set_xscale('log')
     resid_plt.set_xscale('log')
 
@@ -139,7 +139,7 @@ for f in args.file:
         resid_plt.set_xlabel(r'$\tau$ (microseconds)')
         corr_plt.set_ylabel(r'$G(\tau)$')
 
-        ((x,y), _) = gs[4,0].get_position(fig).get_points()
+        ((x,y), _) = gs[3,2].get_position(fig).get_points()
         text = 'reduced $\\chi^2$ = %f\n' % res.curves['curve'].reduced_chi_sqr
         text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
                           for param in res.fit.param_set.params.values())
