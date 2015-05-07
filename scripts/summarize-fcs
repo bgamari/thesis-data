@@ -85,7 +85,7 @@ for f in args.file:
             print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
-        upper = None # 1e5 * small_bin
+        upper = pcb['count'].max() # 1e5 * small_bin
         pch_plt.hist(pch['count'], normed=True, range=(0, upper), bins=int(1e4 * small_bin),
                      histtype='step')
 
