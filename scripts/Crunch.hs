@@ -15,23 +15,24 @@ parseDate s =
 
 getFiles :: Date String -> IO [FilePath]
 getFiles (Date year month day) =
-    glob $ concat ["data/by-date/",year,"/",year,"-",month,"/",year,"-",month,"-",day,"/*.timetag"]
+    glob $ concat ["by-date/",year,"/",year,"-",month,"/",year,"-",month,"-",day,"/*.timetag"]
 
 main :: IO ()
 main = do
     files <- liftIO $ fmap concat $ mapM (getFiles . parseDate) dates
-    print files
-    shakeArgs shakeOptions $ rules files
+    print $ length files
+    shakeArgs (shakeOptions {shakeThreads=0}) $ rules files
 
 rules files = do
     want ["output.pdf"]
 
-    "*.timetag.summary.svg" %> \out -> do
+    "//*.timetag.summary.svg" %> \out -> do
         let timetag = dropExtension $ dropExtension out
         need [timetag]
         need ["scripts/summarize-fcs"]
         cmd "scripts/summarize-fcs" timetag
 
     "*.pdf" %> \out -> do
-        need files
-        cmd "svg-nup --no-tidy --nup 1x1 --no-landscape -o" out "--" files
+        let summaries = map (`addExtension` "summary.svg") files
+        need summaries
+        cmd "svg-nup --no-tidy --nup 1x1 --no-landscape -o" out "--" summaries
