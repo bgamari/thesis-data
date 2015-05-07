@@ -85,8 +85,9 @@ for f in args.file:
             print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
-        pch_plt.hist(pch['count'], normed=True, range=(0, 1e4 * small_bin), bins=round(1e4 * small_bin),
-                     log=True, histtype='step')
+        upper = None # 1e5 * small_bin
+        pch_plt.hist(pch['count'], normed=True, range=(0, upper), bins=int(1e4 * small_bin),
+                     histtype='step')
 
     large_traj_plt.autoscale(axis='both', tight=True)
     small_traj_plt.autoscale(axis='both', tight=True)
