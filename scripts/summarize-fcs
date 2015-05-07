@@ -6,6 +6,8 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as pl
 import matplotlib.gridspec
+import matplotlib
+matplotlib.use('Agg')
 from photon_tools.io import read_photons
 from photon_tools.bin_photons import bin_photons
 from photon_tools import correlate
