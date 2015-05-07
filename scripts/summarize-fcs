@@ -80,6 +80,7 @@ for f in args.file:
 
         try:
             g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
+            g = g[np.logical_not(np.isnan(g['var']))] # FIXME
             corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
         except Exception as e:
             print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
@@ -87,7 +88,7 @@ for f in args.file:
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
         upper = pch['count'].max() # 1e5 * small_bin
         pch_plt.hist(pch['count'], normed=True, range=(0, upper), bins=int(1e4 * small_bin),
-                     histtype='step')
+                     alpha=0.3)
 
     large_traj_plt.autoscale(axis='both', tight=True)
     small_traj_plt.autoscale(axis='both', tight=True)
@@ -100,7 +101,7 @@ for f in args.file:
         g = correlate.corr(ts.channel(0), ts.channel(1),
                            jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
-
+        corr_plt.set_ylim(0.8, 1.2 * g['G'].max())
 
         handles, labels = corr_plt.get_legend_handles_labels()
         fig.legend(handles=handles, labels=labels,
