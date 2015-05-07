@@ -110,7 +110,7 @@ for f in args.file:
     text = '$\\chi^2$ = %f\n' % res.curves['curve'].chi_sqr
     text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
                       for param in res.fit.param_set.params.values())
-    fig.text(x, y, text)
+    fig.text(x, y, text, fontsize='small')
 
     pl.savefig(f.name+'.summary.svg')
 
