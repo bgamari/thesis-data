@@ -20,7 +20,7 @@ parser.add_argument('file', nargs='+', type=argparse.FileType('r'), help='Timest
 args = parser.parse_args()
 
 large_bin = 1 # second
-small_bin = 1e-3 # second
+small_bin = 2e-3 # second
 small_length = 1 # second
 engine = 'favia'
 
@@ -76,7 +76,7 @@ for f in args.file:
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
-        pch_plt.hist(pch['count'], normed=True)
+        pch_plt.hist(pch['count'], normed=True, range=(1e-5, 1e4 * small_bin), bins=round(1e4 * small_bin))
 
     ((x,y), _) = gs[0,0].get_position(fig).get_points()
     fig.text(x, y, text)
