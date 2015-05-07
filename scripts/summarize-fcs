@@ -76,7 +76,8 @@ for f in args.file:
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
-        pch_plt.hist(pch['count'], normed=True, range=(0, 1e4 * small_bin), bins=round(1e4 * small_bin), log=True)
+        pch_plt.hist(pch['count'], normed=True, range=(0, 1e4 * small_bin), bins=round(1e4 * small_bin),
+                     log=True, histtype='step')
 
     ((x,y), _) = gs[0,0].get_position(fig).get_points()
     fig.text(x, y, text)
