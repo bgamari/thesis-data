@@ -46,9 +46,10 @@ for f in args.file:
     resid_plt.set_xscale('log')
 
     pch_plt = pl.subplot(gs[1, 2])
+    pch_plt.locator_params(nbins=3)
     pch_plt.set_xlabel('photons per %g sec' % small_bin)
     pch_plt.set_ylabel('events')
-    pch_plt.set_xscale('log')
+    pch_plt.set_yscale('log')
 
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
@@ -73,10 +74,10 @@ for f in args.file:
         small_traj_plt.plot(bins['start_t'] * ts.jiffy, bins['count'])
 
         g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
-        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
+        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
-        pch_plt.hist(pch['count'], normed=True, range=(1e-5, 1e4 * small_bin), bins=round(1e4 * small_bin))
+        pch_plt.hist(pch['count'], normed=True, range=(0, 1e4 * small_bin), bins=round(1e4 * small_bin))
 
     ((x,y), _) = gs[0,0].get_position(fig).get_points()
     fig.text(x, y, text)
@@ -84,7 +85,15 @@ for f in args.file:
     # Cross-correlation
     g = correlate.corr(ts.channel(0), ts.channel(1),
                        jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
-    corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
+    corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
+
+
+    handles, labels = plots.get_legend_handles_labels()
+    fig.legend(handles=handles, labels=labels,
+               loc='upper left',
+               bbox_to_anchor= gs[2,2].get_position(fig),
+               bbox_transform=fig.transFigure,
+               mode='expand', fontsize='small', ncol=1, frameon=False)
 
     # Plot
     fit = squmfit.Fit()
