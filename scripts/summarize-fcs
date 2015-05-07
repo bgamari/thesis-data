@@ -20,6 +20,7 @@ args = parser.parse_args()
 large_bin = 1 # second
 small_bin = 1e-3 # second
 small_length = 1 # second
+engine = 'favia'
 
 for f in args.file:
     ts = read_photons.open(f.name)
@@ -63,7 +64,7 @@ for f in args.file:
         bins = bin_photons(d, small_bin / ts.jiffy, start_t=middle, end_t=middle + 1/ts.jiffy)
         small_traj_plt.plot(bins['start_t'] * ts.jiffy, bins['count'])
 
-        g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine='hphoton')
+        g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
 
     ((x,y), _) = gs[0,0].get_position(fig).get_points()
@@ -71,7 +72,7 @@ for f in args.file:
 
     # Cross-correlation
     g = correlate.corr(ts.channel(0), ts.channel(1),
-                       jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine='hphoton')
+                       jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
     corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
 
     # Plot
@@ -85,14 +86,15 @@ for f in args.file:
     model = 0 if not offset else fit.param('offset', 0)
     model += 1
     for comp_idx, tauD in enumerate(lifetimes):
-        n = fit.param('N-%d' % (comp_idx), initial=1)
+        n = fit.param('N-%d' % (comp_idx), initial=10)
         model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=aspect, n=n, alpha=1)
     if triplet:
         tauF = fit.param('tauF', initial=0.5)
         model *= triplet_correction(lag=lag, tauF=1e-6 * tauF,
                                     tripletFrac=fit.param('F', initial=0))
 
-    fit.add_curve('curve', model, g['G'], weights=1/sqrt(g['var']), lag=g['lag'])
+    g = g[np.logical_not(np.isnan(g['var']))] # FIXME
+    fit.add_curve('curve', model, g['G'], weights=1/np.maximum(1e-5, sqrt(g['var'])), lag=g['lag'])
     res = fit.fit()
     corr_plt.plot(g['lag'], res.curves['curve'].fit)
     corr_plt.axhline(1, c='k')
@@ -103,8 +105,9 @@ for f in args.file:
     corr_plt.set_ylabel(r'$G(\tau)$')
 
     ((x,y), _) = gs[4,0].get_position(fig).get_points()
-    text = '\n'.join('%15s = %4f' % (param.name, res.eval(param))
-                     for param in res.fit.param_set.params.values())
+    text = '$\\chi^2$ = %f\n' % res.curves['curve'].chi_sqr
+    text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
+                      for param in res.fit.param_set.params.values())
     fig.text(x, y, text)
 
     pl.savefig(f.name+'.summary.svg')
