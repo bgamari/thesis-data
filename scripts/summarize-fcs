@@ -39,10 +39,16 @@ for f in args.file:
     large_traj_plt = pl.subplot(gs[1, 1:2])
     large_traj_plt.set_ylabel('counts per %g sec' % large_bin)
     large_traj_plt.locator_params(nbins=3)
+
     corr_plt = pl.subplot(gs[2, 0:2])
     resid_plt = pl.subplot(gs[3, 0:2])
     corr_plt.set_xscale('log')
     resid_plt.set_xscale('log')
+
+    pch_plt = pl.subplot(gs[1, 2])
+    pch_plt.set_xlabel('photons per %g sec' % small_bin)
+    pch_plt.set_ylabel('events')
+    pch_plt.set_xscale('log')
 
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
@@ -68,6 +74,9 @@ for f in args.file:
 
         g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
+
+        pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
+        pch_plt.hist(pch['count'], normed=True)
 
     ((x,y), _) = gs[0,0].get_position(fig).get_points()
     fig.text(x, y, text)
