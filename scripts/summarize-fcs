@@ -52,7 +52,12 @@ for f in args.file:
 
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
-        d = ts.channel(c)
+        try:
+            d = ts.channel(c)
+        except Exception as e:
+            print 'Error reading timestamps for channel %d: %s' % (c, e)
+            continue
+
         N = len(d)
         if N == 0:
             continue
@@ -72,8 +77,11 @@ for f in args.file:
         bins = bin_photons(d, small_bin / ts.jiffy, start_t=middle, end_t=middle + 1/ts.jiffy)
         small_traj_plt.plot(bins['start_t'] * ts.jiffy, bins['count'])
 
-        g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
-        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
+        try:
+            g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
+            corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
+        except Exception as e:
+            print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
         pch_plt.hist(pch['count'], normed=True, range=(0, 1e4 * small_bin), bins=round(1e4 * small_bin),
@@ -86,52 +94,55 @@ for f in args.file:
     fig.text(x, y, text)
 
     # Cross-correlation
-    g = correlate.corr(ts.channel(0), ts.channel(1),
-                       jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
-    corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
+    try:
+        g = correlate.corr(ts.channel(0), ts.channel(1),
+                           jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
+        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
 
 
-    handles, labels = corr_plt.get_legend_handles_labels()
-    fig.legend(handles=handles, labels=labels,
-               loc='upper left',
-               bbox_to_anchor= gs[2,2].get_position(fig),
-               bbox_transform=fig.transFigure,
-               mode='expand', fontsize='small', ncol=1, frameon=False)
+        handles, labels = corr_plt.get_legend_handles_labels()
+        fig.legend(handles=handles, labels=labels,
+                   loc='upper left',
+                   bbox_to_anchor= gs[2,2].get_position(fig),
+                   bbox_transform=fig.transFigure,
+                   mode='expand', fontsize='small', ncol=1, frameon=False)
 
-    # Plot
-    fit = squmfit.Fit()
-    aspect = 10
-    triplet = True
-    offset = True
-    lifetimes = [fit.param('tauD-%d' % i, initial=initial)
-                 for i,initial in enumerate([100, 1000])]
-    lag = squmfit.Argument('lag')
-    model = 0 if not offset else fit.param('offset', 0)
-    model += 1
-    for comp_idx, tauD in enumerate(lifetimes):
-        n = fit.param('N-%d' % (comp_idx), initial=1. / g[-1]['G'] / len(lifetimes))
-        model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=aspect, n=n, alpha=1)
-    if triplet:
-        tauF = fit.param('tauF', initial=0.5)
-        model *= triplet_correction(lag=lag, tauF=1e-6 * tauF,
-                                    tripletFrac=fit.param('F', initial=0))
+        # Plot
+        fit = squmfit.Fit()
+        aspect = 10
+        triplet = True
+        offset = True
+        lifetimes = [fit.param('tauD-%d' % i, initial=initial)
+                     for i,initial in enumerate([100, 1000])]
+        lag = squmfit.Argument('lag')
+        model = 0 if not offset else fit.param('offset', 0)
+        model += 1
+        for comp_idx, tauD in enumerate(lifetimes):
+            n = fit.param('N-%d' % (comp_idx), initial=1. / g[-1]['G'] / len(lifetimes))
+            model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=aspect, n=n, alpha=1)
+        if triplet:
+            tauF = fit.param('tauF', initial=0.5)
+            model *= triplet_correction(lag=lag, tauF=1e-6 * tauF,
+                                        tripletFrac=fit.param('F', initial=0))
 
-    g = g[np.logical_not(np.isnan(g['var']))] # FIXME
-    fit.add_curve('curve', model, g['G'], weights=1/np.maximum(1e-5, sqrt(g['var'])), lag=g['lag'])
-    res = fit.fit()
-    corr_plt.plot(g['lag'], res.curves['curve'].fit)
-    corr_plt.axhline(1, c='k')
-    pl.setp(corr_plt.get_xticklabels(), visible=False)
-    resid_plt.plot(g['lag'], res.curves['curve'].residuals, '+')
-    resid_plt.axhline(0, c='k')
-    resid_plt.set_xlabel(r'$\tau$ (microseconds)')
-    corr_plt.set_ylabel(r'$G(\tau)$')
+        g = g[np.logical_not(np.isnan(g['var']))] # FIXME
+        fit.add_curve('curve', model, g['G'], weights=1/np.maximum(1e-5, sqrt(g['var'])), lag=g['lag'])
+        res = fit.fit()
+        corr_plt.plot(g['lag'], res.curves['curve'].fit)
+        corr_plt.axhline(1, c='k')
+        pl.setp(corr_plt.get_xticklabels(), visible=False)
+        resid_plt.plot(g['lag'], res.curves['curve'].residuals, '+')
+        resid_plt.axhline(0, c='k')
+        resid_plt.set_xlabel(r'$\tau$ (microseconds)')
+        corr_plt.set_ylabel(r'$G(\tau)$')
 
-    ((x,y), _) = gs[4,0].get_position(fig).get_points()
-    text = 'reduced $\\chi^2$ = %f\n' % res.curves['curve'].reduced_chi_sqr
-    text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
-                      for param in res.fit.param_set.params.values())
-    fig.text(x, y, text, fontsize='small')
+        ((x,y), _) = gs[4,0].get_position(fig).get_points()
+        text = 'reduced $\\chi^2$ = %f\n' % res.curves['curve'].reduced_chi_sqr
+        text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
+                          for param in res.fit.param_set.params.values())
+        fig.text(x, y, text, fontsize='small')
+    except Exception as e:
+        print 'failed to compute cross-correlation: %s' % e
 
     pl.savefig(f.name+'.summary.svg')
 
