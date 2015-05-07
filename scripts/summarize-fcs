@@ -34,10 +34,10 @@ for f in args.file:
     fig.suptitle(f.name)
 
     small_traj_plt = pl.subplot(gs[1, 0])
-    small_traj_plt.ylabel('counts per %f sec' % small_bin)
+    small_traj_plt.set_ylabel('counts per %f sec' % small_bin)
     small_traj_plt.locator_params(nbins=3)
     large_traj_plt = pl.subplot(gs[1, 1:2])
-    large_traj_plt.ylabel('counts per %f sec' % small_bin)
+    large_traj_plt.set_ylabel('counts per %f sec' % small_bin)
     large_traj_plt.locator_params(nbins=3)
     corr_plt = pl.subplot(gs[2, 0:2])
     resid_plt = pl.subplot(gs[3, 0:2])
