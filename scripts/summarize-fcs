@@ -55,10 +55,6 @@ for f in args.file:
         bins = bin_photons(d, large_bin / ts.jiffy)
         m, b, r, p, stderr = linregress(bins['start_t'], bins['count'])
 
-        print '    channel %s: T=%1.1f seconds, N=%1.2e' % (c, dur, N)
-        print '        rate = %1.1f Hz, std dev = %1.1f Hz²' % (N / dur, np.std(bins['count']))
-        print '        dI/dt = %g ± %1.1g Hz / second' % (m / ts.jiffy, stderr / ts.jiffy)
-
         text += '    channel %s: T=%1.1f seconds, N=%1.2e\n' % (c, dur, N)
         text += '        rate = %1.1f Hz, std dev = %1.1f Hz\n' % (N / dur, np.std(bins['count']))
         text += '        dI/dt = %g ± %1.1g Hz / second\n' % (m / ts.jiffy, stderr / ts.jiffy)
