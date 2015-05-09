@@ -49,6 +49,7 @@ for f in args.file:
     pch_plt.locator_params(nbins=3)
     pch_plt.set_xlabel('photons per %g sec' % small_bin)
     pch_plt.set_ylabel('events')
+    pch_plt.yaxis.set_label_position('right')
 
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
@@ -86,7 +87,7 @@ for f in args.file:
             print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
-        upper = pch['count'].max() # 1e5 * small_bin
+        upper = np.percentile(pch['count'], 90) # 1e5 * small_bin
         pch_plt.hist(pch['count'], normed=True, range=(0, upper), bins=int(1e4 * small_bin),
                      alpha=0.3)
 
