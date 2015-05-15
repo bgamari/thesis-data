@@ -1,4 +1,4 @@
-data_root="$(realpath $(pwd))"
+data_root=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 export PATH=$data_root/scripts:$PATH
 
 function cd_date() {
