@@ -20,9 +20,9 @@ parser.add_argument('file', nargs='+', type=argparse.FileType('r'), help='Timest
 args = parser.parse_args()
 
 large_bin = 1 # second
-small_bin = 1e-3 # second
+small_bin = 2e-3 # second
 small_length = 1 # second
-engine = 'favia'
+engine = 'hphoton'
 
 for f in args.file:
     ts = read_photons.open(f.name)
@@ -34,15 +34,32 @@ for f in args.file:
     fig.suptitle(f.name)
 
     small_traj_plt = pl.subplot(gs[1, 0])
+    small_traj_plt.set_ylabel('counts per %g sec' % small_bin)
+    small_traj_plt.locator_params(nbins=3)
     large_traj_plt = pl.subplot(gs[1, 1:2])
-    corr_plt = pl.subplot(gs[2, 0:2])
-    resid_plt = pl.subplot(gs[3, 0:2])
+    large_traj_plt.set_ylabel('counts per %g sec' % large_bin)
+    large_traj_plt.locator_params(nbins=3)
+
+    corr_plt = pl.subplot(gs[2:4, 0:2])
+    resid_plt = pl.subplot(gs[4, 0:2])
     corr_plt.set_xscale('log')
     resid_plt.set_xscale('log')
 
+    pch_plt = pl.subplot(gs[1, 2])
+    pch_plt.locator_params(nbins=3)
+    pch_plt.set_xlabel('photons per %g sec' % small_bin)
+    pch_plt.set_ylabel('events')
+    pch_plt.yaxis.set_label_position('right')
+
     text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
     for c in ts.valid_channels:
-        d = ts.channel(c)
+        d = None
+        try:
+            d = ts.channel(c)
+        except Exception as e:
+            print 'Error reading timestamps for channel %d: %s' % (c, e)
+            continue
+
         N = len(d)
         if N == 0:
             continue
@@ -50,10 +67,6 @@ for f in args.file:
         dur *= ts.jiffy
         bins = bin_photons(d, large_bin / ts.jiffy)
         m, b, r, p, stderr = linregress(bins['start_t'], bins['count'])
-
-        print '    channel %s: T=%1.1f seconds, N=%1.2e' % (c, dur, N)
-        print '        rate = %1.1f Hz, std dev = %1.1f Hz²' % (N / dur, np.std(bins['count']))
-        print '        dI/dt = %g ± %1.1g Hz / second' % (m / ts.jiffy, stderr / ts.jiffy)
 
         text += '    channel %s: T=%1.1f seconds, N=%1.2e\n' % (c, dur, N)
         text += '        rate = %1.1f Hz, std dev = %1.1f Hz\n' % (N / dur, np.std(bins['count']))
@@ -66,13 +79,26 @@ for f in args.file:
         bins = bin_photons(d, small_bin / ts.jiffy, start_t=middle, end_t=middle + 1/ts.jiffy)
         small_traj_plt.plot(bins['start_t'] * ts.jiffy, bins['count'])
 
-        g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
-        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
+        try:
+            g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
+            g = g[np.logical_not(np.isnan(g['var']))] # FIXME
+            corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
+        except Exception as e:
+            print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
+
+        pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
+        upper = np.percentile(pch['count'], 90) # 1e5 * small_bin
+        pch_plt.hist(pch['count'], normed=True, range=(0, upper), bins=int(1e4 * small_bin),
+                     alpha=0.3)
+
+    large_traj_plt.autoscale(axis='both', tight=True)
+    small_traj_plt.autoscale(axis='both', tight=True)
 
     ((x,y), _) = gs[0,0].get_position(fig).get_points()
     fig.text(x, y, text)
 
     # Cross-correlation
+<<<<<<< HEAD
     g = correlate.corr(ts.channel(0), ts.channel(1),
                        jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
     corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']))
@@ -111,6 +137,57 @@ for f in args.file:
     text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
                       for param in res.fit.param_set.params.values())
     fig.text(x, y, text, fontsize='small')
+=======
+    try:
+        g = correlate.corr(ts.channel(0), ts.channel(1),
+                           jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
+        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
+        corr_plt.set_ylim(0.8, 1.2 * g['G'].max())
+
+        handles, labels = corr_plt.get_legend_handles_labels()
+        fig.legend(handles=handles, labels=labels,
+                   loc='upper left',
+                   bbox_to_anchor= gs[2,2].get_position(fig),
+                   bbox_transform=fig.transFigure,
+                   mode='expand', fontsize='small', ncol=1, frameon=False)
+
+        # Plot
+        fit = squmfit.Fit()
+        aspect = 10
+        triplet = True
+        offset = True
+        lifetimes = [fit.param('tauD-%d' % i, initial=initial)
+                     for i,initial in enumerate([100, 1000])]
+        lag = squmfit.Argument('lag')
+        model = 0 if not offset else fit.param('offset', 0)
+        model += 1
+        for comp_idx, tauD in enumerate(lifetimes):
+            n = fit.param('N-%d' % (comp_idx), initial=1. / g[-1]['G'] / len(lifetimes))
+            model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=aspect, n=n, alpha=1)
+        if triplet:
+            tauF = fit.param('tauF', initial=0.5)
+            model *= triplet_correction(lag=lag, tauF=1e-6 * tauF,
+                                        tripletFrac=fit.param('F', initial=0))
+
+        g = g[np.logical_not(np.isnan(g['var']))] # FIXME
+        fit.add_curve('curve', model, g['G'], weights=1/np.maximum(1e-5, sqrt(g['var'])), lag=g['lag'])
+        res = fit.fit()
+        corr_plt.plot(g['lag'], res.curves['curve'].fit)
+        corr_plt.axhline(1, c='k')
+        pl.setp(corr_plt.get_xticklabels(), visible=False)
+        resid_plt.plot(g['lag'], res.curves['curve'].residuals, '+')
+        resid_plt.axhline(0, c='k')
+        resid_plt.set_xlabel(r'$\tau$ (microseconds)')
+        corr_plt.set_ylabel(r'$G(\tau)$')
+
+        ((x,y), _) = gs[3,2].get_position(fig).get_points()
+        text = 'reduced $\\chi^2$ = %f\n' % res.curves['curve'].reduced_chi_sqr
+        text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
+                          for param in res.fit.param_set.params.values())
+        fig.text(x, y, text, fontsize='small')
+    except Exception as e:
+        print 'failed to compute cross-correlation: %s' % e
+>>>>>>> refs/heads/synced/master
 
     pl.savefig(f.name+'.summary.svg')
 
