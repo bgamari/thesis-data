@@ -106,7 +106,7 @@ for f in args.file:
     resid_plt.set_xlabel(r'$\tau$ (microseconds)')
     corr_plt.set_ylabel(r'$G(\tau)$')
 
-    ((x,y), _) = gs[4,0].get_position(fig).get_points()
+    ((x,y), _) = gs[3,2].get_position(fig).get_points()
     text = '$\\chi^2$ = %f\n' % res.curves['curve'].chi_sqr
     text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
                       for param in res.fit.param_set.params.values())
