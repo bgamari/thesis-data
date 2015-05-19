@@ -7,12 +7,12 @@ import matplotlib.pyplot as pl
 from config_file import Config
 
 def find_runs(xs):
-        runs = np.nonzero(np.diff(xs))[0] + 1
-        if xs[0]:
-                runs = np.append(0, runs)
-        if xs[-1]:
-                runs = np.append(runs, len(xs))
-        return runs.reshape(-1, 2) - [0,1]
+    runs = np.nonzero(np.diff(xs))[0] + 1
+    if xs[0]:
+        runs = np.append(0, runs)
+    if xs[-1]:
+        runs = np.append(runs, len(xs))
+    return runs.reshape(-1, 2) - [0,1]
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -44,4 +44,4 @@ for fname in args.file:
     pl.savefig(fname+'-bursts.png')
 
     with Config() as config:
-            config.setdefault(fname, {})['exclude'] = zip(starts * f.jiffy, ends * f.jiffy)
+        config.setdefault(fname, {})['exclude'] = zip(starts * f.jiffy, ends * f.jiffy)
