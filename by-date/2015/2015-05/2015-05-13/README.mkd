@@ -1,0 +1,60 @@
+# 2015-05-13 through 2015-05-14
+
+This was a prolonged data session which took place before leaving for
+Germany. As there was no sleep had during this period I have denoted this
+roughly 48 hour period as "2015-05-13".
+
+Work starts on Ben #4, page 113
+
+ * run001: 10nM RNA sample, roughly 24 hours old, clearly bad
+ * run002: Uncorrelated light
+ * run003: RNA buffer for contamination check
+ * run004: unknown
+
+## Focal volume calibration
+
+First characterize focal volume as it sits (and has been sitting since Sat 9 May
+2015). Using Oregon Green 514, varying concentrations in 200mM phosphate 7.5.
+
+Power: 8.1uW @ 514nm after telescope lens #1
+
+ * run005: 10nM OG514
+ * run006: 5nM OG514
+ * run007: 2nM OG514
+ * run008: 1nM OG514
+
+Now going to open iris fully, run same series,
+
+ * run009: 1nM OG514
+ * run010: 2nM OG514
+ * run011: 5nM OG514
+ * run012: 10nM OG514
+ * run013: 50nM OG514
+
+Now going to try to find an iris configuration which will work for my remaining
+experiments. Clearly this needs to be more stopped down than the configuration
+above. Cut down to roughly 25% power.
+
+Power: 26.5uW @ 514nm after telescope lens #1
+
+ * run014: 5nM OG514
+ * run015: 1nM OG514
+ * run016: 1nM OG514
+ * run017: 10nM OG514
+ * run018: 2nM OG514
+
+Power: 2.9uW after telescope lens #1
+
+ * run019: 50nM OG514
+
+## Ionic strength series
+
+
+First task will be to examine diffusive properties of a simple system as a
+function of ionic strength with the goal of isolating the effect of
+electrostatics by modulation of screening length.
+
+Experiments begin on Ben #4, pg. 120, preparation on pg. 114
+
+These ionic strengths aren't quite right 
+ * run020: 1mM IS Oregon Green 514
