@@ -10,5 +10,5 @@ class Config(object):
         return self.config
 
     def __exit__(self, exc_type, exc, exc_tb):
-        json.dump(self.config, open(self.fname, 'w'))
+        json.dump(self.config, open(self.fname, 'w'), indent=4)
 
