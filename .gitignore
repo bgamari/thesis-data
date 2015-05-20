@@ -3,8 +3,15 @@
 
 *.png
 *.svg
+*.pdf
 
 *.acorr-0
 *.acorr-1
-*.xcorr
+*.xcorr-0-1
 
+*-fit.txt
+*-burst-length.txt
+*-fret_eff.txt
+*.html
+
+*.pt3.ch?.txt
