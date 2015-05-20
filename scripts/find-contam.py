@@ -17,11 +17,11 @@ def find_runs(xs):
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('file', nargs='+', help='Timestamp files')
-parser.add_argument('-w', '--bin-width', type=float, default=1,
+parser.add_argument('-w', '--bin-width', type=float, default=0.1,
                     help='Bin width in seconds')
-parser.add_argument('-b', '--buffer', type=float, default=0.05,
-                    help='Amount of time around burst to drop')
-parser.add_argument('-t', '--threshold', type=float, default=3,
+parser.add_argument('-b', '--buffer', type=float, default=0.2,
+                    help='Amount of time before and after burst to drop')
+parser.add_argument('-t', '--threshold', type=float, default=10,
                     help='Threshold (multiple of the median count')
 args = parser.parse_args()
 
@@ -38,9 +38,9 @@ for fname in args.file:
     print '%s: Found %d bursts above threshold of %f / bin' % (fname, len(bursts), thresh)
 
     pl.clf()
-    pl.plot(t, counts, '+')
+    pl.plot(t * f.jiffy, counts, '+')
     for start,end in zip(starts, ends):
-        pl.axvspan(start, end, alpha=0.3)
+        pl.axvspan(start * f.jiffy, end * f.jiffy, alpha=0.3, color='k')
     pl.savefig(fname+'-bursts.png')
 
     with Config() as config:
