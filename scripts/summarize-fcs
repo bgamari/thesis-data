@@ -8,12 +8,15 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as pl
 import matplotlib.gridspec
+
+from photon_tools.utils import in_intervals
 from photon_tools.io import read_photons
 from photon_tools.bin_photons import bin_photons
 from photon_tools import correlate
 from photon_tools.fcs_models import *
 from scipy.stats import linregress
 import squmfit
+from config_file import Config
 
 parser = argparse.ArgumentParser()
 parser.add_argument('file', nargs='+', type=argparse.FileType('r'), help='Timestamp file')
@@ -29,6 +32,12 @@ for f in args.file:
     print '%s:' % (f.name)
     print '    jiffy = %g ns' % (ts.jiffy / 1e-9)
 
+    with Config() as config:
+        excludes = config.get(f.name, {}).get('exclude', [])
+        if len(excludes) > 0: print '    excludes = ', excludes
+        excludes_ticks = [(e[0] / ts.jiffy, e[1] / ts.jiffy) for e in excludes]
+        exclude = lambda d: d[np.logical_not(in_intervals(excludes_ticks, d))]
+
     fig = pl.figure(figsize=(8.0, 10.5))
     gs = matplotlib.gridspec.GridSpec(5, 3)
     fig.suptitle(f.name)
@@ -36,9 +45,12 @@ for f in args.file:
     small_traj_plt = pl.subplot(gs[1, 0])
     small_traj_plt.set_ylabel('counts per %g sec' % small_bin)
     small_traj_plt.locator_params(nbins=3)
+
     large_traj_plt = pl.subplot(gs[1, 1:2])
     large_traj_plt.set_ylabel('counts per %g sec' % large_bin)
     large_traj_plt.locator_params(nbins=3)
+    for start,end in excludes:
+        pl.axvspan(start, end, alpha=0.3, color='0.3')
 
     corr_plt = pl.subplot(gs[2:4, 0:2])
     resid_plt = pl.subplot(gs[4, 0:2])
@@ -80,7 +92,7 @@ for f in args.file:
         small_traj_plt.plot(bins['start_t'] * ts.jiffy, bins['count'])
 
         try:
-            g = correlate.autocorr(d, jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
+            g = correlate.autocorr(exclude(d), jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
             g = g[np.logical_not(np.isnan(g['var']))] # FIXME
             corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
         except Exception as e:
@@ -99,7 +111,7 @@ for f in args.file:
 
     # Cross-correlation
     try:
-        g = correlate.corr(ts.channel(0), ts.channel(1),
+        g = correlate.corr(exclude(ts.channel(0)), exclude(ts.channel(1)),
                            jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
         corr_plt.set_ylim(0.8, 1.2 * g['G'].max())
