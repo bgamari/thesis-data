@@ -1,6 +1,10 @@
 .*.swp
 *~
 
+*.pyc
+*.o
+*.hi
+
 *.png
 *.svg
 *.pdf
