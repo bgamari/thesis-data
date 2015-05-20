@@ -11,7 +11,7 @@ Work starts on Ben #4, page 113
  * run003: RNA buffer for contamination check
  * run004: unknown
 
-## Focal volume calibration
+## Focal volume calibration for FCS
 
 First characterize focal volume as it sits (and has been sitting since Sat 9 May
 2015). Using Oregon Green 514, varying concentrations in 200mM phosphate 7.5.
@@ -47,7 +47,7 @@ Power: 2.9uW after telescope lens #1
 
  * run019: 50nM OG514
 
-## Ionic strength series
+## Diffusion of OG514 as function of ionic strength via FCS
 
 
 First task will be to examine diffusive properties of a simple system as a
@@ -56,5 +56,85 @@ electrostatics by modulation of screening length.
 
 Experiments begin on Ben #4, pg. 120, preparation on pg. 114
 
-These ionic strengths aren't quite right 
+These ionic strengths aren't quite right, they are underestimates as they assume
+that the IS of the buffer is 100mM at 100mM concentration; it is in fact 275mM
+according to Buffer Maker. Unfortunately it's not easy to model this as it
+requires knowledge of the activity of the buffer..
+
+Power 3.1 uW @ 514nm after telescope lens #1
+
+Start with solution measurements at 1uM OG514, 1mM phosphate 7.5,
+
  * run020: 1mM IS Oregon Green 514
+
+Power: 16.7 uW after telescope lens #1
+
+ * run021: Again
+ * run022: 10mM IS
+ * run023: 40mM IS
+ * run024: 80mM IS
+ * run025: 200mM IS
+ * run026: 500mM IS
+
+Next droplet measurements using 100nM OG514, 1mM phosphate 7.5,
+
+ * run027: 1mM IS Oregon Green 514 droplets
+ * run028: Again
+ * run029: 10mM IS
+ * run030: 40mM IS
+ * run031: Again
+ * run032: Again
+ * run033: 80mM IS
+ * run034: 200mM IS
+ * run035: 500mM IS
+
+## Oil viscosity dependence via FCS
+
+Lori suggested that the apparent slowed diffusion may be due to a boundary layer
+effect and could be affected by viscosity. Let's try diluting FC-40 droplets
+with FC-77, lowering the viscosity of the continuous phase from 4cP to 1.9cP.
+See Ben #4 pg. 123.
+
+ * run036: diluted droplets
+ * run037: diluted droplets
+ * run038: diluted droplets
+
+## Diffusion of Polylysine via FCS
+
+Polylysine is positively charged at neutral pH and therefore could make for a
+good probe of electrostatic interactions within the droplet environment.
+
+Power 16.6uW @ 514nm after telescope lens #1
+
+ * run039: nominal 10nM polylysine in solution
+ * run040: nominal 100nM polylysine in solution
+
+Very little fluorescence; realigned excitation
+Power: 15.2uW after telescope lens #1
+
+ * run041: 100nM polylysine in soln
+ * run042: 10nM polylysine in soln
+
+Still nothing; let's check instrument with OG514
+
+ * run043: 10nM OG514
+
+Looks good. Perhaps the polylysine is plating out of the surface. Let's try
+droplets,
+
+ * run044: 100nM polylysine droplets
+
+Power: 31.2uW @ 514nm after telescope lens #1
+
+ * run045: 100nM polylysine droplets
+
+Somewhere around here I opened box to show Sheema the changes I've made to the
+instrument. Unfortunately a light guard wasn't installed properly after this,
+resulting in increased background in channel 1 in the remaining experiments.
+
+## Anisotropy of polylysine
+
+Seeing as FCS of polylysine may be difficult, let's try looking at the
+rotational anisotropy. Placed in `2015-05-15-anisotropy` directory.
+
+ * run
