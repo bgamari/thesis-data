@@ -9,6 +9,16 @@
  * BCECF: pK_a = 7.0
      * TCSPC in @Szmacinski1993 (lifetimes are 3.17 ns and 4.49 ns)
 
+## 2015-05-15: FCS on droplets
+
+## 2015-05-13: Anisotropy on droplets
+
+## 2015-05-13: FCS on OG514, polylysine, RNA in droplets
+
+## 2015-05-05: FCS on droplets
+
+ *
+
 ## 2015-05-02: FCS on droplets
 
  * Replaced dichroic with non-polarizing beamsplitter
@@ -30,6 +40,7 @@
 ## 2015-04-20: FCS on droplets
 
  * 10uM OG514, 2uL aqueous in 300uL 1% FC-40/Raindance
+ * 50nm, 100nm, 200nm, 400nm, 800nm, 1000nm pore sizes
  
 ## 2015-04-19: FCS on droplets
 
