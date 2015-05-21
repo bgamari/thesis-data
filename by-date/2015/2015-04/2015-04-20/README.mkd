@@ -1,0 +1,96 @@
+# 2015-04-20: FCS in droplets
+
+Exploring pore size dependence.
+Usual 2uL aqueous (10uM OG514 in 100mM phosphate 7.5) in 300uL FC-40/Raindance 1% w/w
+
+## 50 nm pore
+
+ * run001: 50nm pore
+ * run002: Again
+ * run003: Again
+
+Excitation too strong, power reduced
+ 
+ * run004: Again
+ * run005: Again
+ * run006: Again
+ * run007: Again
+ * run008: Again
+ * run009: Again
+
+New batch of droplets with same 50nm membrane
+
+ * run010: 50nm pore
+ * run011: Again
+ * run012: Again
+
+## 100nm pore
+
+100nm membrane droplets
+
+ * run013: 100nm pore
+ * run014: Again
+ * run015: Again
+ * run016: Again
+
+New batch of droplets with same 100nm membrane,
+
+ * run017: 100nm pore
+ * run018: Again
+
+## 200nm pore
+
+200nm membrane
+
+ * run019: 200nm pore
+ * run020: Again
+ * run021: Again
+ * run022: Again
+
+New batch of droplets with same 200nm membrane,
+
+ * run023: 200nm pore
+ * run024: Again
+ * run025: Again
+ * run026: Again
+
+## 400nm pore
+
+400nm membrane
+
+ * run027: 400nm pore
+ * run028: Again
+ * run029: Again
+
+New batch of droplets with same 400nm membrane,
+
+ * run030: 400nm pore
+ * run031: Again
+ * run032: Again
+ * run033: Again
+
+## 800nm pore
+
+800nm membrane
+
+New batch of droplets with same 800nm membrane
+
+ * run034: 800nm pore
+ * run035: Again
+ * run036: Again
+ * run037: Again
+ * run038: Again
+ * run039: Again
+
+## 1000nm pore
+
+ * run040: 1000nm pore
+ * run041: Again
+ * run042: Again
+
+## Calibration
+
+ * run043: 2nM OG514 in solution
+ * run044: Uncorrelated light
+
+
