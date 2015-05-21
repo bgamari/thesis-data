@@ -1,0 +1,24 @@
+# 2015-02-25: DLS/FCS as function of surfactant concentration
+
+This was the original plan although doesn't necessarily reflect what was done.
+See the notebook for this.
+
+Prepare about 2.0mL of each surfactant/oil concentration
+Filter in sterile filter
+Prepare two Eppendorf tubes for each sample each with 200uL oil/surfactant
+
+pH 7.8 Phophate 0.1% surfactant
+pH 7.8 Phophate 0.5% surfactant
+pH 7.8 Phophate 1.0% surfactant
+pH 7.8 Phophate 1.5% surfactant
+pH 7.8 Phophate 2.0% surfactant
+pH 5.5 Citrate 2.0% surfactant
+
+Form droplets with 2uL of aqueous phase into each
+DLS sample prepared with 100mM buffer
+FCS sample prepared with 100mM buffer + 50uM Oregon Green 488
+
+ZetaSizer: three measurements of each
+Two FCS measurements of each
+
+Sonicate all for at least 30 minutes
