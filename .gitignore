@@ -17,5 +17,7 @@
 *-burst-length.txt
 *-fret_eff.txt
 *.html
+*.timetag-bins
+*.timetag-se
 
 *.pt3.ch?.txt
