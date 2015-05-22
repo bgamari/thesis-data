@@ -73,8 +73,6 @@ New batch of droplets with same 400nm membrane,
 
 800nm membrane
 
-New batch of droplets with same 800nm membrane
-
  * run034: 800nm pore
  * run035: Again
  * run036: Again
@@ -94,3 +92,12 @@ New batch of droplets with same 800nm membrane
  * run044: Uncorrelated light
 
 
+## Other things
+
+ * run045: 2nM Oregon Green 514 1um droplets
+ * run046: Again
+
+ * run047: Testing cleaning procedure
+
+ * run048: Another cleaning test
+ * run049: 2nM OG 514 in 1um droplets
