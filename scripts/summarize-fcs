@@ -20,6 +20,7 @@ from config_file import Config
 
 parser = argparse.ArgumentParser()
 parser.add_argument('file', nargs='+', type=argparse.FileType('r'), help='Timestamp file')
+parser.add_argument('-O', '--offset', action='store_true', help='Fit an offset')
 args = parser.parse_args()
 
 large_bin = 1 # second
@@ -127,11 +128,10 @@ for f in args.file:
         fit = squmfit.Fit()
         aspect = 10
         triplet = True
-        offset = True
         lifetimes = [fit.param('tauD-%d' % i, initial=initial)
-                     for i,initial in enumerate([100, 1000])]
+                     for i,initial in enumerate([100, 5000])]
         lag = squmfit.Argument('lag')
-        model = 0 if not offset else fit.param('offset', 0)
+        model = 0 if not args.offset else fit.param('offset', 0)
         model += 1
         for comp_idx, tauD in enumerate(lifetimes):
             n = fit.param('N-%d' % (comp_idx), initial=1. / g[-1]['G'] / len(lifetimes))
