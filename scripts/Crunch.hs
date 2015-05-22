@@ -53,8 +53,11 @@ lookupConfig fname = do
     cfg <- MaybeT $ liftIO $ Aeson.decode <$> BS.readFile configFile
     MaybeT $ return $ HM.lookup (takeFileName fname) cfg
 
+shakeOpts = shakeOptions { shakeThreads = 0
+                         , shakeStaunch = True
+                         }
 main :: IO ()
-main = shakeArgs (shakeOptions {shakeThreads=0}) $ do
+main = shakeArgs shakeOpts $ do
     getFileConfig <- addOracle $ runMaybeT . lookupConfig
     "crunch-all" ~> do
         files <- concat <$> mapM (getFiles "timetag" . parseDate) dates
