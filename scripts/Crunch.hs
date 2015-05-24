@@ -1,12 +1,14 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DeriveAnyClass #-}
 {-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE FlexibleContexts #-}
 
+import System.Environment (getEnv)
 import Control.Monad (guard, mzero)
 import Control.Monad.Trans.Class
 import Control.Monad.Trans.Maybe
 import Control.Applicative
-import Development.Shake
+import Development.Shake hiding (getEnv)
 import Development.Shake.FilePath
 import Data.List.Split (splitOn)
 import Data.Aeson as Aeson
@@ -42,9 +44,14 @@ parseDate s =
     let year:month:day:_ = splitOn "-" s
     in Date year month day
 
+dateDir :: Date String -> FilePath
+dateDir (Date year month day) =
+    "by-date" </> year </> (year<->month) </> (year<->month<->day)
+  where a <-> b = a ++ "-" ++ b
+
 getFiles :: String -> Date String -> Action [FilePath]
-getFiles ext (Date year month day) =
-    getDirectoryFiles "." [concat ["by-date/",year,"/",year,"-",month,"/",year,"-",month,"-",day,"/*.",ext]]
+getFiles ext date =
+    getDirectoryFiles "." [dateDir date </> "*." ++ ext]
 
 lookupConfig :: FilePath -> MaybeT Action FileConfig
 lookupConfig fname = do
@@ -53,25 +60,53 @@ lookupConfig fname = do
     cfg <- MaybeT $ liftIO $ Aeson.decode <$> BS.readFile configFile
     MaybeT $ return $ HM.lookup (takeFileName fname) cfg
 
-shakeOpts = shakeOptions { shakeThreads = 0
-                         , shakeStaunch = True
-                         }
+
+getTimetags :: Action [FilePath]
+getTimetags = concat <$> mapM (getFiles "timetag" . parseDate) dates
+
 main :: IO ()
-main = shakeArgs shakeOpts $ do
+main = do
+    dataRoot <- getEnv "data_root"
+    let shakeOpts = shakeOptions
+                    { shakeThreads = 0
+                    , shakeStaunch = True
+                    , shakeProgress = progressSimple
+                    , shakeFiles = dataRoot </> ".shake"
+                    }
+    shakeArgs shakeOpts (rules dataRoot)
+
+rules :: FilePath -> Rules ()
+rules dataRoot = do
     getFileConfig <- addOracle $ runMaybeT . lookupConfig
-    "crunch-all" ~> do
-        files <- concat <$> mapM (getFiles "timetag" . parseDate) dates
+    phony "crunch-all" $ do
+        files <- getTimetags
         liftIO $ print $ length files
         need $ map (`addExtension` "summary.svg") files
 
     "//*.timetag.summary.svg" %> \out -> do
         let timetag = dropExtension $ dropExtension out
         getFileConfig timetag
-        need [timetag]
-        need ["scripts/summarize-fcs"]
-        Exit c <- cmd ("scripts/summarize-fcs" :: String) timetag
+        need [timetag, "scripts/summarize-fcs"]
+        Exit c <- command [] "scripts/summarize-fcs" [timetag]
         return ()
 
     "output.pdf" %> \out -> do
         summaries <- concat <$> mapM (getFiles "timetag.summary.svg" . parseDate) dates
-        cmd ("svg-nup --no-tidy --nup 1x1 --no-landscape -o" :: String) out ("--" :: String) summaries
+        command [] "svg-nup" (words "--no-tidy --nup 1x1 --no-landscape -o"++[out, "--"]++summaries)
+
+    "//*.timetag.xcorr-0-1" %> \out -> do
+        let timetag = dropExtension out
+        need [timetag]
+        cfg <- getFileConfig timetag
+        let excludeInterval (Interval s e) = "-e"++show s++"-"++show e
+            args = [timetag, "--engine=hphoton", "-n0", "-L10", "--plot", "--output="++takeDirectory timetag]
+                   ++ map excludeInterval (maybe [] excludeTimes cfg)
+        command [] "fcs-corr" args
+
+    phony "corr-all" $ do
+        getTimetags >>= need . map (<.> "xcorr-0-1")
+
+    "//corr" %> \out -> do
+        let dir = takeDirectory out
+        timetags <- getDirectoryFiles "." ["*.timetag"]
+        need $ map (<.> "xcorr-0-1") timetags
