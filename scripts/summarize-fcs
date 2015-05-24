@@ -1,8 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+from __future__ import unicode_literals, print_function
 import argparse
+import os.path
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -12,7 +13,6 @@ import matplotlib.gridspec
 from photon_tools.utils import in_intervals
 from photon_tools.io import read_photons
 from photon_tools.bin_photons import bin_photons
-from photon_tools import correlate
 from photon_tools.fcs_models import *
 from scipy.stats import linregress
 import squmfit
@@ -26,16 +26,23 @@ args = parser.parse_args()
 large_bin = 1 # second
 small_bin = 2e-3 # second
 small_length = 1 # second
-engine = 'hphoton'
+
+def load_corr(fname):
+    try:
+        return np.genfromtxt(fname, dtype=float, names='lag,G,var')
+    except Exception as e:
+        print('Failed to load correlation function %s: %s'% (fname, e))
+        return None
 
 for f in args.file:
     ts = read_photons.open(f.name)
-    print '%s:' % (f.name)
-    print '    jiffy = %g ns' % (ts.jiffy / 1e-9)
+    print('%s:' % (f.name))
+    print('    jiffy = %g ns' % (ts.jiffy / 1e-9))
 
     with Config() as config:
         excludes = config.get(f.name, {}).get('exclude', [])
-        if len(excludes) > 0: print '    excludes = ', excludes
+        if len(excludes) > 0:
+            print('    excludes = ', excludes)
         excludes_ticks = [(e[0] / ts.jiffy, e[1] / ts.jiffy) for e in excludes]
         exclude = lambda d: d[np.logical_not(in_intervals(excludes_ticks, d))]
 
@@ -70,7 +77,7 @@ for f in args.file:
         try:
             d = ts.channel(c)
         except Exception as e:
-            print 'Error reading timestamps for channel %d: %s' % (c, e)
+            print('Error reading timestamps for channel %d: %s' % (c, e))
             continue
 
         N = len(d)
@@ -92,12 +99,12 @@ for f in args.file:
         bins = bin_photons(d, small_bin / ts.jiffy, start_t=middle, end_t=middle + 1/ts.jiffy)
         small_traj_plt.plot(bins['start_t'] * ts.jiffy, bins['count'])
 
-        try:
-            g = correlate.autocorr(exclude(d), jiffy=ts.jiffy, min_lag=5e-7, max_lag=min(dur/15, 10), engine=engine)
+        g = load_corr('%s.acorr-%d' % (f.name, c))
+        if g is not None:
             g = g[np.logical_not(np.isnan(g['var']))] # FIXME
             corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
-        except Exception as e:
-            print 'Failed to compute autocorrelation for channel %d: %s' % (c, e)
+        else:
+            print('No autocorrelation for channel %d' % c)
 
         pch = bin_photons(d, small_bin / ts.jiffy, include_zeros=False)
         upper = np.percentile(pch['count'], 90) # 1e5 * small_bin
@@ -111,9 +118,8 @@ for f in args.file:
     fig.text(x, y, text)
 
     # Cross-correlation
-    try:
-        g = correlate.corr(exclude(ts.channel(0)), exclude(ts.channel(1)),
-                           jiffy=ts.jiffy, min_lag=100e-9, max_lag=min(dur/15, 10), engine=engine)
+    g = load_corr('%s.xcorr-0-1' % f.name)
+    if g is not None:
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
         corr_plt.set_ylim(0.8, 1.2 * g['G'].max())
 
@@ -157,9 +163,9 @@ for f in args.file:
         text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
                           for param in res.fit.param_set.params.values())
         fig.text(x, y, text, fontsize='small')
-    except Exception as e:
-        print 'failed to compute cross-correlation: %s' % e
+    else:
+        print('failed to compute cross-correlation')
 
     pl.savefig(f.name+'.summary.svg')
 
-    print
+    print()

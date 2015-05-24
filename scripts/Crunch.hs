@@ -85,9 +85,10 @@ rules dataRoot = do
 
     "//*.timetag.summary.svg" %> \out -> do
         let timetag = dropExtension $ dropExtension out
+            summarize = dataRoot</>"scripts/summarize-fcs"
         getFileConfig timetag
-        need [timetag, "scripts/summarize-fcs"]
-        Exit c <- command [] "scripts/summarize-fcs" [timetag]
+        need [timetag, summarize, timetag <.> "xcorr-0-1"]
+        Exit c <- command [] summarize [timetag]
         return ()
 
     "output.pdf" %> \out -> do
@@ -99,7 +100,7 @@ rules dataRoot = do
         need [timetag]
         cfg <- getFileConfig timetag
         let excludeInterval (Interval s e) = "-e"++show s++"-"++show e
-            args = [timetag, "--engine=hphoton", "-n0", "-L10", "--plot", "--output="++takeDirectory timetag]
+            args = [timetag, "--engine=hphoton", "-n0", "-E100e-9", "-L10", "--plot", "--output="++takeDirectory timetag]
                    ++ map excludeInterval (maybe [] excludeTimes cfg)
         command [] "fcs-corr" args
 
