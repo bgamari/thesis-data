@@ -1,0 +1,266 @@
+---
+title: FCS data summary
+author: Ben Gamari
+---
+
+# How to read this
+
+This is a transcription and analysis of portions of my notebooks. You will find
+discussion interleaved with figures showing summaries of the data taken. This is
+to be read as a single chronological sequence.
+
+## FCS summaries
+
+FCS data summaries will look like the following,
+
+> summarize: 2015-04-20, 001-003
+
+The notes at the top provide a quantitative view into the dataset, showing the
+total length (denoted $T$), the number of observed photons ($N$), the first two
+moments of the count rate, and an estimate of the rate of change in the count rate.
+
+The next row of plots shows the three different views on the count statistics of
+the dataset. The left-most plot shows the bin counts over time of the first one
+second of the dataset, binned into 2 millisecond bins. The next plot shows the
+bin counts over time of the entire dataset, using 1 second bins. The final
+right-most plot shows the photon-counting histogram of the dataset, using 2
+millisecond bins.
+
+The next plot shows the auto- and cross-correlations of the dataset. Note that
+in the blue and green curves (the auto-correlations of channels 0 and 1,
+respectively) we will typically observe large correlations at early lags due to
+afterpulsing. For this reason the red curve is of the greatest interest and the
+only curve to which we attempt to fit an analytical model, shown as the light
+blue curve. A one- or two-component three-dimensional diffusion model is used
+with triplet correction. The parameters of the fitted model are shown to the
+right of the plot, along the reduced $χ²$ statistic.
+
+The bottom plot shows the residuals of the model.
+
+# Contamination removal
+
+Some of the data unfortunately shows clear signs of contamination. This
+is perhaps not surprising as much of the data was taken at the height of the New
+England spring. I've done my best to eliminate emission bursts that I suspect
+are due to contamination with a simple binning/thresholding scheme. For this I
+bin the photon trajectory into 100 millisecond bins. From these bin counts I
+then estimate the expected count using the median, an estimator known to be
+robust against outliers like those I am trying to identify. Finally, I mark any
+bins above a chosen multiple of the expected count (typically ten) as due to
+contamination. To ensure that bursts near bin edges are fully identified, I also
+exclude a buffer region of 200 milliseconds on either side of the burst.
+
+Photon arrivals falling in intervals identified as due to contamination are
+dropped in the analyses herein. These intervals are marked in 
+
+# 2014-10-23
+
+Removed green APD for repair due to high dark counts.
+
+![Chimera setup after 2015-10-23](chimera-20141023-2127.svg)
+
+# 2015-01-26
+
+Switched out detector and filters.
+
+![Chimera setup after 2015-01-26](chimera-20150126-1922.svg)
+
+# 2015-02-13
+
+Added short-pass filter in front of acceptor channel detector to exclude IR
+scatter due to trap.
+
+![Chimera setup after 2015-02-13](chimera-20150213-1419.svg)
+
+# 2015-04-20
+
+The goal of this day was to examine the effect of the extruder pore size on the
+resulting droplet size distribution. This was done via FCS on Chimera. The
+droplet-making protocol followed the usual 2uL of aqueous phase introduced into
+300μL FC-40/Raindance (1% w/w). The dispersed phase was 10μM Oregon Green 514 in
+100mM phosphate 7.5 buffer.
+
+I try membranes with 50nm, 100nm, 200nm, 400nm, 800nm, and 1μm pore sizes.
+
+## 50nm pore membrane
+The first attempts are clearly saturating the detectors at times,
+
+> summarize: 2015-04-20, 001-003
+
+I reduce the power and things start looking a bit better,
+
+> summarize: 2015-04-20, 004-009
+
+Now I produce a fresh batch to droplets with the same membrane to verify the
+reproducibility of the result.
+
+> summarize: 2015-04-20, 010-012
+
+## 100nm pore membrane
+
+> summarize: 2015-04-20, 013,016
+
+Again, produce a second batch of droplets
+
+> summarize: 2015-04-20, 017-018
+
+## 200nm pore membrane
+
+> summarize: 2015-04-20, 019-022
+
+Second batch,
+
+> summarize: 2015-04-20, 023-026
+
+## 400nm pore membrane
+
+> summarize: 2015-04-20, 027-029
+
+Second batch
+
+> summarize: 2015-04-20, 030-033
+
+## 800nm pore membrane
+
+> summarize: 2015-04-20, 034-039
+
+No second batch this time
+
+## 1μm pore membrane
+
+> summarize: 2015-04-20, 040-042
+
+## Calibration
+
+To get a sense for the observation volume I'll look at 2nM Oregon Green 514 in
+aqueous solution.
+
+> summarize: 2015-04-20, 043
+
+And to allow correction for afterpulsing I'll look at uncorrelated white light,
+
+> summarize: 2015-04-20, 044
+
+## Checking
+
+Unfortunately it was only at this point that I began to question whether my
+protocol for cleaning the extruder was adequate.
+
+TODO
+
+# 2015-05-02
+
+Reconfigured detection side for FCS: replaced dichroic with non-polarizing
+beamsplitter, replaced acceptor channel emission filter with ET575/50m for use
+with Oregon Green 514, *et al.* Prior to this change cross-correlations were
+marginal as the acceptor channel was only seeing cross-talk.
+
+![Chimera setup after 2015-05-02](chimera-20150502-1502.svg)
+
+# 2015-05-05
+
+Trying to build an understanding of characteristics of GFP; measuring FCS in
+solution and droplets comparing to Oregon Green 514. The iris is fully open in the below
+experiments. Excitation is with big frame Coherent laser.
+
+First measure uncorrelated light from brightfield lamp for afterpulsing
+correction,
+
+> summarize: 2015-05-05, 000
+
+## Oregon Green 514 in solution
+
+Now look at 10nM Oregon Green 514 in solution for observation volume
+characterization.
+
+> summarize: 2015-05-05, 001
+
+## Oregon Green 514 in droplets
+
+Now we'll look at 50nM Oregon Green 514 (buffered with 100mM phosphate 7.5) in
+droplets (made with usual 2μL aqueous in 300mL 1% FC-40/RAN w/w). We'll do a
+brief power-series.
+
+Exciting with 34μW @ 514nm
+
+> summarize: 2015-05-05, 002
+
+Reduced power to 8.5μW and continuing with the same droplets,
+
+> summarize: 2015-05-05, 003-004
+
+Reduced power further to 2.7μW
+
+> summarize: 2015-05-05, 005
+
+Increased power to 62μW
+
+> summarize: 2015-05-05, 006
+
+## GFP in solution
+
+Now we'll move on to GFP, starting with the solution measurements (10nM). Power
+still at 62μW.
+
+> summarize: 2015-05-05, 007
+
+There was very little fluorescence in the above. Perhaps the dye is very sensitive to photobleaching at high powers.
+
+Reduce power to 14.2μW @ 514nm.
+
+> summarize: 2015-05-05, 008
+
+Too little fluorescence in the above. Perhaps the excitation cross-section is too low at 514nm. Let's try 488nm.
+
+Coupled 488nm line from Coherent into fiber, switched to unknown 488nm dichroic.
+Unfortunately I don't know the exact excitation power as the power meter was set at the wrong wavelength but it was somewhere around 15μW.
+
+> summarize: 2015-05-05, 009
+
+It may still be that my filters are eliminating most of my emission. Will need
+to try the Zeiss scope to confirm this.
+
+## Troubleshooting 514nm excitation
+
+Coupled in 514nm, switched back to Chroma 514nm dichroic. Power is 8.7μW.
+
+Try Oregon Green 514 droplets from runs 002-005 again to ensure things are okay. Unfortunately as the next run shows the instrument is out of alignment. It took me a few tries to fix this.
+
+> summarize: 2015-05-05, 010
+
+Clearly something is wrong; Let's do a Oregon Green 514 solution measurement to
+work out the issue.
+
+> summarize: 2015-05-05, 011
+> summarize: 2015-05-05, 012
+
+Realigned excitation, try another measurement.
+
+> summarize: 2015-05-05, 013
+
+Things look much better.
+
+## Another Oregon Green 514 droplet measurement
+
+Since GFP measurements failed and there isn't much time left in the day I'll
+fall back to Oregon Green 514 droplet measurements, this time with 2% w/w
+FC-40/RAN, 50nM Oregon Green
+
+> summarize: 2015-05-05, 013
+
+
+# 2015-05-08
+
+Added power monitor photodiode to setup. This has been in the setup for a few
+months now but was omitted from the schematic.
+
+![Chimera setup after 2015-05-08](chimera-20150508-0132.svg)
+
+# 2015-05-11
+
+Rearrange setup to use a single emission filter. Previously the channels were
+rather imbalanced. Now a single ET525/50m sits in front of the beamsplitter and
+acts on both channels.
+
+![Chimera setup after 2015-05-11](chimera-20150511-1411.svg)
+
