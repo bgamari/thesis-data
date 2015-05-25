@@ -70,7 +70,11 @@ lookupConfig :: FilePath -> MaybeT Action FileConfig
 lookupConfig fname = do
     let configFile = takeDirectory fname </> "config.json"
     lift (doesFileExist configFile) >>= guard
-    cfg <- MaybeT $ liftIO $ Aeson.decode <$> BS.readFile configFile
+    cfgMaybe <- liftIO $ Aeson.decode <$> BS.readFile configFile
+    cfg <- case cfgMaybe of
+     Nothing -> do lift $ putNormal $ "Failed to parse configuration "++configFile
+                   mzero
+     Just cfg -> return cfg
     MaybeT $ return $ HM.lookup (takeFileName fname) cfg
 
 
@@ -91,7 +95,7 @@ main = do
 rules :: FilePath -> Rules ()
 rules dataRoot = do
     getFileConfig <- addOracle $ runMaybeT . lookupConfig
-    phony "crunch-all" $ do
+    phony "summarize-all" $ do
         files <- getTimetags dataRoot
         liftIO $ print $ length files
         need $ map (`addExtension` "summary.svg") files
