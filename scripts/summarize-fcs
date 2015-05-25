@@ -36,12 +36,10 @@ def load_corr(fname):
 
 for f in args.file:
     ts = read_photons.open(f.name)
-    print('%s:' % (f.name))
-    print('    jiffy = %g ns' % (ts.jiffy / 1e-9))
 
     with Config() as config:
-        exclude = config.get(f.name, {}).get('exclude', {})
-        excludes = exclude.get('intervals', [])
+        exclude_info = config.get(f.name, {}).get('exclude', {})
+        excludes = exclude_info.get('intervals', [])
         if len(excludes) > 0:
             print('    excludes = ', excludes)
         excludes_ticks = [(e[0] / ts.jiffy, e[1] / ts.jiffy) for e in excludes]
@@ -61,7 +59,7 @@ for f in args.file:
     for start,end in excludes:
         pl.axvspan(start, end, alpha=0.3, color='0.3')
 
-    exclude_thresh = exclude.get('threshold')
+    exclude_thresh = exclude_info.get('threshold')
     if exclude_thresh is not None:
         pl.axhline(exclude_thresh, c='k')
 
@@ -78,7 +76,7 @@ for f in args.file:
 
     text = ''
     text += 'jiffy = %g ns\n' % (ts.jiffy / 1e-9)
-    text += 'contamination threshold factor = %s\n' % exclude.get('threshold-factor')
+    text += 'contamination threshold factor = %s\n' % exclude_info.get('threshold-factor')
     for c in ts.valid_channels:
         d = None
         try:
