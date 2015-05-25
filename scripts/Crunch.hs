@@ -62,9 +62,9 @@ dateDir (Date year month day) =
     "by-date" </> year </> (year<->month) </> (year<->month<->day)
   where a <-> b = a ++ "-" ++ b
 
-getFiles :: String -> Date String -> Action [FilePath]
-getFiles ext date =
-    getDirectoryFiles "." [dateDir date </> "*." ++ ext]
+getFiles :: FilePath -> String -> Date String -> Action [FilePath]
+getFiles dataRoot ext date =
+    getDirectoryFiles dataRoot [dateDir date </> "*." ++ ext]
 
 lookupConfig :: FilePath -> MaybeT Action FileConfig
 lookupConfig fname = do
@@ -74,8 +74,8 @@ lookupConfig fname = do
     MaybeT $ return $ HM.lookup (takeFileName fname) cfg
 
 
-getTimetags :: Action [FilePath]
-getTimetags = concat <$> mapM (getFiles "timetag" . parseDate) dates
+getTimetags :: FilePath -> Action [FilePath]
+getTimetags dataRoot = concat <$> mapM (getFiles dataRoot "timetag" . parseDate) dates
 
 main :: IO ()
 main = do
@@ -92,7 +92,7 @@ rules :: FilePath -> Rules ()
 rules dataRoot = do
     getFileConfig <- addOracle $ runMaybeT . lookupConfig
     phony "crunch-all" $ do
-        files <- getTimetags
+        files <- getTimetags dataRoot
         liftIO $ print $ length files
         need $ map (`addExtension` "summary.svg") files
 
@@ -105,7 +105,7 @@ rules dataRoot = do
         return ()
 
     "output.pdf" %> \out -> do
-        summaries <- concat <$> mapM (getFiles "timetag.summary.svg" . parseDate) dates
+        summaries <- concat <$> mapM (getFiles dataRoot "timetag.summary.svg" . parseDate) dates
         command [] "svg-nup" (words "--no-tidy --nup 1x1 --no-landscape -o"++[out, "--"]++summaries)
 
     "//*.timetag.xcorr-0-1" %> \out -> do
@@ -118,7 +118,7 @@ rules dataRoot = do
         command [] "fcs-corr" args
 
     phony "corr-all" $ do
-        getTimetags >>= need . map (<.> "xcorr-0-1")
+        getTimetags dataRoot >>= need . map (<.> "xcorr-0-1")
 
     "//corr" %> \out -> do
         let dir = takeDirectory out
