@@ -27,11 +27,24 @@ instance FromJSON Interval where
     parseJSON (Array a) | V.length a == 2 = Interval <$> parseJSON (a V.! 0) <*> parseJSON (a V.! 1)
     parseJSON _ = mzero
 
-data FileConfig = FileConfig { excludeTimes :: [Interval] }
+data ExcludeInfo = ExcludeInfo { excludeTimes :: [Interval]
+                               , excludeThresh :: Double
+                               , excludeThreshFactor :: Double
+                               }
+                 deriving (Show, Eq, Ord, Generic, Binary, NFData, Hashable)
+
+instance FromJSON ExcludeInfo where
+    parseJSON (Object o) = ExcludeInfo <$> o .: "intervals"
+                                       <*> o .: "threshold"
+                                       <*> o .: "threshold-factor"
+    parseJSON _ = mzero
+
+data FileConfig = FileConfig { fileExclude :: Maybe ExcludeInfo
+                             }
                 deriving (Show, Eq, Ord, Generic, Binary, NFData, Hashable)
 
 instance FromJSON FileConfig where
-    parseJSON (Object o) = FileConfig <$> o .:? "exclude" .!= []
+    parseJSON (Object o) = FileConfig <$> o .:? "exclude"
     parseJSON _ = mzero
 
 dates :: [String]
@@ -101,7 +114,7 @@ rules dataRoot = do
         cfg <- getFileConfig timetag
         let excludeInterval (Interval s e) = "-e"++show s++"-"++show e
             args = [timetag, "--engine=hphoton", "-n0", "-E100e-9", "-L10", "--plot", "--output="++takeDirectory timetag]
-                   ++ map excludeInterval (maybe [] excludeTimes cfg)
+                   ++ map excludeInterval (maybe [] excludeTimes (cfg >>= fileExclude))
         command [] "fcs-corr" args
 
     phony "corr-all" $ do

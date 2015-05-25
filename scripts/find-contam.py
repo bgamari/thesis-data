@@ -44,4 +44,9 @@ for fname in args.file:
     pl.savefig(fname+'-bursts.png')
 
     with Config() as config:
-        config.setdefault(fname, {})['exclude'] = zip(starts * f.jiffy, ends * f.jiffy)
+        config.setdefault(fname, {})['exclude'] = {
+                'intervals': zip(starts * f.jiffy, ends * f.jiffy),
+                'buffer': args.buffer,
+                'threshold': thresh,
+                'threshold-factor': args.threshold,
+        }

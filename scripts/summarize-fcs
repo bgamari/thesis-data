@@ -40,7 +40,8 @@ for f in args.file:
     print('    jiffy = %g ns' % (ts.jiffy / 1e-9))
 
     with Config() as config:
-        excludes = config.get(f.name, {}).get('exclude', [])
+        exclude = config.get(f.name, {}).get('exclude', {})
+        excludes = exclude.get('intervals', [])
         if len(excludes) > 0:
             print('    excludes = ', excludes)
         excludes_ticks = [(e[0] / ts.jiffy, e[1] / ts.jiffy) for e in excludes]
@@ -60,6 +61,10 @@ for f in args.file:
     for start,end in excludes:
         pl.axvspan(start, end, alpha=0.3, color='0.3')
 
+    exclude_thresh = exclude.get('threshold')
+    if exclude_thresh is not None:
+        pl.axhline(exclude_thresh, c='k')
+
     corr_plt = pl.subplot(gs[2:4, 0:2])
     resid_plt = pl.subplot(gs[4, 0:2])
     corr_plt.set_xscale('log')
@@ -71,7 +76,9 @@ for f in args.file:
     pch_plt.set_ylabel('events')
     pch_plt.yaxis.set_label_position('right')
 
-    text = "jiffy = %g ns\n" % (ts.jiffy / 1e-9)
+    text = ''
+    text += 'jiffy = %g ns\n' % (ts.jiffy / 1e-9)
+    text += 'contamination threshold factor = %s\n' % exclude.get('threshold-factor')
     for c in ts.valid_channels:
         d = None
         try:
