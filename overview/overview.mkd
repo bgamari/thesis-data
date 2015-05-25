@@ -13,7 +13,7 @@ to be read as a single chronological sequence.
 
 FCS data summaries will look like the following,
 
-> summarize: 2015-04-20, 001-003
+> summarize: 2015-04-20, 001
 
 The notes at the top provide a quantitative view into the dataset, showing the
 total length (denoted $T$), the number of observed photons ($N$), the first two
@@ -39,9 +39,15 @@ The bottom plot shows the residuals of the model.
 
 # Contamination removal
 
-Some of the data unfortunately shows clear signs of contamination. This
-is perhaps not surprising as much of the data was taken at the height of the New
-England spring. I've done my best to eliminate emission bursts that I suspect
+Some of the data unfortunately shows clear signs of contamination. A
+representative example of this is shown below.  This is perhaps not surprising
+as much of the data was taken at the height of the New England
+spring. Contamination is characterized by extremely intense, relatively
+long bursts of fluorescence.
+
+![Data set showing clear signs of contamination.](contamination.svg)
+
+I've done my best to eliminate emission bursts that I suspect
 are due to contamination with a simple binning/thresholding scheme. For this I
 bin the photon trajectory into 100 millisecond bins. From these bin counts I
 then estimate the expected count using the median, an estimator known to be
@@ -51,7 +57,10 @@ contamination. To ensure that bursts near bin edges are fully identified, I also
 exclude a buffer region of 200 milliseconds on either side of the burst.
 
 Photon arrivals falling in intervals identified as due to contamination are
-dropped in the analyses herein. These intervals are marked in 
+dropped in the analyses herein. The result of this procedure applied to the
+dataset above is seen below.
+
+![Data set showing clear signs of contamination.](contamination.svg)
 
 # 2014-10-23
 
