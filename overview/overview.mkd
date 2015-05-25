@@ -13,7 +13,7 @@ to be read as a single chronological sequence.
 
 FCS data summaries will look like the following,
 
-> summarize: 2015-04-20, 001
+> summarize: 2015-04-20, 002
 
 The notes at the top provide a quantitative view into the dataset, showing the
 total length (denoted $T$), the number of observed photons ($N$), the first two
@@ -57,10 +57,11 @@ contamination. To ensure that bursts near bin edges are fully identified, I also
 exclude a buffer region of 200 milliseconds on either side of the burst.
 
 Photon arrivals falling in intervals identified as due to contamination are
-dropped in the analyses herein. The result of this procedure applied to the
+dropped in the analyses herein; these intervals are marked in light grey in the
+bin timeseries on the summarization. The result of this procedure applied to the
 dataset above is seen below.
 
-![Data set showing clear signs of contamination.](contamination.svg)
+![Data set showing clear signs of contamination.](contamination-corrected.svg)
 
 # 2014-10-23
 
