@@ -104,7 +104,7 @@ See Ben #4 pg. 123.
 Polylysine is positively charged at neutral pH and therefore could make for a
 good probe of electrostatic interactions within the droplet environment.
 
-Power 16.6uW @ 514nm after telescope lens #1
+Power: 16.6uW @ 514nm after telescope lens #1
 
  * run039: nominal 10nM polylysine in solution
  * run040: nominal 100nM polylysine in solution

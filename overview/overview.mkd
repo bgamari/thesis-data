@@ -354,3 +354,125 @@ after telescope lens #1.
 Reduce power to 2.9μW after telescope lens #1.
 
 > summarize: 2015-05-13, 019
+
+## Diffusion of OG514 as a function of ionic strength via FCS
+
+First task will be to examine diffusive properties of a simple system as a
+function of ionic strength with the goal of isolating the effect of
+electrostatics by modulation of screening length.
+
+Experiments begin on Ben #4, pg. 120, preparation on pg. 114
+
+These ionic strengths aren't quite right, they are underestimates as they assume
+that the IS of the buffer is 100mM at 100mM concentration; it is in fact 275mM
+according to Buffer Maker. Unfortunately it's not easy to model this as it
+requires knowledge of the activity of the buffer..
+
+Power 3.1 uW @ 514nm after telescope lens #1
+
+Start with solution measurements at 1uM OG514, 1mM phosphate 7.5.
+Power is 16.7 uW after telescope lens #1.
+
+### Solution measurements
+
+First let's look at 1mM ionic strength,
+> summarize: 2015-05-13, 020
+> summarize: 2015-05-13, 021
+
+Next 10mM ionic strength,
+
+> summarize: 2015-05-13, 022
+
+Next 40mM ionic strength,
+
+> summarize: 2015-05-13, 023
+
+Next 80mM ionic strength,
+
+> summarize: 2015-05-13, 024
+
+Next 200mM ionic strength,
+
+> summarize: 2015-05-13, 025
+
+Next 500mM ionic strength,
+
+> summarize: 2015-05-13, 026
+
+
+### Droplet measurements
+
+Next droplet measurements. First 1mM ionic strength,
+
+> summarize: 2015-05-13, 027-028
+
+Next 10mM ionic strength,
+
+> summarize: 2015-05-13, 029
+
+Next 40mM ionic strength,
+
+> summarize: 2015-05-13, 030-023
+
+Next 80mM ionic strength,
+
+> summarize: 2015-05-13, 033
+
+Next 200mM ionic strength,
+
+> summarize: 2015-05-13, 034
+
+Next 500mM ionic strength,
+
+> summarize: 2015-05-13, 035
+
+
+## Oil viscosity dependence via FCS
+
+Lori suggested that the apparent slowed diffusion may be due to a boundary layer
+effect and could be affected by viscosity. Let's try diluting FC-40 droplets
+with FC-77, lowering the viscosity of the continuous phase from 4cP to 1.9cP.
+See Ben #4 pg. 123.
+
+> summarize: 2015-05-13, 036-038
+
+## Diffusion of Polylysine via FCS
+
+Polylysine is positively charged at neutral pH and therefore could make for a
+good probe of electrostatic interactions within the droplet environment.
+
+Power is 16.6uW @ 514nm after telescope lens #1
+
+First look at 10nM polylysine in solution,
+
+> summarize: 2015-05-13, 039
+
+Now try 100nM polylysine in solution,
+
+> summarize: 2015-05-13, 040
+
+Very little fluorescence; realigned excitation. Power is 15.2uW after telescope
+lens #1. Try 100nM polylysine again,
+
+> summarize: 2015-05-13, 041
+
+Hmm, still nothing. Try 10nM again,
+
+> summarize: 2015-05-13, 042
+
+Still nothing; let's check instrument with 10nM Oregon Green 514,
+
+> summarize: 2015-05-13, 043
+
+Looks good. Perhaps the polylysine is plating out of the surface. Let's try
+100nM polylysine in droplets (where presumably it won't plate out),
+
+> summarize: 2015-05-13, 044
+
+Power is 31.2uW @ 514nm after telescope lens #1
+
+> summarize: 2015-05-13, 045
+
+Somewhere around here I opened box to show Sheema the changes I've made to the
+instrument. Unfortunately a light guard wasn't installed properly after this,
+resulting in increased background in channel 1 in the remaining experiments.
