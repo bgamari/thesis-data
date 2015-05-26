@@ -152,9 +152,18 @@ Second batch,
 
 > summarize: 2015-04-20, 023
 
-Unfortunately this looks pretty unusable.
+Unfortunately it looks like there may have been a fair amount of either
+contamination or droplet heterogeneity in the above; it is difficult to say
+which.
 
-> summarize: 2015-04-20, 024-026
+> summarize: 2015-04-20, 024
+
+> summarize: 2015-04-20, 025
+
+It's not clear to me what happened in the above experiment but clearly the
+timestamps are a bit odd; this dataset really should be discarded.
+
+> summarize: 2015-04-20, 026
 
 ## 400nm pore membrane
 
@@ -308,3 +317,40 @@ acts on both channels.
 
 ![Chimera setup after 2015-05-11](chimera-20150511-1411.svg)
 
+## Calibration
+
+Beginning with a 10nM RNA sample, roughly 24 hours, clearly degraded while I
+prepare the initial set of samples.
+
+> summarize: 2015-05-13, 001
+
+Next some uncorrelated light for afterpulsing correction,
+
+> summarize: 2015-05-13, 002
+
+Next a check of RNA buffer from 9 May 2015 to ensure it wasn't contaminated,
+
+> summarize: 2015-05-13, 003
+
+## Focal volume calibration for FCS
+
+Excitation iris in same state since 9 May 2015. Going to do Oregon Green 514
+concentration series (in 200mM phosphate 7.5). Power is 8.1μW @ 514nm after
+telescope lens #1.
+
+> summarize: 2015-05-13, 005-008
+
+Now we'll open the iris fully. Power is same as above,
+
+> summarize: 2015-05-13, 009-013
+
+Given the size of the excitation beam it is quite likely that it needs to be
+stopped further that it was on 9 May. Now we'll try an configuration which cuts
+the beam down to roughly 25% of its unstopped power. Power is 26.5μW @ 514nm
+after telescope lens #1.
+
+> summarize: 2015-05-13, 014-018
+
+Reduce power to 2.9μW after telescope lens #1.
+
+> summarize: 2015-05-13, 019
