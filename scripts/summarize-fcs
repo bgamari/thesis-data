@@ -155,13 +155,6 @@ for f in args.file:
         corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr', alpha=0.4)
         corr_plt.set_ylim(0.8, 1.2 * g['G'].max())
 
-        handles, labels = corr_plt.get_legend_handles_labels()
-        fig.legend(handles=handles, labels=labels,
-                   loc='upper left',
-                   bbox_to_anchor= gs[2,2].get_position(fig),
-                   bbox_transform=fig.transFigure,
-                   mode='expand', fontsize='small', ncol=1, frameon=False)
-
         # Fit
         g = g[np.logical_not(np.isnan(g['var']))] # FIXME
 
@@ -194,6 +187,14 @@ for f in args.file:
         fig.text(x, y, text, fontsize='small')
     else:
         print('failed to compute cross-correlation')
+
+    # Correlation plot legend
+    handles, labels = corr_plt.get_legend_handles_labels()
+    fig.legend(handles=handles, labels=labels,
+                loc='upper left',
+                bbox_to_anchor= gs[2,2].get_position(fig),
+                bbox_transform=fig.transFigure,
+                mode='expand', fontsize='small', ncol=1, frameon=False)
 
     pl.savefig(f.name+'.summary.svg')
 
