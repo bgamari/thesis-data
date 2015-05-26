@@ -30,12 +30,40 @@ The next plot shows the auto- and cross-correlations of the dataset. Note that
 in the blue and green curves (the auto-correlations of channels 0 and 1,
 respectively) we will typically observe large correlations at early lags due to
 afterpulsing. For this reason the red curve is of the greatest interest and the
-only curve to which we attempt to fit an analytical model, shown as the light
-blue curve. A one- or two-component three-dimensional diffusion model is used
-with triplet correction. The parameters of the fitted model are shown to the
-right of the plot, along the reduced $χ²$ statistic.
+only curve to which we attempt to fit an analytical model (discussed in the next
+section), shown as the light blue curve.
+The
+parameters of the fitted model are shown to the right of the plot, along the
+reduced $χ²$ statistic.
 
 The bottom plot shows the residuals of the model.
+
+# Modelling
+
+The fluorescence correlation functions are fit to a one- or two-component
+three-dimensional diffusion model,
+
+$$ G(\tau) = N^{-1} \left(1 + \tau / \tau_D\right)^{-1} \left(1 + a^{-2} \tau / \tau_D\right)^{-1/2} $$
+
+where $\tau$ is the lag, $N$ is the mean number of molecules per observation
+volume, $\tau_D$ is a characteristic timescale of diffusion, and $a$ is the
+aspect ratio of the observation volume.
+
+As many of the fluorophores used herein have appreciable triplet state occupancy
+at practical excitation powers, this model is typically supplemented with a
+factor correcting for triplet dynamics,
+
+$$ G_F(\tau) = \frac{1 - F + F e^{-\tau / \tau_F}}{1 - F} $$
+
+Where $\tau_F$ is the relaxation time of the triplet state and $F$ is the
+steady-state triplet population fraction.
+
+As the parameters associated with the triplet model have strong covariances with
+those of the diffusion model, care must be taken in fitting this embellished
+model. In the analyses below the fitting process begins with the simplified
+diffusion model fit only on data points where $\tau > 1 \mathrm{\mu s}$. The
+resulting estimates for $N$ and $\tau_D$ then serve as initial values when
+fitting the embellished model.
 
 # Contamination removal
 
