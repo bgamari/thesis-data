@@ -19,6 +19,7 @@ import GHC.Generics
 import Data.Binary
 import Control.DeepSeq
 import Data.Hashable
+import Data.Maybe
 
 data Interval = Interval !Double !Double
               deriving (Show, Eq, Ord, Generic, Binary, NFData, Hashable)
@@ -39,12 +40,22 @@ instance FromJSON ExcludeInfo where
                                        <*> o .: "threshold-factor"
     parseJSON _ = mzero
 
+data CorrInfo = CorrInfo { corrMaxLag :: Double
+                         }
+              deriving (Show, Eq, Ord, Generic, Binary, NFData, Hashable)
+
+instance FromJSON CorrInfo where
+    parseJSON (Object o) = CorrInfo <$> o .: "max-lag"
+    parseJSON _ = mzero
+
 data FileConfig = FileConfig { fileExclude :: Maybe ExcludeInfo
+                             , corrInfo :: Maybe CorrInfo
                              }
                 deriving (Show, Eq, Ord, Generic, Binary, NFData, Hashable)
 
 instance FromJSON FileConfig where
     parseJSON (Object o) = FileConfig <$> o .:? "exclude"
+                                      <*> o .:? "corr"
     parseJSON _ = mzero
 
 dates :: [String]
@@ -98,7 +109,7 @@ rules dataRoot = do
     phony "summarize-all" $ do
         files <- getTimetags dataRoot
         liftIO $ print $ length files
-        need $ map (`addExtension` "summary.svg") files
+        need $ map (\f -> dataRoot </> f <.> "summary.svg") files
 
     "//*.timetag.summary.svg" %> \out -> do
         let timetag = dropExtension $ dropExtension out
@@ -116,8 +127,9 @@ rules dataRoot = do
         let timetag = dropExtension out
         need [timetag]
         cfg <- getFileConfig timetag
+        let maxLag = maybe 10 corrMaxLag $ cfg >>= corrInfo
         let excludeInterval (Interval s e) = "-e"++show s++"-"++show e
-            args = [timetag, "--engine=hphoton", "-n0", "-E100e-9", "-L10", "--plot", "--output="++takeDirectory timetag]
+            args = [timetag, "--engine=hphoton", "-n0", "-E100e-9", "-L"++show maxLag, "--plot", "--output="++takeDirectory timetag]
                    ++ map excludeInterval (maybe [] excludeTimes (cfg >>= fileExclude))
         command [] "fcs-corr" args
 
