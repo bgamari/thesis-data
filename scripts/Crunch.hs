@@ -59,8 +59,17 @@ instance FromJSON FileConfig where
     parseJSON _ = mzero
 
 dates :: [String]
-dates = words "2015-05-05 2015-05-02 2015-04-22 2015-04-20 2015-04-19 2015-04-15 2015-03-19 2015-03-12 2015-02-12"
-
+dates =
+    [ "2015-05-05"
+    , "2015-05-02"
+    , "2015-04-19"
+    , "2015-04-20"
+    , "2015-04-22"
+    , "2015-04-15"
+    , "2015-03-19"
+    , "2015-03-12"
+    , "2015-02-12"
+    ]
 data Date a = Date {year, month, day :: a}
 
 parseDate :: String -> Date String
