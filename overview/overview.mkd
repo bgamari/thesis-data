@@ -38,7 +38,8 @@ only curve to which we attempt to fit an analytical model (discussed in the next
 section), shown as the light blue curve.  The parameters of the fitted model are
 shown to the right of the plot, along the reduced $χ²$ statistic.
 
-The bottom plot shows the residuals of the model.
+The bottom plot shows the residuals of the model. These are normalized to the
+estimated uncertainty of the correlation function.
 
 # Modelling
 
