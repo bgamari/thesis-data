@@ -41,6 +41,25 @@ def load_corr(fname):
         print('Failed to load correlation function %s: %s'% (fname, e))
         return None
 
+def build_model(corr, initial_taus, triplet=False, offset=False, initial_amps=None):
+    fit = squmfit.Fit()
+    lifetimes = [fit.param('tauD-%d' % i, initial=initial)
+                 for i,initial in enumerate(initial_taus)]
+    lag = squmfit.Argument('lag')
+    model = 0 if not offset else fit.param('offset', 0)
+    model += 1
+    if initial_amps is None:
+        initial_amps = [1. / g[-1]['G'] / len(lifetimes)] * len(lifetimes)
+    for comp_idx, (tauD, amp) in enumerate(zip(lifetimes, initial_amps)):
+        n = fit.param('N-%d' % (comp_idx), initial=amp)
+        model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=args.aspect, n=n, alpha=1)
+    if triplet:
+        tauF = fit.param('tauF', initial=0.5)
+        model *= triplet_correction(lag=lag, tauF=1e-6 * tauF,
+                                    tripletFrac=fit.param('F', initial=0))
+    fit.add_curve('curve', model, corr['G'], weights=1/np.maximum(1e-5, sqrt(corr['var'])), lag=corr['lag'])
+    return fit.fit()
+
 for f in args.file:
     ts = read_photons.open(f.name)
 
@@ -114,7 +133,8 @@ for f in args.file:
         g = load_corr('%s.acorr-%d' % (f.name, c))
         if g is not None:
             g = g[np.logical_not(np.isnan(g['var']))] # FIXME
-            corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c)
+            corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='ch%d' % c,
+                              alpha=0.4)
         else:
             print('No autocorrelation for channel %d' % c)
 
@@ -132,7 +152,7 @@ for f in args.file:
     # Cross-correlation
     g = load_corr('%s.xcorr-0-1' % f.name)
     if g is not None:
-        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr')
+        corr_plt.errorbar(g['lag'], g['G'], fmt='+', yerr=np.sqrt(g['var']), label='xcorr', alpha=0.4)
         corr_plt.set_ylim(0.8, 1.2 * g['G'].max())
 
         handles, labels = corr_plt.get_legend_handles_labels()
@@ -142,25 +162,24 @@ for f in args.file:
                    bbox_transform=fig.transFigure,
                    mode='expand', fontsize='small', ncol=1, frameon=False)
 
-        # Plot
-        fit = squmfit.Fit()
-        lifetimes = [fit.param('tauD-%d' % i, initial=initial)
-                     for i,initial in enumerate(taus)]
-        lag = squmfit.Argument('lag')
-        model = 0 if not args.offset else fit.param('offset', 0)
-        model += 1
-        for comp_idx, tauD in enumerate(lifetimes):
-            n = fit.param('N-%d' % (comp_idx), initial=1. / g[-1]['G'] / len(lifetimes))
-            model += three_dim_diffusion(lag=lag, tauD=1e-6 * tauD, aspect=args.aspect, n=n, alpha=1)
-        if args.triplet:
-            tauF = fit.param('tauF', initial=0.5)
-            model *= triplet_correction(lag=lag, tauF=1e-6 * tauF,
-                                        tripletFrac=fit.param('F', initial=0))
-
+        # Fit
         g = g[np.logical_not(np.isnan(g['var']))] # FIXME
-        fit.add_curve('curve', model, g['G'], weights=1/np.maximum(1e-5, sqrt(g['var'])), lag=g['lag'])
-        res = fit.fit()
-        corr_plt.plot(g['lag'], res.curves['curve'].fit)
+
+        # First fit taus without triplet as it tends to send the fit in the wrong direction
+        res = build_model(g, taus, triplet=False, offset=False)
+
+        # then fit with the triplet
+        if args.triplet:
+            corr_plt.plot(g['lag'], res.curves['curve'].fit, label='fit (no triplet)')
+            res = build_model(g,
+                              initial_taus=[res.eval(res.fit.param_set.params['tauD-%d' % i])
+                                            for i in range(len(taus))],
+                              initial_amps=[res.eval(res.fit.param_set.params['N-%d' % i])
+                                            for i in range(len(taus))],
+                              triplet=True, offset=args.offset)
+
+        # Plot
+        corr_plt.plot(g['lag'], res.curves['curve'].fit, label='fit')
         corr_plt.axhline(1, c='k')
         pl.setp(corr_plt.get_xticklabels(), visible=False)
         resid_plt.plot(g['lag'], res.curves['curve'].residuals, '+')
