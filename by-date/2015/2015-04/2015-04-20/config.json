@@ -213,7 +213,7 @@
     }, 
     "2015-04-20-run_003.timetag": {
         "corr": {
-            "max-lag": 1,
+            "max-lag": 1
         },
         "exclude": {
             "buffer": 0.2, 
