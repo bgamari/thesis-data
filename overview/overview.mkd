@@ -7,7 +7,11 @@ author: Ben Gamari
 
 This is a transcription and analysis of portions of my notebooks. You will find
 discussion interleaved with figures showing summaries of the data taken. This is
-to be read as a single chronological sequence.
+to be read as a single chronological sequence. Unfortunately due to the
+limitations in typesetting the printed version of this document will have many
+pages consisting of a single figure followed by a bit of text. The text is to be
+taken to be chronologically *after* the figure (as one might expect) and
+consequently may discuss the preparation for the figure on the following page.
 
 ## FCS summaries
 
@@ -31,10 +35,8 @@ in the blue and green curves (the auto-correlations of channels 0 and 1,
 respectively) we will typically observe large correlations at early lags due to
 afterpulsing. For this reason the red curve is of the greatest interest and the
 only curve to which we attempt to fit an analytical model (discussed in the next
-section), shown as the light blue curve.
-The
-parameters of the fitted model are shown to the right of the plot, along the
-reduced $χ²$ statistic.
+section), shown as the light blue curve.  The parameters of the fitted model are
+shown to the right of the plot, along the reduced $χ²$ statistic.
 
 The bottom plot shows the residuals of the model.
 
