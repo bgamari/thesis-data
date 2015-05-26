@@ -125,7 +125,7 @@ rules dataRoot = do
             summarize = dataRoot</>"scripts/summarize-fcs"
         getFileConfig timetag
         need [timetag, summarize, timetag <.> "xcorr-0-1"]
-        Exit c <- command [] summarize [timetag]
+        Exit c <- command [] summarize [timetag, "--triplet"]
         return ()
 
     "output.pdf" %> \out -> do
