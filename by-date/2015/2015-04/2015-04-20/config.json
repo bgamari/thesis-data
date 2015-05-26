@@ -721,7 +721,7 @@
                 ]
             ],
             "threshold": 9390.0,
-            "threshold-factor": 10
+            "threshold-factor": 10.0
         }
     }
 }
