@@ -1,7 +1,7 @@
 figure img {
     /* ensure images fit on the page */
-    max-width: 8in;
-    max-height: 8in;
+    max-width: 6in;
+    max-height: 7in;
     display: block;
     margin-left: auto;
     margin-right: auto;
