@@ -120,7 +120,11 @@ Again, produce a second batch of droplets
 
 Second batch,
 
-> summarize: 2015-04-20, 023-026
+> summarize: 2015-04-20, 023
+
+Unfortunately this looks pretty unusable.
+
+> summarize: 2015-04-20, 024-026
 
 ## 400nm pore membrane
 
