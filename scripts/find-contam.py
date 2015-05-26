@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import numpy as np
 from photon_tools.bin_photons import bin_photons
@@ -35,7 +35,7 @@ for fname in args.file:
     bursts = np.array(find_runs(counts > thresh))
     starts = t[bursts[:,0]] - args.buffer / f.jiffy
     ends = t[bursts[:,1]] + args.buffer / f.jiffy
-    print '%s: Found %d bursts above threshold of %f / bin' % (fname, len(bursts), thresh)
+    print('%s: Found %d bursts above threshold of %f / bin' % (fname, len(bursts), thresh))
 
     pl.clf()
     pl.plot(t * f.jiffy, counts, '+')
