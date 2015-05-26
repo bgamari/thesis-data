@@ -45,7 +45,7 @@ for fname in args.file:
 
     with Config() as config:
         config.setdefault(fname, {})['exclude'] = {
-                'intervals': zip(starts * f.jiffy, ends * f.jiffy),
+                'intervals': list(zip(starts * f.jiffy, ends * f.jiffy)),
                 'buffer': args.buffer,
                 'threshold': thresh,
                 'threshold-factor': args.threshold,
