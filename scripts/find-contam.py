@@ -49,4 +49,5 @@ for fname in args.file:
                 'buffer': args.buffer,
                 'threshold': thresh,
                 'threshold-factor': args.threshold,
+                'bin-width': args.bin_width,
         }
