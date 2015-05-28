@@ -60,7 +60,9 @@ instance FromJSON FileConfig where
 
 dates :: [String]
 dates =
-    [ "2015-05-05"
+    [ "2015-05-15"
+    , "2015-05-13"
+    , "2015-05-05"
     , "2015-05-02"
     , "2015-04-19"
     , "2015-04-20"
@@ -70,6 +72,7 @@ dates =
     , "2015-03-12"
     , "2015-02-12"
     ]
+
 data Date a = Date {year, month, day :: a}
 
 parseDate :: String -> Date String
