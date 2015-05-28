@@ -318,6 +318,8 @@ acts on both channels.
 
 ![Chimera setup after 2015-05-11](chimera-20150511-1411.svg)
 
+#2015-05-13
+
 ## Calibration
 
 Beginning with a 10nM RNA sample, roughly 24 hours, clearly degraded while I
@@ -477,3 +479,42 @@ Power is 31.2uW @ 514nm after telescope lens #1
 Somewhere around here I opened box to show Sheema the changes I've made to the
 instrument. Unfortunately a light guard wasn't installed properly after this,
 resulting in increased background in channel 1 in the remaining experiments.
+
+
+# 2015-05-15
+
+## RNA droplets on chimera
+
+Power is 32uW @ 514nm after telescope lens #1. I'll start with a sample of old
+10nM RNA while I prepare new RNA.
+
+> summarize: 2015-05-15, 001
+
+Despite the fact that the RNA is a few days old, the correlation function looks pretty good.
+
+While the RNA is annealing I will try looking at polylysine in low pH solution
+to reduce plating onto glass. 10nM Cy3-labelled polylysine in 20mM pH 4.0 citrate
+buffer,
+
+> summarize: 2015-05-15, 002
+
+Unfortunately it still appears that there is substantial plating out.
+
+Next I'll try the same experiment but using Sigmacote'd slide/coverslip,
+
+> summarize: 2015-05-15, 003
+
+Next we'll try turning up the power to 98uW,
+
+> summarize: 2015-05-15, 004
+
+Let's quickly look at the viscosity dependence. Diluted 100nM polylysine droplets from 2015-05-13 (anisotropy) run₀12 in 400μL FC-77
+
+> summarize: 2015-05-15, 005
+
+Clearly this is too bright, reduce power to 17.8μW and try again,
+
+> summarize: 2015-05-15, 006
+
+
+> summarize: 2015-05-15, 006
