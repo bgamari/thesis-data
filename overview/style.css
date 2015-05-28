@@ -14,7 +14,11 @@ figure {
 
     padding: 1em;
     border-radius: 0.5em;
-    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+figcaption:before {
+    content: "Figure: ";
 }
 
 figcaption {
