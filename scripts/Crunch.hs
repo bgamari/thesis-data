@@ -121,7 +121,7 @@ rules dataRoot = do
     phony "summarize-all" $ do
         files <- getTimetags dataRoot
         liftIO $ print $ length files
-        need $ map (\f -> dataRoot </> f <.> "summary.svg") files
+        need $ map (\f -> f <.> "summary.svg") files
 
     "//*.timetag.summary.svg" %> \out -> do
         let timetag = dropExtension $ dropExtension out
