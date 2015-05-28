@@ -20,7 +20,7 @@ FCS data summaries will look like the following,
 > summarize: 2015-04-20, 002
 
 The notes at the top provide a quantitative view into the dataset, showing the
-total length (denoted $T$), the number of observed photons ($N$), the first two
+total duration (denoted $T$), the number of observed photons ($N$), the first two
 moments of the count rate, and an estimate of the rate of change in the count rate.
 
 The next row of plots shows the three different views on the count statistics of
