@@ -119,7 +119,7 @@ The goal of this day was to examine the effect of the extruder pore size on the
 resulting droplet size distribution. This was done via FCS on Chimera. The
 droplet-making protocol followed the usual 2uL of aqueous phase introduced into
 300μL FC-40/Raindance (1% w/w). The dispersed phase was 10μM Oregon Green 514 in
-100mM phosphate 7.5 buffer.
+100mM phosphate 7.5 buffer. The excitation iris is fully open here.
 
 I try membranes with 50nm, 100nm, 200nm, 400nm, 800nm, and 1μm pore sizes.
 
@@ -131,6 +131,13 @@ The first attempts are clearly saturating the detectors at times,
 I reduce the power and things start looking a bit better,
 
 > summarize: 2015-04-20, 004-009
+
+Looking at this,
+
+```
+fcs-fit 2015-04-20-run_{005,006,007,008}.timetag.xcorr-0-1 --fix-aspect=13 -c2
+```
+
 
 Now I produce a fresh batch to droplets with the same membrane to verify the
 reproducibility of the result.
@@ -343,9 +350,22 @@ telescope lens #1.
 
 > summarize: 2015-05-13, 005-008
 
+Fitting runs 005, 007, and 008 to a single diffusion and triplet (allowing $N$
+and $F$ to vary) yields an aspect ratio of $11.0 \pm 0.6$ with the curves having
+reduced $\chi^2$ of 0.5, 0.6, and 0.7. $\tau_D$ is estimated at 70 \pm 0.6$
+microseconds and $\tau_F$ is $5.1 \pm 0.6$. Run 006, however, fits this model
+rather poorly. If we insist on including run 006 we find an aspect ratio of
+$16.79 \pm 1.7$, with the curves having reduced chi-squares of 0.5, 0.7, 0.8,
+and run 006 having a reduced chi squared of 2.2.
+
 Now we'll open the iris fully. Power is same as above,
 
 > summarize: 2015-05-13, 009-013
+
+All four of these runs fit fairly well to a single diffusion time with triplet,
+yielding an aspect ratio of $15.3 \pm 3.0$. $\tau_D$ is $115.7 \pm 2.3$
+microseconds and $\tau_F$ is $12.6 \pm $1.3$ microseconds. All curves fit with a
+$\chi^2$ between 0.51 and 0.68.
 
 Given the size of the excitation beam it is quite likely that it needs to be
 stopped further that it was on 9 May. Now we'll try an configuration which cuts
@@ -353,6 +373,10 @@ the beam down to roughly 25% of its unstopped power. Power is 26.5μW @ 514nm
 after telescope lens #1.
 
 > summarize: 2015-05-13, 014-018
+
+Fitting 
+$\tau_D$ is estimated at $118 \pm 0.6$
+microseconds and $\tau_F$ is $3.2 \pm 0.1$.
 
 Reduce power to 2.9μW after telescope lens #1.
 
