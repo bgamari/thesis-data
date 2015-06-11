@@ -447,7 +447,8 @@ Next 500mM ionic strength,
 
 Runs 21, 22, 23, and 26 can be collectively fit against a single diffusion
 model (fixing the aspect ratio at 5.6 as measured earlier). With $\tau_D$ of
-$104.4 \pm 0.6$ microseconds.
+$104.4 \pm 0.6$ microseconds. This suggests that the probe itself exhibits a
+negligible ionic strength dependence.
 
 ### Droplet measurements
 
@@ -461,7 +462,9 @@ Next 10mM ionic strength,
 
 Next 40mM ionic strength,
 
-> summarize: 2015-05-13, 030-023
+> summarize: 2015-05-13, 030
+> summarize: 2015-05-13, 031
+> summarize: 2015-05-13, 032
 
 Next 80mM ionic strength,
 
@@ -474,6 +477,18 @@ Next 200mM ionic strength,
 Next 500mM ionic strength,
 
 > summarize: 2015-05-13, 035
+
+              IS       $\tau_0$      $\tau_1$
+              ------   ----------    ----------
+  run_027     1 mM     crazy
+  run_028     1 mM     2.75 ms       19.86 ms
+  run_029     10 mM    1.92 ms       10.02 ms
+  run_030     40 mM    4.29 ms       23.14 ms
+  run_031
+  run_032
+  run_033     80 mM    3.74 ms       22.62 ms
+  run_034     200 mM   1.83 ms       20.11 ms
+  run_035     500 mM   3.26 ms       29.22 ms
 
 
 ## Oil viscosity dependence via FCS
