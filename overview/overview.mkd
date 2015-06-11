@@ -374,7 +374,13 @@ after telescope lens #1.
 
 > summarize: 2015-05-13, 014-018
 
-Fitting 
+Unfortunately run 014 is too long to easily correlate. Fitting the remaining sets 
+to a single diffusion time with triplet yields an aspect ratio of $5.6 \pm 0.1$.
+$\tau_D$ under this model is $118.5 \pm 0.6$ microseconds and $\tau_F$ is $3.2
+\pm 0.1$ microseconds. All but run 15 fits with $\chi^2$ better than 0.6..
+Rerunning the fit excluding run 15 results in no appreciable difference in the
+inferred parameters.
+
 $\tau_D$ is estimated at $118 \pm 0.6$
 microseconds and $\tau_F$ is $3.2 \pm 0.1$.
 
