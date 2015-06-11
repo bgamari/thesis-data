@@ -394,11 +394,11 @@ Reduce power to 2.9μW after telescope lens #1.
 
 ### Conclusion
 
-              aspect ratio    $\tau_D$
-              -------------   ----------
-  IrisOpen    15.3            115.7
-  IrisA       11.0            70
-  IrisB       5.6             118.5
+iris        aspect ratio    $\tau_D$
+---------   -------------   ----------
+IrisOpen    15.3            115.7
+IrisA       11.0            70
+IrisB       5.6             118.5
 
 ## Diffusion of OG514 as a function of ionic strength via FCS
 
@@ -478,17 +478,17 @@ Next 500mM ionic strength,
 
 > summarize: 2015-05-13, 035
 
-              IS       $\tau_0$      $\tau_1$
-              ------   ----------    ----------
-  run_027     1 mM     crazy
-  run_028     1 mM     2.75 ms       19.86 ms
-  run_029     10 mM    1.92 ms       10.02 ms
-  run_030     40 mM    4.29 ms       23.14 ms
-  run_031
-  run_032
-  run_033     80 mM    3.74 ms       22.62 ms
-  run_034     200 mM   1.83 ms       20.11 ms
-  run_035     500 mM   3.26 ms       29.22 ms
+run         IS       $\tau_0$      $\tau_1$
+--------    ------   ---------     ----------
+run_027     1 mM     crazy
+run_028     1 mM     2.75 ms       19.86 ms
+run_029     10 mM    1.92 ms       10.02 ms
+run_030     40 mM    4.29 ms       23.14 ms
+run_031
+run_032
+run_033     80 mM    3.74 ms       22.62 ms
+run_034     200 mM   1.83 ms       20.11 ms
+run_035     500 mM   3.26 ms       29.22 ms
 
 
 ## Oil viscosity dependence via FCS
