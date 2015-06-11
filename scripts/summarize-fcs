@@ -183,7 +183,7 @@ for f in args.file:
         ((x,y), _) = gs[3,2].get_position(fig).get_points()
         text = 'reduced $\\chi^2$ = %f\n' % res.curves['curve'].reduced_chi_sqr
         text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
-                          for param in res.fit.param_set.params.values())
+                          for param in sorted(res.fit.param_set.params.values()))
         fig.text(x, y, text, fontsize='small')
     else:
         print('failed to compute cross-correlation')
