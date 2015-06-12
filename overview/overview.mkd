@@ -400,6 +400,9 @@ IrisOpen    15.3            115.7
 IrisA       11.0            70
 IrisB       5.6             118.5
 
+The behavior of $\tau_D$ is perplexing indeed.
+
+
 ## Diffusion of OG514 as a function of ionic strength via FCS
 
 First task will be to examine diffusive properties of a simple system as a
@@ -553,6 +556,8 @@ Power is 32uW @ 514nm after telescope lens #1. I'll start with a sample of old
 
 Despite the fact that the RNA is a few days old, the correlation function looks pretty good.
 
+## Polylysine droplets
+
 While the RNA is annealing I will try looking at polylysine in low pH solution
 to reduce plating onto glass. 10nM Cy3-labelled polylysine in 20mM pH 4.0 citrate
 buffer,
@@ -569,7 +574,7 @@ Next we'll try turning up the power to 98uW,
 
 > summarize: 2015-05-15, 004
 
-Let's quickly look at the viscosity dependence. Diluted 100nM polylysine droplets from 2015-05-13 (anisotropy) run₀12 in 400μL FC-77
+Let's quickly look at the viscosity dependence. Diluted 100nM polylysine droplets from 2015-05-13 (anisotropy) run 12 in 400μL FC-77
 
 > summarize: 2015-05-15, 005
 
@@ -577,5 +582,32 @@ Clearly this is too bright, reduce power to 17.8μW and try again,
 
 > summarize: 2015-05-15, 006
 
+And now we'll look at 2% FC-40/RAN droplets,
 
-> summarize: 2015-05-15, 006
+> summarize: 2015-05-15, 007
+
+Set power at 54μW @ 514nm after telescope,
+
+> summarize: 2015-05-15, 008
+
+Increase power to 105μW
+
+> summarize: 2015-05-15, 009
+
+Let's try more dilute polylysine: 20nM polylysine droplets
+
+> summarize: 2015-05-15, 010
+
+Decrease power to 33.7μW after telescope
+
+> summarize: 2015-05-15, 011
+
+
+## RNA droplets
+
+
+# Overview
+
+ * Observation volume measurements questionable from 2015-05-13
+ * Diffusion inside droplets is arguably shows no measurable ionic strength dependence
+ * 
