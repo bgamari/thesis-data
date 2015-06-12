@@ -601,6 +601,7 @@ Let's try more dilute polylysine: 20nM polylysine droplets
 Decrease power to 33.7μW after telescope
 
 > summarize: 2015-05-15, 011
+> summarize: 2015-05-15, 012
 
 
 ## RNA droplets
@@ -611,3 +612,7 @@ Decrease power to 33.7μW after telescope
  * Observation volume measurements questionable from 2015-05-13
  * Diffusion inside droplets is arguably shows no measurable ionic strength dependence
  * 
+ * Issues:
+   * Contamination is unfortunately quite prevalent, very difficult to discern from large droplets
+   * Background in acceptor detector from missing light guard
+
