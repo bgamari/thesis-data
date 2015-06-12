@@ -182,7 +182,7 @@ for f in args.file:
 
         ((x,y), _) = gs[3,2].get_position(fig).get_points()
         text = 'reduced $\\chi^2$ = %f\n' % res.curves['curve'].reduced_chi_sqr
-        text += '\n'.join('%15s = %4f' % (param.name, res.eval(param))
+        text += '\n'.join('%15s = %4.2f ± %4.2f' % (param.name, res.eval(param), res.stderr[param.name])
                           for param in sorted(res.fit.param_set.params.values(),
                                               key=lambda x: x.name))
         fig.text(x, y, text, fontsize='small')
