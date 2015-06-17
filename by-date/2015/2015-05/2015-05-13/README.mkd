@@ -63,7 +63,7 @@ requires knowledge of the activity of the buffer..
 
 Power 3.1 uW @ 514nm after telescope lens #1
 
-Start with solution measurements at 1uM OG514, 1mM phosphate 7.5,
+Start with solution measurements at 10nM OG514, 1mM phosphate 7.5,
 
  * run020: 1mM IS Oregon Green 514
 
