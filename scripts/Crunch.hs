@@ -123,12 +123,16 @@ rules dataRoot = do
         liftIO $ print $ length files
         need $ map (\f -> f <.> "summary.svg") files
 
+    {-}"//summarize-all" %> \out -> do
+        let dir = takeDirectory out
+        getDirectoryFiles dataRoot [dateDir date </> "*.timetag"]-}
+
     "//*.timetag.summary.svg" %> \out -> do
         let timetag = dropExtension $ dropExtension out
             summarize = dataRoot</>"scripts/summarize-fcs"
         getFileConfig timetag
         need [timetag, summarize, timetag <.> "xcorr-0-1"]
-        Exit c <- command [] summarize [timetag, "--triplet"]
+        Exit c <- command [] summarize [timetag, "--triplet=2"]
         return ()
 
     "output.pdf" %> \out -> do

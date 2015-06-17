@@ -200,3 +200,4 @@ for f in args.file:
     pl.savefig(f.name+'.summary.svg')
 
     print()
+
