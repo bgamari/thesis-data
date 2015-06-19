@@ -158,6 +158,7 @@ for f in args.file:
 
         # Fit
         g = g[np.logical_not(np.isnan(g['var']))] # FIXME
+        g = g[g['lag'] > 1e-6]
 
         # First fit taus without triplet as it tends to send the fit in the wrong direction
         res = build_model(g, taus, triplet=False, offset=False)
