@@ -95,4 +95,4 @@ def analyze2(phs, root, sign=+1):
     res = fit.fit()
     squmfit.plot.plot_fit('ph', res, marker='o')
     print squmfit.pretty.markdown_fit_result(res)
-    pl.show()
+    pl.savefig('%s-ph.png' % root)
