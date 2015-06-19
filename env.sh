@@ -1,5 +1,6 @@
 export data_root=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 export PATH=$data_root/scripts:$PATH
+export PYTHONPATH=$data_root/scripts:$PYTHONPATH
 
 function cd_date() {
         local year=$1
