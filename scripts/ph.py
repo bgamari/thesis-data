@@ -6,7 +6,7 @@ import re
 from photon_tools import anisotropy
 from photon_tools.anisotropy import Aniso, FitSet
 import squmfit.pretty
-import cPickle
+import pickle
 
 use_cache = True
 
@@ -33,7 +33,7 @@ def read_run(basename):
 def go(irfs, files, root, *args, **kwargs):
     if use_cache:
         try:
-            return cPickle.load(open('%s.pickle' % root))
+            return pickle.load(open('%s.pickle' % root))
         except:
             pass
 
@@ -61,17 +61,17 @@ def run(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period
     frac = [a/(a+b) for a,b in amps]
     phs = [ph for _,ph in files]
     res = np.rec.fromarrays([phs, frac], dtype=[('ph','f4'), ('frac','f4')])
-    cPickle.dump(res, open('%s.pickle' % root, 'w'))
+    pickle.dump(res, open('%s.pickle' % root, 'w'))
     return res
 
 def analyze(phs, root, sign=+1):
     from scipy.optimize import curve_fit
     p0 = [4, 0, 1, sign]
     p,pcov = curve_fit(sigmoid, phs['ph'], phs['frac'], p0)
-    print root
-    print p
-    print pcov
-    print
+    print(root)
+    print(p)
+    print(pcov)
+    print()
 
     xs = np.linspace(0.5, 8, 500)
     pl.figure()
@@ -94,5 +94,5 @@ def analyze2(phs, root, sign=+1):
     fit.add_curve('hi', model, data=phs['frac'], ph=phs['ph'])
     res = fit.fit()
     squmfit.plot.plot_fit('ph', res, marker='o')
-    print squmfit.pretty.markdown_fit_result(res)
+    print(squmfit.pretty.markdown_fit_result(res))
     pl.savefig('%s-ph.png' % root)
