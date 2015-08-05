@@ -33,13 +33,14 @@ def read_run(basename):
 def go(irfs, files, root, *args, **kwargs):
     if use_cache:
         try:
-            return pickle.load(open('%s.pickle' % root))
+            return pickle.load(open('%s.pickle' % root, 'rb'))
         except:
             pass
 
     return run(irfs, files, root, *args, **kwargs)
 
-def run(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period=1560):
+def run_fit(irfs, files, root, run=True, ncomps=2,
+            periods=2, jiffy_ps=8, exc_period=1560, params0={}, with_bounds=False):
     n = periods * exc_period
     files = files.items()
     irfs = anisotropy.normalize_irfs(irfs.map(lambda x: x[:n]['counts']))
@@ -48,12 +49,16 @@ def run(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period
 
     res0, res, desc = anisotropy.fit(corrs, jiffy_ps=jiffy_ps,
                                      exc_period=exc_period, periods=periods,
-                                     n_components=ncomps)
+                                     n_components=ncomps, params0=params0)
     open('%s.mkd' % root, 'w').write(squmfit.pretty.markdown_fit_result(res))
+    pickle.dump(res.params, open("%s.fit.pickle" % root, 'wb'))
     fig = pl.figure(figsize=(4,12))
     anisotropy.plot(fig, corrs, jiffy_ps, res, sep_resid=True)
     pl.savefig('%s.png' % root)
+    return res, corrs
 
+def run(irfs, files, root, ncomps=2, *args, **kwargs):
+    res, corrs = run_fit(irfs, files, root, ncomps=ncomps, *args, **kwargs)
     taus = [1/res.params['lambda%d' % i] for i in range(ncomps)]
     amps = [[res.params['%s_amplitude%d' % (pair.name, i)] * tau
             for i,tau in enumerate(taus)]
@@ -61,7 +66,7 @@ def run(irfs, files, root, run=True, ncomps=2, periods=2, jiffy_ps=8, exc_period
     frac = [a/(a+b) for a,b in amps]
     phs = [ph for _,ph in files]
     res = np.rec.fromarrays([phs, frac], dtype=[('ph','f4'), ('frac','f4')])
-    pickle.dump(res, open('%s.pickle' % root, 'w'))
+    pickle.dump(res, open('%s.pickle' % root, 'wb'))
     return res
 
 def analyze(phs, root, sign=+1):

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 from ph import *
 import ph
@@ -19,9 +19,10 @@ files = {
     22: 6.0,   23:  5.5,
     24: 5.0,   25:  4.5,
     26: 4.0,   27:  3.5,
-    28: 3.0,   29:  2.5,
+    28: 3.0,   29:  2.5
 }
-analyze(go(irfs, files, 'og488'), 'og488', -1)
+res = go(irfs, files, 'og488', ncomps=2)
+analyze(res, 'og488', -1)
 
 # BCECF
 files = {
@@ -39,6 +40,9 @@ files = {
     52: 4.0,   53: 3.5,
     54: 3.0,   55: 2.5,
 }
-analyze2(go(irfs, files, 'bcecf'), 'bcecf', -1)
+analyze(go(irfs, files, 'bcecf', ncomps=2), 'bcecf', -1)
 
 # Droplet
+files = {
+    36: 5.0,   37: 5.5,
+}
