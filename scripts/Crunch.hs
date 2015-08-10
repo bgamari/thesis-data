@@ -145,7 +145,7 @@ rules dataRoot = do
         cfg <- getFileConfig timetag
         let maxLag = maybe 10 corrMaxLag $ cfg >>= corrInfo
         let excludeInterval (Interval s e) = "-e"++show s++"-"++show e
-            args = [timetag, "--engine=hphoton", "-n0", "-E100e-9", "-L"++show maxLag, "--plot", "--output="++takeDirectory timetag]
+            args = [timetag, "--engine=favia", "-E100e-9", "-L"++show maxLag, "--plot", "--output="++takeDirectory timetag]
                    ++ map excludeInterval (maybe [] excludeTimes (cfg >>= fileExclude))
         command [] "fcs-corr" args
 
