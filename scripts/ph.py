@@ -51,7 +51,7 @@ def run_fit(irfs, files, root, run=True, ncomps=2,
                                      exc_period=exc_period, periods=periods,
                                      n_components=ncomps, params0=params0)
     open('%s.mkd' % root, 'w').write(squmfit.pretty.markdown_fit_result(res))
-    pickle.dump(res.params, open("%s.fit.pickle" % root, 'wb'))
+    pickle.dump({'params': res.params, 'files': list(files)}, open("%s.fit.pickle" % root, 'wb'))
     fig = pl.figure(figsize=(4,12))
     anisotropy.plot(fig, corrs, jiffy_ps, res, sep_resid=True)
     pl.savefig('%s.png' % root)
@@ -64,7 +64,7 @@ def run(irfs, files, root, ncomps=2, *args, **kwargs):
             for i,tau in enumerate(taus)]
             for pair in corrs]
     frac = [a/(a+b) for a,b in amps]
-    phs = [ph for _,ph in files]
+    phs = [ph for _,ph in files.items()]
     res = np.rec.fromarrays([phs, frac], dtype=[('ph','f4'), ('frac','f4')])
     pickle.dump(res, open('%s.pickle' % root, 'wb'))
     return res
