@@ -604,6 +604,10 @@ Decrease power to 33.7μW after telescope
 > summarize: 2015-05-15, 012
 
 
+# 2015-02-10
+
+TODO: Oregon Green 488 in droplets as a function of surfactant, aging
+
 ## RNA droplets
 
 
