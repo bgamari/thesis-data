@@ -2,7 +2,7 @@
 
 from ph import *
 import ph
-#ph.use_cache = False
+ph.use_cache = False
 
 irfs = read_run('run_002.pt3')
 
